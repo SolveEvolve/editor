@@ -2,11 +2,12 @@
 
 ## Current phase
 
-Phase 0 — baseline and safeguards.
+Phase 1 — static catalog snapshot and Git LFS.
 
 ## Completed commits
 
-None yet.
+- `8edfa590 feat(unity): add initial Pascal JSON scene importer`
+- `df72e1e3 build: configure git lfs for Pascal Unity assets`
 
 ## Verification commands
 

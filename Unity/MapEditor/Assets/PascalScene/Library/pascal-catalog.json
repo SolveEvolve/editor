@@ -1,0 +1,5013 @@
+{
+  "schemaVersion": 1,
+  "source": "pascal-editor-catalog",
+  "sourceSha256": "8fc8a77bc4df7a680146b83610b26c33f21357a59d12edab033739526ff2d2b6",
+  "generatedAt": "2026-07-29T17:07:52.299Z",
+  "entries": [
+    {
+      "id": "cactus",
+      "category": "furniture",
+      "name": "Cactus",
+      "tags": [
+        "cactus",
+        "rack",
+        "stand",
+        "hanger",
+        "sculpture",
+        "decor",
+        "modern",
+        "contemporary",
+        "pop",
+        "green",
+        "organizer",
+        "storage",
+        "sculptural"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/cactus/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/cactus/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/cactus/floor-plan.png",
+      "dimensions": [
+        0.34,
+        0.39,
+        0.27
+      ],
+      "offset": [
+        -0.0039,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/cactus.glb",
+      "sha256": "21a7772215ddc0ebe332e4124a6edfe3401d5c860a413654944b855f1366023e",
+      "bytes": 7464
+    },
+    {
+      "id": "tv-stand",
+      "category": "furniture",
+      "name": "TV Stand",
+      "tags": [
+        "floor",
+        "storage"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/tv-stand/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/tv-stand/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/tv-stand/floor-plan.png",
+      "dimensions": [
+        1.86,
+        0.35,
+        0.32
+      ],
+      "offset": [
+        0,
+        0.2066,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 0.35
+      },
+      "localPath": "Assets/PascalScene/Library/Models/tv-stand.glb",
+      "sha256": "4703963652959cd707aeba305774cfc2b1b593fa115b7e19ccf847891a04a017",
+      "bytes": 1664
+    },
+    {
+      "id": "dining-table-mo9ms5yh",
+      "category": "furniture",
+      "name": "Dining table",
+      "tags": [
+        "dining",
+        "table",
+        "dinette",
+        "wood",
+        "oak",
+        "modern",
+        "minimalist",
+        "scandinavian",
+        "rectangular",
+        "kitchen",
+        "mealtime",
+        "entertaining"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-table-mo9ms5yh/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-table-mo9ms5yh/models/item_model_Sffq4hIGw8R3keLh.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-table-mo9ms5yh/floor-plan.png",
+      "dimensions": [
+        2,
+        0.77,
+        0.91
+      ],
+      "offset": [
+        0.0002,
+        0.3793,
+        -0.0026
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2,
+        2,
+        2
+      ],
+      "surface": {
+        "height": 0.77
+      },
+      "localPath": "Assets/PascalScene/Library/Models/dining-table-mo9ms5yh.glb",
+      "sha256": "edd884d90d763f6612b83541bfdf3097828e7ad558cab83ea935e6fe526406eb",
+      "bytes": 299876
+    },
+    {
+      "id": "single-bed",
+      "category": "furniture",
+      "name": "Single Bed",
+      "tags": [
+        "floor",
+        "bedroom"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/single-bed/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/single-bed/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/single-bed/floor-plan.png",
+      "dimensions": [
+        1.08,
+        0.6,
+        2.14
+      ],
+      "offset": [
+        -0.0024,
+        0,
+        -0.013
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/single-bed.glb",
+      "sha256": "12fd880815dfa3f97b156892a0226b19249b761873805dc6266d66c7293189ac",
+      "bytes": 6168
+    },
+    {
+      "id": "livingroom-chair",
+      "category": "furniture",
+      "name": "Livingroom Chair",
+      "tags": [
+        "chair",
+        "armchair",
+        "seating",
+        "lounge",
+        "upholstered",
+        "modern",
+        "fabric",
+        "furniture",
+        "minimalist",
+        "comfort",
+        "accent",
+        "lounger"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/livingroom-chair/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/livingroom-chair/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/livingroom-chair/floor-plan.png",
+      "dimensions": [
+        1.1,
+        0.75,
+        1.07
+      ],
+      "offset": [
+        0,
+        0.0001,
+        0.0053
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/livingroom-chair.glb",
+      "sha256": "00a12e491a4a5e0fe0c24a54bcbac8596111b2b7d304d58fe6dd7622e8b57c65",
+      "bytes": 5924
+    },
+    {
+      "id": "small-indoor-plant",
+      "category": "furniture",
+      "name": "Small Plant",
+      "tags": [
+        "countertop",
+        "decor",
+        "vegetation"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/small-indoor-plant/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/small-indoor-plant/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/small-indoor-plant/floor-plan.png",
+      "dimensions": [
+        0.4,
+        0.67,
+        0.38
+      ],
+      "offset": [
+        -0.0106,
+        0,
+        0.0067
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/small-indoor-plant.glb",
+      "sha256": "57bd7a31b1677cf272a7dfc7176daae93f205b256a394794893fb86f7a75db7f",
+      "bytes": 9680
+    },
+    {
+      "id": "column",
+      "category": "furniture",
+      "name": "Column",
+      "tags": [
+        "column",
+        "pillar",
+        "pedestal",
+        "plinth",
+        "stand",
+        "marble",
+        "stone",
+        "classical",
+        "roman",
+        "greek",
+        "decorative",
+        "architectural",
+        "antique",
+        "support",
+        "base"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/column/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/column/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/column/floor-plan.png",
+      "dimensions": [
+        0.5,
+        2.5,
+        0.5
+      ],
+      "offset": [
+        0,
+        1.25,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/column.glb",
+      "sha256": "884299fba36438dc71acca9dc7fec2981ad6f97f2d4c6185d57030c9c54e431e",
+      "bytes": 4548
+    },
+    {
+      "id": "barbell",
+      "category": "furniture",
+      "name": "Barbell",
+      "tags": [
+        "barbell",
+        "weight",
+        "steel",
+        "iron",
+        "metal",
+        "gym",
+        "fitness",
+        "industrial",
+        "workout",
+        "strength",
+        "training",
+        "lifting",
+        "chrome",
+        "exercise"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/barbell/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/barbell/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/barbell/floor-plan.png",
+      "dimensions": [
+        0.38,
+        0.38,
+        1.72
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/barbell.glb",
+      "sha256": "a2676d13403ec11a7a0deb27a233b903eb76eb763cb9d467d1ab16040510c6e6",
+      "bytes": 12780
+    },
+    {
+      "id": "toy",
+      "category": "furniture",
+      "name": "Toy",
+      "tags": [
+        "floor",
+        "kids",
+        "decor"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toy/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toy/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toy/floor-plan.png",
+      "dimensions": [
+        0.29,
+        0.49,
+        0.34
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/toy.glb",
+      "sha256": "cd0a56ad4f2fd638cb195c43dd0126351fca68868d3110acf2ce01800ad2f27b",
+      "bytes": 18884
+    },
+    {
+      "id": "barbell-stand",
+      "category": "furniture",
+      "name": "Barbell Stand",
+      "tags": [
+        "rack",
+        "stand",
+        "holder",
+        "storage",
+        "metal",
+        "steel",
+        "industrial",
+        "fitness",
+        "gym",
+        "weightlifting",
+        "training",
+        "minimalist",
+        "black",
+        "organizer"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/barbell-stand/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/barbell-stand/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/barbell-stand/floor-plan.png",
+      "dimensions": [
+        1.34,
+        1.22,
+        1.72
+      ],
+      "offset": [
+        -0.0173,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/barbell-stand.glb",
+      "sha256": "b539be6ea99a29ce80bf58942633b787b3b2c296d49529e91611173d5b8207d0",
+      "bytes": 22740
+    },
+    {
+      "id": "books",
+      "category": "furniture",
+      "name": "Books",
+      "tags": [
+        "books",
+        "novels",
+        "literature",
+        "reading",
+        "vintage",
+        "classic",
+        "decorative",
+        "paper",
+        "leather",
+        "library",
+        "study",
+        "office",
+        "decor",
+        "shelf",
+        "antique"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/books/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/books/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/books/floor-plan.png",
+      "dimensions": [
+        0.22,
+        0.22,
+        0.18
+      ],
+      "offset": [
+        -0.0851,
+        0.003,
+        0.0209
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/books.glb",
+      "sha256": "4c804887930604372a6c94bbd7ffcb51075537314801ed6b79ef04acd46499c5",
+      "bytes": 18212
+    },
+    {
+      "id": "stool",
+      "category": "furniture",
+      "name": "Stool",
+      "tags": [
+        "floor",
+        "seating"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/stool/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/stool/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/stool/floor-plan.png",
+      "dimensions": [
+        0.52,
+        1.16,
+        0.55
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/stool.glb",
+      "sha256": "51040685615ef6003bc4a08d27615a7ba04e1e22ba92bb310ab80f86469d28b3",
+      "bytes": 5036
+    },
+    {
+      "id": "pool-table",
+      "category": "furniture",
+      "name": "Pool table",
+      "tags": [
+        "pool",
+        "billiards",
+        "snooker",
+        "table",
+        "recreation",
+        "leisure",
+        "entertainment",
+        "wood",
+        "felt",
+        "gaming",
+        "traditional",
+        "luxury",
+        "classic",
+        "hobby",
+        "furniture"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/pool-table/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/pool-table/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/pool-table/floor-plan.png",
+      "dimensions": [
+        2.11,
+        0.98,
+        3.5
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/pool-table.glb",
+      "sha256": "a0ed1c141a8646ca251f6d92de816f2cbecd3e498ea9fb3f013c44e5554da9ca",
+      "bytes": 66096
+    },
+    {
+      "id": "bookshelf",
+      "category": "furniture",
+      "name": "Bookshelf",
+      "tags": [
+        "bookshelf",
+        "bookcase",
+        "shelving",
+        "storage",
+        "organizer",
+        "modern",
+        "minimalist",
+        "wood",
+        "metal",
+        "industrial",
+        "library",
+        "office",
+        "furniture",
+        "display",
+        "timber"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bookshelf/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bookshelf/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bookshelf/floor-plan.png",
+      "dimensions": [
+        0.93,
+        1.99,
+        0.33
+      ],
+      "offset": [
+        0,
+        0,
+        0.0032
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/bookshelf.glb",
+      "sha256": "81d2cc805b1b51bb1ef86fc34accb3e2676fc15517d691aed1a36013de00365b",
+      "bytes": 3524
+    },
+    {
+      "id": "coat-rack",
+      "category": "furniture",
+      "name": "Coat Rack",
+      "tags": [
+        "coatrack",
+        "rack",
+        "hanger",
+        "valet",
+        "organizer",
+        "storage",
+        "entryway",
+        "hallway",
+        "minimalist",
+        "metal",
+        "wood",
+        "mudroom",
+        "hooks",
+        "clothes"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/coat-rack/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/coat-rack/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/coat-rack/floor-plan.png",
+      "dimensions": [
+        0.33,
+        1.76,
+        0.33
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/coat-rack.glb",
+      "sha256": "f7ede0a869664b66872aa6bc13998e94b22b464c22d7aa563a7c30feaf65087d",
+      "bytes": 4120
+    },
+    {
+      "id": "car-toy",
+      "category": "furniture",
+      "name": "Car Toy",
+      "tags": [
+        "car",
+        "toy",
+        "vehicle",
+        "racer",
+        "play",
+        "nursery",
+        "playroom",
+        "wooden",
+        "vintage",
+        "decor",
+        "kids",
+        "child",
+        "classic",
+        "miniature",
+        "hobby"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/car-toy/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/car-toy/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/car-toy/floor-plan.png",
+      "dimensions": [
+        0.31,
+        0.38,
+        0.6
+      ],
+      "offset": [
+        0.0005,
+        0.0005,
+        -0.0075
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/car-toy.glb",
+      "sha256": "c0c4e8fc08486e4ba4fff03607945031d7712e40e59887faa594b34ef7588c4c",
+      "bytes": 20108
+    },
+    {
+      "id": "bedside-table",
+      "category": "furniture",
+      "name": "Bedside Table",
+      "tags": [
+        "nightstand",
+        "table",
+        "bedroom",
+        "storage",
+        "wood",
+        "modern",
+        "minimalist",
+        "stand",
+        "drawer",
+        "furniture",
+        "cabinet",
+        "bedside"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bedside-table/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bedside-table/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bedside-table/floor-plan.png",
+      "dimensions": [
+        0.45,
+        0.48,
+        0.46
+      ],
+      "offset": [
+        0.0005,
+        0,
+        -0.0062
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 0.48
+      },
+      "localPath": "Assets/PascalScene/Library/Models/bedside-table.glb",
+      "sha256": "ae287c86595a3751f6259f5d8c440af7affded0171a82d43d393cef825f15c76",
+      "bytes": 4524
+    },
+    {
+      "id": "cabinet",
+      "tool": "cabinet",
+      "category": "furniture",
+      "name": "Modular Cabinet",
+      "tags": [
+        "cabinet",
+        "cupboard",
+        "storage",
+        "kitchen",
+        "pantry",
+        "wood",
+        "timber",
+        "modern",
+        "contemporary",
+        "minimalist",
+        "organization",
+        "furniture"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-cabinet/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-cabinet/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-cabinet/floor-plan.png",
+      "dimensions": [
+        1.65,
+        1.09,
+        0.77
+      ],
+      "offset": [
+        0,
+        0.0004,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 1.09
+      },
+      "localPath": "Assets/PascalScene/Library/Models/cabinet.glb",
+      "sha256": "32426f302bf71ce22d900107c8eac04f0d58d9a01d8fdb9898bff62fa4903e27",
+      "bytes": 6488
+    },
+    {
+      "id": "sofa",
+      "category": "furniture",
+      "name": "Sofa",
+      "tags": [
+        "floor",
+        "seating"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sofa/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sofa/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sofa/floor-plan.png",
+      "dimensions": [
+        2.06,
+        0.74,
+        1.01
+      ],
+      "offset": [
+        -0.0023,
+        0.009,
+        0.0459
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/sofa.glb",
+      "sha256": "f40aa74dee9eaf82b0a01fb6b7115a70e6372f155c5afc9e880927f481abc0c3",
+      "bytes": 7908
+    },
+    {
+      "id": "bunkbed",
+      "category": "furniture",
+      "name": "Bunkbed",
+      "tags": [
+        "bunkbed",
+        "bed",
+        "sleeper",
+        "loft",
+        "bedroom",
+        "kids",
+        "wood",
+        "metal",
+        "modern",
+        "sleeping",
+        "ladder",
+        "rustic",
+        "dormitory",
+        "furniture"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bunkbed/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bunkbed/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bunkbed/floor-plan.png",
+      "dimensions": [
+        1.65,
+        1.55,
+        0.99
+      ],
+      "offset": [
+        0,
+        0,
+        -0.0886
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/bunkbed.glb",
+      "sha256": "c17329932a91805fb893510a0353da81083975c38ab6de01d5a25702bda1cf58",
+      "bytes": 37528
+    },
+    {
+      "id": "my-leather-couch-modp80ha",
+      "category": "furniture",
+      "name": "My leather couch",
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/my-leather-couch-modp80ha/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/my-leather-couch-modp80ha/models/item_model_kgORhH5vwFK8xub0.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/my-leather-couch-modp80ha/floor-plan.png",
+      "dimensions": [
+        2,
+        0.67,
+        0.61
+      ],
+      "offset": [
+        -0.0005,
+        0.3228,
+        -0.004
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2,
+        2,
+        2
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/my-leather-couch-modp80ha.glb",
+      "sha256": "633a7111231fa38005ed7401591a656fe6962ecfc53e399b41d1c81fd0e66573",
+      "bytes": 232492
+    },
+    {
+      "id": "office-table",
+      "category": "furniture",
+      "name": "Office Table",
+      "tags": [
+        "desk",
+        "table",
+        "workstation",
+        "furniture",
+        "office",
+        "work",
+        "study",
+        "writing",
+        "modern",
+        "minimalist",
+        "industrial",
+        "wood",
+        "metal"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/office-table/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/office-table/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/office-table/floor-plan.png",
+      "dimensions": [
+        1.51,
+        0.76,
+        0.62
+      ],
+      "offset": [
+        -0.0001,
+        0,
+        -0.0052
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 0.75
+      },
+      "localPath": "Assets/PascalScene/Library/Models/office-table.glb",
+      "sha256": "84f33dd62dc34525f62eb72b52c62194de8fc4026b6f2b8f5207f031f4098bc0",
+      "bytes": 3780
+    },
+    {
+      "id": "dining-table",
+      "category": "furniture",
+      "name": "Dining Table",
+      "tags": [
+        "table",
+        "dining",
+        "furniture",
+        "wood",
+        "modern",
+        "minimalist",
+        "kitchen",
+        "eating",
+        "surface",
+        "contemporary",
+        "gathering",
+        "walnut"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-table/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-table/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-table/floor-plan.png",
+      "dimensions": [
+        2.16,
+        0.7,
+        0.95
+      ],
+      "offset": [
+        0,
+        0,
+        -0.0077
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 0.7
+      },
+      "localPath": "Assets/PascalScene/Library/Models/dining-table.glb",
+      "sha256": "92a54b7607e726d8d8d403dac996cad1220669fbbe734bb4087ef8e2aa7af417",
+      "bytes": 3424
+    },
+    {
+      "id": "guitar",
+      "category": "furniture",
+      "name": "Guitar",
+      "tags": [
+        "guitar",
+        "instrument",
+        "musical",
+        "wood",
+        "acoustic",
+        "vintage",
+        "classic",
+        "decor",
+        "mahogany",
+        "string",
+        "art",
+        "hobby"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/guitar/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/guitar/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/guitar/floor-plan.png",
+      "dimensions": [
+        0.4,
+        1.18,
+        0.09
+      ],
+      "offset": [
+        -0.0009,
+        0.3197,
+        -0.0129
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/guitar.glb",
+      "sha256": "dc022f857d2ffc854e94af66ff3fef0761ffaec715be8988ae5c811e74807586",
+      "bytes": 8832
+    },
+    {
+      "id": "trash-bin",
+      "category": "furniture",
+      "name": "Trash Bin",
+      "tags": [
+        "floor"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/trash-bin/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/trash-bin/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/trash-bin/floor-plan.png",
+      "dimensions": [
+        0.35,
+        0.59,
+        0.42
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/trash-bin.glb",
+      "sha256": "a88f236417168106ea6cc0af99f7c74788163c37206fff89cd99ea8895a150f4",
+      "bytes": 4020
+    },
+    {
+      "id": "recessed-light",
+      "category": "furniture",
+      "name": "Recessed Light",
+      "tags": [
+        "recessed",
+        "downlight",
+        "spotlight",
+        "lighting",
+        "fixture",
+        "modern",
+        "minimalist",
+        "metal",
+        "aluminum",
+        "luminaire",
+        "ambient",
+        "illumination",
+        "architectural",
+        "can"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/recessed-light/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/recessed-light/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/recessed-light/floor-plan.png",
+      "dimensions": [
+        0.23,
+        0.06,
+        0.23
+      ],
+      "offset": [
+        0,
+        0.0057,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "ceiling",
+      "recessed": true,
+      "interactive": {
+        "controls": [
+          {
+            "kind": "toggle"
+          },
+          {
+            "kind": "slider",
+            "label": "Intensity",
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "displayMode": "dial",
+            "default": 100
+          }
+        ],
+        "effects": [
+          {
+            "kind": "light",
+            "intensityRange": [
+              0,
+              2
+            ],
+            "color": "#ffffff",
+            "offset": [
+              0,
+              -0.1,
+              0
+            ]
+          }
+        ]
+      },
+      "localPath": "Assets/PascalScene/Library/Models/recessed-light.glb",
+      "sha256": "e37e54d4a903639341fb9856a0f88a5299c6aaea6529749725d3134ef4235fc8",
+      "bytes": 24604
+    },
+    {
+      "id": "shelf",
+      "category": "furniture",
+      "name": "Shelf",
+      "tags": [
+        "shelf",
+        "shelving",
+        "rack",
+        "ledge",
+        "storage",
+        "organization",
+        "display",
+        "bookshelf",
+        "modern",
+        "minimalist",
+        "furniture",
+        "decor",
+        "contemporary"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shelf/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shelf/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shelf/floor-plan.png",
+      "dimensions": [
+        0.74,
+        0.04,
+        0.32
+      ],
+      "offset": [
+        0,
+        0.02,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "wall-side",
+      "surface": {
+        "height": 0.04
+      },
+      "localPath": "Assets/PascalScene/Library/Models/shelf.glb",
+      "sha256": "c70a024a161a1536d05e02f6fc6a232e9529ab05015d662eed49329675e34c11",
+      "bytes": 1512
+    },
+    {
+      "id": "table-lamp",
+      "category": "furniture",
+      "name": "Table Lamp",
+      "tags": [
+        "countertop",
+        "lighting"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/table-lamp/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/table-lamp/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/table-lamp/floor-plan.png",
+      "dimensions": [
+        0.29,
+        0.74,
+        0.67
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/table-lamp.glb",
+      "sha256": "326051ce85c8a69ab61f50a638c02c7030481a42069f3e591d09e3ce40305bf5",
+      "bytes": 9224
+    },
+    {
+      "id": "ceiling-lamp",
+      "category": "furniture",
+      "name": "Ceiling Lamp",
+      "tags": [
+        "lamp",
+        "light",
+        "chandelier",
+        "pendant",
+        "luminaire",
+        "fixture",
+        "lighting",
+        "modern",
+        "minimalist",
+        "glass",
+        "metal",
+        "indoor",
+        "illumination",
+        "interior"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ceiling-lamp/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ceiling-lamp/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ceiling-lamp/floor-plan.png",
+      "dimensions": [
+        0.55,
+        0.86,
+        0.55
+      ],
+      "offset": [
+        0,
+        0.8545,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "ceiling",
+      "interactive": {
+        "controls": [
+          {
+            "kind": "toggle"
+          },
+          {
+            "kind": "slider",
+            "label": "Intensity",
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "displayMode": "dial",
+            "default": 100
+          }
+        ],
+        "effects": [
+          {
+            "kind": "light",
+            "intensityRange": [
+              0,
+              2
+            ],
+            "color": "#ffffff",
+            "offset": [
+              0,
+              -0.3,
+              0
+            ]
+          }
+        ]
+      },
+      "localPath": "Assets/PascalScene/Library/Models/ceiling-lamp.glb",
+      "sha256": "33a6369a9a55f06508bdb953649a1850bd1a2b94f4c4ea1b4a873a3e72fabeab",
+      "bytes": 9136
+    },
+    {
+      "id": "closet",
+      "category": "furniture",
+      "name": "Closet",
+      "tags": [
+        "closet",
+        "wardrobe",
+        "armoire",
+        "cabinet",
+        "storage",
+        "organization",
+        "wood",
+        "bedroom",
+        "modern",
+        "minimalist",
+        "clothing",
+        "apparel",
+        "cupboard",
+        "locker"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/closet/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/closet/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/closet/floor-plan.png",
+      "dimensions": [
+        1.95,
+        2.26,
+        0.6
+      ],
+      "offset": [
+        0,
+        0,
+        -0.0141
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/closet.glb",
+      "sha256": "d690f77da3591ab289e18fbcec48092495c5b6b2f4ad5abfc4ea3bbbc6593658",
+      "bytes": 1784
+    },
+    {
+      "id": "coffee-table",
+      "category": "furniture",
+      "name": "Coffee Table",
+      "tags": [
+        "table",
+        "cocktail",
+        "wood",
+        "modern",
+        "minimalist",
+        "furniture",
+        "living",
+        "lounge",
+        "walnut",
+        "metal",
+        "glass",
+        "surface",
+        "decor"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/coffee-table/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/coffee-table/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/coffee-table/floor-plan.png",
+      "dimensions": [
+        1.72,
+        0.3,
+        1.04
+      ],
+      "offset": [
+        0,
+        0,
+        0.0089
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 0.3
+      },
+      "localPath": "Assets/PascalScene/Library/Models/coffee-table.glb",
+      "sha256": "63fcdd7cb8cd18b1b847199e7d6d0efaeab8db86f8ca93d3db0fcd2afe3391c8",
+      "bytes": 4296
+    },
+    {
+      "id": "dining-chair",
+      "category": "furniture",
+      "name": "Dining Chair",
+      "tags": [
+        "chair",
+        "seating",
+        "dining",
+        "furniture",
+        "modern",
+        "wood",
+        "upholstered",
+        "kitchen",
+        "seat",
+        "minimalist",
+        "timber",
+        "bistro"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-chair/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-chair/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-chair/floor-plan.png",
+      "dimensions": [
+        0.47,
+        0.87,
+        0.5
+      ],
+      "offset": [
+        0,
+        0,
+        0.0016
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/dining-chair.glb",
+      "sha256": "fea8f3c14fdccb8beae9101d8e689f0a17f67d84fbfe1ffabf133cee2ffe5c5b",
+      "bytes": 5176
+    },
+    {
+      "id": "dresser",
+      "category": "furniture",
+      "name": "Dresser",
+      "tags": [
+        "dresser",
+        "chest",
+        "bureau",
+        "storage",
+        "bedroom",
+        "drawers",
+        "wood",
+        "modern",
+        "organization",
+        "cabinet",
+        "rustic",
+        "minimalist"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dresser/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dresser/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dresser/floor-plan.png",
+      "dimensions": [
+        1.23,
+        0.73,
+        0.61
+      ],
+      "offset": [
+        0,
+        0,
+        -0.0066
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 0.73
+      },
+      "localPath": "Assets/PascalScene/Library/Models/dresser.glb",
+      "sha256": "6e773cb510e0a808f0fb09c449184ab69011576f96c8a67bcb8f0186f079c34f",
+      "bytes": 4348
+    },
+    {
+      "id": "ikea-kallax-1x4-moa2y49n",
+      "category": "furniture",
+      "name": "Ikea Kallax 2x4",
+      "tags": [
+        "shelf",
+        "bookcase",
+        "shelving",
+        "storage",
+        "organizer",
+        "cubby",
+        "cube",
+        "scandinavian",
+        "modern",
+        "minimalist",
+        "wood",
+        "laminate",
+        "display",
+        "modular"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ikea-kallax-1x4-moa2y49n/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ikea-kallax-1x4-moa2y49n/models/item_model_ocVHS1SWDex5DeYc.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ikea-kallax-1x4-moa2y49n/floor-plan.png",
+      "dimensions": [
+        1.09,
+        2.06,
+        0.55
+      ],
+      "offset": [
+        0,
+        -0.0053,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.4,
+        1.4,
+        1.4
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/ikea-kallax-1x4-moa2y49n.glb",
+      "sha256": "218e75bd62544a3e644c280beaf002cab06d98d41c68be0f2c89c5207214a81a",
+      "bytes": 1884
+    },
+    {
+      "id": "indoor-plant",
+      "category": "furniture",
+      "name": "Indoor Plant",
+      "tags": [
+        "plant",
+        "greenery",
+        "botanical",
+        "foliage",
+        "houseplant",
+        "organic",
+        "natural",
+        "modern",
+        "minimalist",
+        "tropical",
+        "decor",
+        "accent",
+        "green",
+        "ceramic"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/indoor-plant/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/indoor-plant/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/indoor-plant/floor-plan.png",
+      "dimensions": [
+        0.69,
+        1.63,
+        0.83
+      ],
+      "offset": [
+        -0.0506,
+        0,
+        0.0664
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/indoor-plant.glb",
+      "sha256": "a1ac7116faa84d547e23c5a9c8c15d73b57971b4cdd7f46d9361427aeec6b548",
+      "bytes": 40700
+    },
+    {
+      "id": "ironing-board",
+      "category": "furniture",
+      "name": "Ironing Board",
+      "tags": [
+        "ironing",
+        "board",
+        "laundry",
+        "foldable",
+        "metal",
+        "utility",
+        "pressing",
+        "collapsible",
+        "stand",
+        "table",
+        "organization",
+        "industrial"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ironing-board/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ironing-board/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ironing-board/floor-plan.png",
+      "dimensions": [
+        1.31,
+        0.96,
+        0.48
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/ironing-board.glb",
+      "sha256": "e708c3b8448e0e1800c871cde536aebb9400e8156bc280cd3ffaf95baec177c2",
+      "bytes": 7268
+    },
+    {
+      "id": "double-bed",
+      "category": "furniture",
+      "name": "Double Bed",
+      "tags": [
+        "bed",
+        "bedstead",
+        "double",
+        "frame",
+        "bedroom",
+        "sleeping",
+        "modern",
+        "minimalist",
+        "upholstered",
+        "wood",
+        "sleep",
+        "furniture",
+        "contemporary"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/double-bed/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/double-bed/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/double-bed/floor-plan.png",
+      "dimensions": [
+        1.52,
+        0.71,
+        2
+      ],
+      "offset": [
+        0.0042,
+        0,
+        -0.0277
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/double-bed.glb",
+      "sha256": "5ba5525e813553ee3138e80d84dd7dc4a6a5240d9fea6f43cc17c7add93d525e",
+      "bytes": 8096
+    },
+    {
+      "id": "floor-lamp",
+      "category": "furniture",
+      "name": "Floor Lamp",
+      "tags": [
+        "lamp",
+        "luminaire",
+        "light",
+        "torchere",
+        "lighting",
+        "illumination",
+        "metal",
+        "brass",
+        "modern",
+        "minimalist",
+        "industrial",
+        "decor",
+        "ambient",
+        "reading",
+        "sleek"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/floor-lamp/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/floor-lamp/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/floor-lamp/floor-plan.png",
+      "dimensions": [
+        0.7,
+        1.86,
+        0.69
+      ],
+      "offset": [
+        0.0341,
+        0.0045,
+        0.0219
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "interactive": {
+        "controls": [
+          {
+            "kind": "toggle"
+          },
+          {
+            "kind": "slider",
+            "label": "Intensity",
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "displayMode": "dial",
+            "default": 100
+          }
+        ],
+        "effects": [
+          {
+            "kind": "light",
+            "intensityRange": [
+              0,
+              2
+            ],
+            "color": "#ffffff",
+            "offset": [
+              0,
+              1.4,
+              0
+            ]
+          }
+        ]
+      },
+      "localPath": "Assets/PascalScene/Library/Models/floor-lamp.glb",
+      "sha256": "88db8fd26d512938a00f08030d49d4fe2643aa66d428cc2a08e52b5d321c8a5b",
+      "bytes": 3836
+    },
+    {
+      "id": "herman-miller-aeron-mo8x36k9",
+      "category": "furniture",
+      "name": "Herman Miller Aeron",
+      "tags": [
+        "office"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/herman-miller-aeron-mo8x36k9/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/herman-miller-aeron-mo8x36k9/models/item_model_YshL4maC8cHtry5c.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/herman-miller-aeron-mo8x36k9/floor-plan.png",
+      "dimensions": [
+        0.67,
+        1.06,
+        0.66
+      ],
+      "offset": [
+        -0.0013,
+        0.5256,
+        0.0028
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.05,
+        1.05,
+        1.05
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/herman-miller-aeron-mo8x36k9.glb",
+      "sha256": "0f0f617db20a11eb577c1a59b3d37b58e673092e2402629299da0a1d44fb28f2",
+      "bytes": 117988
+    },
+    {
+      "id": "easel",
+      "category": "furniture",
+      "name": "Easel",
+      "tags": [
+        "easel",
+        "stand",
+        "tripod",
+        "art",
+        "studio",
+        "wood",
+        "display",
+        "canvas",
+        "atelier",
+        "presentation",
+        "wooden",
+        "sketching",
+        "painting",
+        "decor"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/easel/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/easel/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/easel/floor-plan.png",
+      "dimensions": [
+        0.99,
+        2.32,
+        0.55
+      ],
+      "offset": [
+        0,
+        0.0402,
+        0.0116
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/easel.glb",
+      "sha256": "ff402b50b5a3259dd9715f784c0f70e060f7e5dac39975c8e742e10bb966ad60",
+      "bytes": 5700
+    },
+    {
+      "id": "lounge-chair",
+      "category": "furniture",
+      "name": "Lounge Chair",
+      "tags": [
+        "chair",
+        "armchair",
+        "seating",
+        "lounge",
+        "seat",
+        "modern",
+        "contemporary",
+        "minimalist",
+        "comfort",
+        "relaxation",
+        "upholstered",
+        "interior",
+        "furniture"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/lounge-chair/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/lounge-chair/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/lounge-chair/floor-plan.png",
+      "dimensions": [
+        0.68,
+        1.03,
+        1.26
+      ],
+      "offset": [
+        0,
+        0.0034,
+        0.0894
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/lounge-chair.glb",
+      "sha256": "12834efb48e32435a312adcab399b1aa74d7fa1c9083a48c3322dc46d2f47626",
+      "bytes": 5256
+    },
+    {
+      "id": "office-chair",
+      "category": "furniture",
+      "name": "Office Chair",
+      "tags": [
+        "chair",
+        "seating",
+        "ergonomic",
+        "swivel",
+        "office",
+        "desk",
+        "mesh",
+        "leather",
+        "modern",
+        "task",
+        "workspace",
+        "professional",
+        "computer"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/office-chair/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/office-chair/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/office-chair/floor-plan.png",
+      "dimensions": [
+        0.66,
+        1.16,
+        0.69
+      ],
+      "offset": [
+        0.0024,
+        0.0015,
+        0.0332
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/office-chair.glb",
+      "sha256": "2ea58198ef2473007e395f66c4c639dee82d2b4de27fe7f5cb34c7a80d6bde25",
+      "bytes": 11500
+    },
+    {
+      "id": "piano",
+      "category": "furniture",
+      "name": "Piano",
+      "tags": [
+        "piano",
+        "instrument",
+        "musical",
+        "grand",
+        "upright",
+        "keyboard",
+        "wood",
+        "polished",
+        "lacquer",
+        "ebony",
+        "classic",
+        "traditional",
+        "music",
+        "entertainment",
+        "luxury"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/piano/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/piano/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/piano/floor-plan.png",
+      "dimensions": [
+        1.54,
+        1.44,
+        0.69
+      ],
+      "offset": [
+        0,
+        0,
+        0.0162
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/piano.glb",
+      "sha256": "cc858d13e03592e285670ac6471c0b82550045a25c3f5119bffcdf07bbcff855",
+      "bytes": 432080
+    },
+    {
+      "id": "picture",
+      "category": "furniture",
+      "name": "Picture",
+      "tags": [
+        "picture",
+        "frame",
+        "art",
+        "artwork",
+        "print",
+        "canvas",
+        "decor",
+        "modern",
+        "abstract",
+        "minimalist",
+        "decorative",
+        "glass",
+        "wood",
+        "illustration",
+        "portrait"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/picture/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/picture/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/picture/floor-plan.png",
+      "dimensions": [
+        1.47,
+        0.82,
+        0.06
+      ],
+      "offset": [
+        0,
+        0.41,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "wall-side",
+      "localPath": "Assets/PascalScene/Library/Models/picture.glb",
+      "sha256": "08961164f1e73bc5ce64331442f6a7124c7fd70bfdec859983f8ec2ff2be75c8",
+      "bytes": 3544
+    },
+    {
+      "id": "rectangular-carpet",
+      "category": "furniture",
+      "name": "Rectangular Carpet",
+      "tags": [
+        "carpet",
+        "rug",
+        "mat",
+        "textile",
+        "woven",
+        "rectangular",
+        "modern",
+        "wool",
+        "cotton",
+        "minimalist",
+        "decor",
+        "plush"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/rectangular-carpet/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/rectangular-carpet/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/rectangular-carpet/floor-plan.png",
+      "dimensions": [
+        2.78,
+        0.04,
+        1.81
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 0.03
+      },
+      "localPath": "Assets/PascalScene/Library/Models/rectangular-carpet.glb",
+      "sha256": "f094d1455a999d08ae9e55a26d5d20d8713900a6332e4cce785e275369e4639a",
+      "bytes": 7976
+    },
+    {
+      "id": "round-mirror",
+      "category": "furniture",
+      "name": "Rounded Mirror",
+      "tags": [
+        "mirror",
+        "glass",
+        "reflective",
+        "circular",
+        "oval",
+        "modern",
+        "minimalist",
+        "contemporary",
+        "scandinavian",
+        "vanity",
+        "decor",
+        "curved",
+        "reflection",
+        "grooming"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/round-mirror/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/round-mirror/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/round-mirror/floor-plan.png",
+      "dimensions": [
+        0.57,
+        0.57,
+        0.05
+      ],
+      "offset": [
+        0,
+        0.2848,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "wall-side",
+      "localPath": "Assets/PascalScene/Library/Models/round-mirror.glb",
+      "sha256": "3defa9ccacc976ca3817a4b5acca32d3ec2883b98ed27b691792b7a5814ef210",
+      "bytes": 3240
+    },
+    {
+      "id": "round-carpet",
+      "category": "furniture",
+      "name": "Round Carpet",
+      "tags": [
+        "carpet",
+        "rug",
+        "mat",
+        "circular",
+        "modern",
+        "minimalist",
+        "scandinavian",
+        "textile",
+        "woven",
+        "decor",
+        "accent",
+        "wool",
+        "fiber",
+        "interior"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/round-carpet/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/round-carpet/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/round-carpet/floor-plan.png",
+      "dimensions": [
+        1.99,
+        0.05,
+        1.99
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 0.04
+      },
+      "localPath": "Assets/PascalScene/Library/Models/round-carpet.glb",
+      "sha256": "e9ad727b747e8e4000156b14d20813be8894023cc1e78c9411340c4877d902ec",
+      "bytes": 7228
+    },
+    {
+      "id": "threadmill",
+      "category": "furniture",
+      "name": "Threadmill",
+      "tags": [
+        "floor",
+        "fitness"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/threadmill/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/threadmill/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/threadmill/floor-plan.png",
+      "dimensions": [
+        2.1,
+        1.45,
+        0.9
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/threadmill.glb",
+      "sha256": "5ca8c01b4134a4d8b89ced5434ea3d371c4211ee141d459c9059dfa1161ea7d4",
+      "bytes": 18156
+    },
+    {
+      "id": "standing-desk-mo8wgz95",
+      "category": "furniture",
+      "name": "Standing Desk",
+      "tags": [
+        "office"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/standing-desk-mo8wgz95/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/standing-desk-mo8wgz95/models/item_model_zzZ58018waP8VY6Z.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/standing-desk-mo8wgz95/floor-plan.png",
+      "dimensions": [
+        1.41,
+        0.85,
+        0.68
+      ],
+      "offset": [
+        0,
+        0.4203,
+        0.0019
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.4,
+        1.4,
+        1.4
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/standing-desk-mo8wgz95.glb",
+      "sha256": "b33ea9fbc7cefd4b1afb5515fa098c80f6459ac6394de5a21fec58debb5bb1fb",
+      "bytes": 100608
+    },
+    {
+      "id": "sprinkler",
+      "category": "appliance",
+      "name": "Sprinkler",
+      "tags": [
+        "ceiling",
+        "safety"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sprinkler/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sprinkler/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sprinkler/floor-plan.png",
+      "dimensions": [
+        0.09,
+        0.04,
+        0.09
+      ],
+      "offset": [
+        0,
+        0.0386,
+        0
+      ],
+      "rotation": [
+        3.141592653589793,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "ceiling",
+      "localPath": "Assets/PascalScene/Library/Models/sprinkler.glb",
+      "sha256": "def6e55f7ac5ca0973292517b7818f74ea7509b37c2cd681cafa7f2a45fd942b",
+      "bytes": 52920
+    },
+    {
+      "id": "exit-sign",
+      "category": "appliance",
+      "name": "Exit Sign",
+      "tags": [
+        "sign",
+        "signage",
+        "exit",
+        "emergency",
+        "safety",
+        "wayfinding",
+        "directional",
+        "lighting",
+        "led",
+        "commercial",
+        "industrial",
+        "marker",
+        "egress",
+        "appliance"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/exit-sign/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/exit-sign/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/exit-sign/floor-plan.png",
+      "dimensions": [
+        0.54,
+        0.27,
+        0.1
+      ],
+      "offset": [
+        0,
+        0.0036,
+        0.0452
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.6,
+        0.5,
+        0.7
+      ],
+      "attachTo": "wall-side",
+      "localPath": "Assets/PascalScene/Library/Models/exit-sign.glb",
+      "sha256": "3d80129bd5562e47cb6d248894239e8b5c943351029dcdaf415ad61f607e77ca",
+      "bytes": 6148
+    },
+    {
+      "id": "sewing-machine",
+      "category": "appliance",
+      "name": "Sewing Machine",
+      "tags": [
+        "sewing",
+        "machine",
+        "appliance",
+        "tailor",
+        "craft",
+        "hobby",
+        "textile",
+        "metal",
+        "plastic",
+        "vintage",
+        "modern",
+        "industrial",
+        "mending",
+        "stitching"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sewing-machine/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sewing-machine/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sewing-machine/floor-plan.png",
+      "dimensions": [
+        0.83,
+        0.68,
+        0.32
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/sewing-machine.glb",
+      "sha256": "3b025921f545795a1b7defe2c8c39aceb3177cd9f017851b51c0ad1cbc093f7c",
+      "bytes": 9212
+    },
+    {
+      "id": "television",
+      "category": "appliance",
+      "name": "Television",
+      "tags": [
+        "floor",
+        "electronics"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/television/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/television/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/television/floor-plan.png",
+      "dimensions": [
+        1.62,
+        1.07,
+        0.38
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/television.glb",
+      "sha256": "0e4d42d768623af95f762d46757e54026038c7d2f39c377b0dc17b6b918c27f7",
+      "bytes": 3332
+    },
+    {
+      "id": "power-outlet-moa09g0o",
+      "category": "appliance",
+      "name": "Power Outlet",
+      "tags": [
+        "electric"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/power-outlet-moa09g0o/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/power-outlet-moa09g0o/models/item_model_PTDhACPTrrrtLLeI.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/power-outlet-moa09g0o/floor-plan.png",
+      "dimensions": [
+        0.09,
+        0.09,
+        0.03
+      ],
+      "offset": [
+        0,
+        0.045,
+        0.0117
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.09,
+        0.09,
+        0.09
+      ],
+      "attachTo": "wall-side",
+      "localPath": "Assets/PascalScene/Library/Models/power-outlet-moa09g0o.glb",
+      "sha256": "c300c46cbf78d7ea192eeb151889c74b988e83419d2a86bd0d495edfb8511a1c",
+      "bytes": 124468
+    },
+    {
+      "id": "ac-block",
+      "category": "appliance",
+      "name": "AC block",
+      "tags": [
+        "conditioner",
+        "cooler",
+        "hvac",
+        "cooling",
+        "appliance",
+        "vent",
+        "modern",
+        "minimalist",
+        "metal",
+        "industrial",
+        "white",
+        "utility",
+        "ventilation",
+        "unit",
+        "climate"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ac-block/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ac-block/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ac-block/floor-plan.png",
+      "dimensions": [
+        1.06,
+        0.95,
+        1.06
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.79,
+        0.79,
+        0.79
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/ac-block.glb",
+      "sha256": "9a324e6b7fb884bc47b46ae833201b56dbca102fbab5f999fe52d23ec8f1436f",
+      "bytes": 31960
+    },
+    {
+      "id": "stereo-speaker",
+      "category": "appliance",
+      "name": "Stereo Speaker",
+      "tags": [
+        "floor",
+        "electronics"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/stereo-speaker/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/stereo-speaker/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/stereo-speaker/floor-plan.png",
+      "dimensions": [
+        0.23,
+        1,
+        0.34
+      ],
+      "offset": [
+        0,
+        0,
+        -0.0129
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/stereo-speaker.glb",
+      "sha256": "37db8b0c163632b07a5bf86a20aa4b6555cba67d621fcba31eddf0148710b340",
+      "bytes": 4552
+    },
+    {
+      "id": "thermostat",
+      "category": "appliance",
+      "name": "Thermostat",
+      "tags": [
+        "wall",
+        "climate",
+        "electrical"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/thermostat/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/thermostat/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/thermostat/floor-plan.png",
+      "dimensions": [
+        0.1,
+        0.1,
+        0.01
+      ],
+      "offset": [
+        0,
+        0.0013,
+        0.0022
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.08,
+        2.1,
+        2.59
+      ],
+      "attachTo": "wall-side",
+      "localPath": "Assets/PascalScene/Library/Models/thermostat.glb",
+      "sha256": "babaf26f72d7e244b5937661e18167cd76b9ac9e97f6bb7b279b6e6155fe643f",
+      "bytes": 11412
+    },
+    {
+      "id": "toaster",
+      "category": "appliance",
+      "name": "Toaster",
+      "tags": [
+        "countertop",
+        "electronics"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toaster/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toaster/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toaster/floor-plan.png",
+      "dimensions": [
+        0.28,
+        0.23,
+        0.17
+      ],
+      "offset": [
+        -0.0057,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/toaster.glb",
+      "sha256": "8e72c00a75aa4d85f2c10f890292354aca15cd2fcb7f10b4cc7425724c0c13cc",
+      "bytes": 3624
+    },
+    {
+      "id": "kettle",
+      "category": "appliance",
+      "name": "Kettle",
+      "tags": [
+        "kettle",
+        "teapot",
+        "boiler",
+        "electric",
+        "kitchen",
+        "appliance",
+        "metal",
+        "steel",
+        "modern",
+        "tea",
+        "coffee",
+        "boiling",
+        "beverage",
+        "breakfast"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kettle/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kettle/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kettle/floor-plan.png",
+      "dimensions": [
+        0.24,
+        0.25,
+        0.18
+      ],
+      "offset": [
+        -0.026,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/kettle.glb",
+      "sha256": "515c442fa8b7e918b4d7aeef376900ef5af245de2c0418e6068585cb735693d8",
+      "bytes": 15612
+    },
+    {
+      "id": "hydrant",
+      "category": "appliance",
+      "name": "Hydrant",
+      "tags": [
+        "hydrant",
+        "faucet",
+        "spigot",
+        "valve",
+        "metal",
+        "iron",
+        "industrial",
+        "vintage",
+        "retro",
+        "plumbing",
+        "water",
+        "utility",
+        "outdoor",
+        "garden",
+        "red"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/hydrant/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/hydrant/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/hydrant/floor-plan.png",
+      "dimensions": [
+        0.64,
+        0.88,
+        0.64
+      ],
+      "offset": [
+        -0.0046,
+        0,
+        -0.0008
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/hydrant.glb",
+      "sha256": "211e6292d68d8babbd618aa1fd22ffd3c9a211ca89ceba88ca63a7a1606fdb1f",
+      "bytes": 3144
+    },
+    {
+      "id": "fire-detector",
+      "category": "appliance",
+      "name": "Fire Detector",
+      "tags": [
+        "detector",
+        "alarm",
+        "sensor",
+        "smoke",
+        "alert",
+        "safety",
+        "security",
+        "protection",
+        "appliance",
+        "white",
+        "plastic",
+        "minimalist",
+        "modern",
+        "warning",
+        "electronic"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fire-detector/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fire-detector/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fire-detector/floor-plan.png",
+      "dimensions": [
+        0.12,
+        0.19,
+        0.07
+      ],
+      "offset": [
+        0.0281,
+        0.012,
+        0.0015
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.9,
+        1.4,
+        0.7
+      ],
+      "attachTo": "wall",
+      "localPath": "Assets/PascalScene/Library/Models/fire-detector.glb",
+      "sha256": "c2fdeb907deb217e7a83faa606dbbef54ec448a56699063ddc6ecf4ebb1e5e42",
+      "bytes": 20960
+    },
+    {
+      "id": "smoke-detector",
+      "category": "appliance",
+      "name": "Smoke Detector",
+      "tags": [
+        "ceiling",
+        "safety"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/smoke-detector/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/smoke-detector/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/smoke-detector/floor-plan.png",
+      "dimensions": [
+        0.16,
+        0.05,
+        0.16
+      ],
+      "offset": [
+        0,
+        0.0492,
+        0
+      ],
+      "rotation": [
+        3.141592653589793,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "ceiling",
+      "localPath": "Assets/PascalScene/Library/Models/smoke-detector.glb",
+      "sha256": "d233b13914e27bc3d29da50cc41f190703d0d1f64e4b2ea015affff8a998d463",
+      "bytes": 16396
+    },
+    {
+      "id": "coffee-machine",
+      "category": "appliance",
+      "name": "Coffee Machine",
+      "tags": [
+        "coffee",
+        "machine",
+        "maker",
+        "espresso",
+        "brewer",
+        "kitchen",
+        "appliance",
+        "modern",
+        "metal",
+        "sleek",
+        "black",
+        "silver",
+        "beverage",
+        "brewing"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/coffee-machine/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/coffee-machine/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/coffee-machine/floor-plan.png",
+      "dimensions": [
+        0.16,
+        0.24,
+        0.23
+      ],
+      "offset": [
+        0.0003,
+        0.0003,
+        -0.0366
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/coffee-machine.glb",
+      "sha256": "95d7b731c41d6b82a5984e68fca84f0af4ffd9af4a6cca7ae90ae4730054829e",
+      "bytes": 6604
+    },
+    {
+      "id": "ceiling-fan",
+      "category": "appliance",
+      "name": "Ceiling fan",
+      "tags": [
+        "fan",
+        "ventilator",
+        "cooling",
+        "airflow",
+        "blades",
+        "modern",
+        "industrial",
+        "metal",
+        "wood",
+        "appliance",
+        "ventilation",
+        "breeze",
+        "climate",
+        "circulation"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ceiling-fan/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ceiling-fan/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ceiling-fan/floor-plan.png",
+      "dimensions": [
+        0.92,
+        0.35,
+        1.04
+      ],
+      "offset": [
+        -0.1371,
+        0.3448,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "ceiling",
+      "interactive": {
+        "controls": [
+          {
+            "kind": "toggle"
+          }
+        ],
+        "effects": [
+          {
+            "kind": "animation",
+            "clips": {
+              "on": "On"
+            }
+          }
+        ]
+      },
+      "localPath": "Assets/PascalScene/Library/Models/ceiling-fan.glb",
+      "sha256": "d3721ebc2e4d216632b70ebb6397b2aafbe66b452e174194e4db843122523a11",
+      "bytes": 5692
+    },
+    {
+      "id": "iron",
+      "category": "appliance",
+      "name": "Iron",
+      "tags": [
+        "iron",
+        "steamer",
+        "laundry",
+        "clothing",
+        "modern",
+        "metal",
+        "plastic",
+        "ceramic",
+        "garment",
+        "pressing",
+        "household",
+        "utility",
+        "appliance",
+        "sleek"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/iron/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/iron/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/iron/floor-plan.png",
+      "dimensions": [
+        0.36,
+        0.24,
+        0.21
+      ],
+      "offset": [
+        0.026,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/iron.glb",
+      "sha256": "75b4eaa6673dd9881d5b309e2d2f331dd4bfa8c0a7b475bd17475c9e237def8c",
+      "bytes": 9780
+    },
+    {
+      "id": "air-conditioning",
+      "category": "appliance",
+      "name": "Air Conditioning",
+      "tags": [
+        "conditioner",
+        "cooling",
+        "hvac",
+        "appliance",
+        "electronic",
+        "modern",
+        "minimalist",
+        "white",
+        "climate",
+        "temperature",
+        "ventilation",
+        "airflow",
+        "comfort",
+        "sleek"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/air-conditioning/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/air-conditioning/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/air-conditioning/floor-plan.png",
+      "dimensions": [
+        1.56,
+        0.6,
+        0.41
+      ],
+      "offset": [
+        0,
+        0.3,
+        0.2018
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "wall-side",
+      "localPath": "Assets/PascalScene/Library/Models/air-conditioning.glb",
+      "sha256": "dd77757c047d14a720a21be6625a8c71aeedf9931e829d70e877d5d471c69262",
+      "bytes": 4956
+    },
+    {
+      "id": "computer",
+      "category": "appliance",
+      "name": "Computer",
+      "tags": [
+        "computer",
+        "desktop",
+        "workstation",
+        "monitor",
+        "technology",
+        "office",
+        "electronics",
+        "modern",
+        "sleek",
+        "metal",
+        "silver",
+        "minimalist",
+        "hardware",
+        "productivity"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/computer/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/computer/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/computer/floor-plan.png",
+      "dimensions": [
+        0.68,
+        0.48,
+        0.19
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/computer.glb",
+      "sha256": "092098b12798babf6618a370276d2720f69df2947d0d3c9a5723759c905a3780",
+      "bytes": 3220
+    },
+    {
+      "id": "alarm-keypad",
+      "category": "appliance",
+      "name": "Alarm Keypad",
+      "tags": [
+        "alarm",
+        "keypad",
+        "panel",
+        "security",
+        "interface",
+        "controller",
+        "modern",
+        "minimalist",
+        "digital",
+        "plastic",
+        "white",
+        "electronic",
+        "safety",
+        "automation",
+        "smart"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/alarm-keypad/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/alarm-keypad/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/alarm-keypad/floor-plan.png",
+      "dimensions": [
+        0.18,
+        0.13,
+        0.03
+      ],
+      "offset": [
+        0,
+        0.0671,
+        -0.0002
+      ],
+      "rotation": [
+        1.5708,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "wall-side",
+      "localPath": "Assets/PascalScene/Library/Models/alarm-keypad.glb",
+      "sha256": "e919fdf7fcafd92870053b0730aa1571b73e38e122511e672d0ba71cd3049854",
+      "bytes": 10284
+    },
+    {
+      "id": "ev-wall-charger",
+      "category": "appliance",
+      "name": "Ev-wall-charger",
+      "tags": [
+        "charger",
+        "station",
+        "electric",
+        "vehicle",
+        "automotive",
+        "garage",
+        "modern",
+        "minimalist",
+        "power",
+        "energy",
+        "appliance",
+        "tech",
+        "sleek",
+        "plastic",
+        "black"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ev-wall-charger/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ev-wall-charger/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ev-wall-charger/floor-plan.png",
+      "dimensions": [
+        0.29,
+        0.65,
+        0.17
+      ],
+      "offset": [
+        -0.0677,
+        0.2979,
+        0.1503
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "wall",
+      "localPath": "Assets/PascalScene/Library/Models/ev-wall-charger.glb",
+      "sha256": "b6bfa73430b38b77877aee6f9b2812aed641c0ef9628e394c86f3a06b80373d1",
+      "bytes": 68948
+    },
+    {
+      "id": "electric-panel",
+      "category": "appliance",
+      "name": "Electric Panel",
+      "tags": [
+        "breaker",
+        "box",
+        "fusebox",
+        "electrical",
+        "utility",
+        "industrial",
+        "metal",
+        "steel",
+        "power",
+        "circuit",
+        "technical",
+        "maintenance",
+        "energy",
+        "appliance"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/electric-panel/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/electric-panel/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/electric-panel/floor-plan.png",
+      "dimensions": [
+        0.4,
+        0.98,
+        0.11
+      ],
+      "offset": [
+        0,
+        0.0036,
+        0.0611
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.61,
+        0.74,
+        0.7
+      ],
+      "attachTo": "wall-side",
+      "localPath": "Assets/PascalScene/Library/Models/electric-panel.glb",
+      "sha256": "f6006d8b3a1204b71ea6cca90e40b373c76170128f9edc77e7e6600ae1597568",
+      "bytes": 2748
+    },
+    {
+      "id": "bathroom-sink",
+      "category": "bathroom",
+      "name": "Bathroom Sink",
+      "tags": [
+        "sink",
+        "basin",
+        "lavatory",
+        "washbasin",
+        "vanity",
+        "modern",
+        "minimalist",
+        "ceramic",
+        "porcelain",
+        "white",
+        "plumbing",
+        "washing",
+        "bathroom",
+        "hygiene"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bathroom-sink/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bathroom-sink/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bathroom-sink/floor-plan.png",
+      "dimensions": [
+        1.83,
+        0.97,
+        0.63
+      ],
+      "offset": [
+        0.1037,
+        0,
+        0.0221
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/bathroom-sink.glb",
+      "sha256": "61beb21ba2e83c67ea81bda5ad2b152eee4b0ebc4c010b59dd39cf6765f7ee84",
+      "bytes": 9824
+    },
+    {
+      "id": "shower-angle",
+      "category": "bathroom",
+      "name": "Angle Shower",
+      "tags": [
+        "shower",
+        "enclosure",
+        "cubicle",
+        "modern",
+        "glass",
+        "corner",
+        "bathroom",
+        "chrome",
+        "minimalist",
+        "washing",
+        "hygiene",
+        "plumbing",
+        "stall",
+        "sleek"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shower-angle/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shower-angle/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shower-angle/floor-plan.png",
+      "dimensions": [
+        0.83,
+        1.81,
+        0.83
+      ],
+      "offset": [
+        0.4102,
+        0,
+        -0.4102
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/shower-angle.glb",
+      "sha256": "3261ddc3eb99935f34dea044afe5c6df4127b7be5b5cc05df5fadd648427ec92",
+      "bytes": 15876
+    },
+    {
+      "id": "toilet-paper",
+      "category": "bathroom",
+      "name": "Toilet Paper",
+      "tags": [
+        "wall",
+        "decor"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toilet-paper/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toilet-paper/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toilet-paper/floor-plan.png",
+      "dimensions": [
+        0.26,
+        0.27,
+        0.24
+      ],
+      "offset": [
+        0,
+        0.145,
+        0.1147
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "wall-side",
+      "localPath": "Assets/PascalScene/Library/Models/toilet-paper.glb",
+      "sha256": "bbf685f92bd993c6fc9ed77da7af5305ec66281b19c455b1fc9d8bea33134a74",
+      "bytes": 5468
+    },
+    {
+      "id": "washing-machine",
+      "category": "bathroom",
+      "name": "Washing Machine",
+      "tags": [
+        "floor",
+        "large",
+        "electronics"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/washing-machine/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/washing-machine/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/washing-machine/floor-plan.png",
+      "dimensions": [
+        0.6,
+        0.86,
+        0.53
+      ],
+      "offset": [
+        0,
+        0,
+        -0.0114
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/washing-machine.glb",
+      "sha256": "1d2338b5d5b751f688e4d0d9e4a07b09da626eb56671f34bafb0c051a1af064e",
+      "bytes": 5356
+    },
+    {
+      "id": "shower-rug",
+      "category": "bathroom",
+      "name": "Shower Rug",
+      "tags": [
+        "rug",
+        "mat",
+        "bathmat",
+        "absorbent",
+        "cotton",
+        "chenille",
+        "modern",
+        "soft",
+        "minimalist",
+        "spa",
+        "bathroom",
+        "hygiene",
+        "plush",
+        "microfiber",
+        "woven"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shower-rug/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shower-rug/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shower-rug/floor-plan.png",
+      "dimensions": [
+        0.77,
+        0.03,
+        0.48
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 0.03
+      },
+      "localPath": "Assets/PascalScene/Library/Models/shower-rug.glb",
+      "sha256": "801028617effee0d70e29a5efcb2cde042b2811790244a12a49ecd83c73fbbd7",
+      "bytes": 4180
+    },
+    {
+      "id": "bathtub",
+      "category": "bathroom",
+      "name": "Bathtub",
+      "tags": [
+        "bathtub",
+        "tub",
+        "bath",
+        "soaking",
+        "modern",
+        "minimalist",
+        "porcelain",
+        "acrylic",
+        "ceramic",
+        "bathroom",
+        "relaxation",
+        "spa"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bathtub/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bathtub/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bathtub/floor-plan.png",
+      "dimensions": [
+        2.34,
+        0.79,
+        1.11
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/bathtub.glb",
+      "sha256": "f6d726f9b8661a96e4cfc2acbca892b2407a8021fef51d53c896b0d0be8f707c",
+      "bytes": 6008
+    },
+    {
+      "id": "laundry-bag",
+      "category": "bathroom",
+      "name": "Laundry Bag",
+      "tags": [
+        "laundry",
+        "bag",
+        "hamper",
+        "basket",
+        "canvas",
+        "fabric",
+        "storage",
+        "organization",
+        "modern",
+        "minimalist",
+        "utility",
+        "cleaning",
+        "linen"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/laundry-bag/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/laundry-bag/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/laundry-bag/floor-plan.png",
+      "dimensions": [
+        0.46,
+        0.78,
+        0.48
+      ],
+      "offset": [
+        0,
+        0,
+        -0.0006
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/laundry-bag.glb",
+      "sha256": "f51a5ee39c09bcb6a9ac0aca6d6982022fe8dcaaf398fff2c79f145d4160df69",
+      "bytes": 4312
+    },
+    {
+      "id": "shower-square",
+      "category": "bathroom",
+      "name": "Squared Shower",
+      "tags": [
+        "floor",
+        "large"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shower-square/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shower-square/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shower-square/floor-plan.png",
+      "dimensions": [
+        0.81,
+        1.8,
+        0.81
+      ],
+      "offset": [
+        0.4,
+        0,
+        -0.3995
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/shower-square.glb",
+      "sha256": "185266da0575005d63e451ec2a130494966395504cc5a357352bd717c16358d1",
+      "bytes": 12608
+    },
+    {
+      "id": "drying-rack",
+      "category": "bathroom",
+      "name": "Drying Rack",
+      "tags": [
+        "dryer",
+        "rack",
+        "airer",
+        "laundry",
+        "hanging",
+        "organizer",
+        "metal",
+        "steel",
+        "modern",
+        "minimalist",
+        "storage",
+        "bathroom"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/drying-rack/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/drying-rack/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/drying-rack/floor-plan.png",
+      "dimensions": [
+        1.79,
+        1.05,
+        0.58
+      ],
+      "offset": [
+        0,
+        -0.0058,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/drying-rack.glb",
+      "sha256": "5a9dbe2061c74540e9cc9a5639453df86efdbe8b87c7e981842b290ffd4a9e0c",
+      "bytes": 10068
+    },
+    {
+      "id": "toilet",
+      "category": "bathroom",
+      "name": "Toilet",
+      "tags": [
+        "floor",
+        "large"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toilet/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toilet/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toilet/floor-plan.png",
+      "dimensions": [
+        0.42,
+        0.82,
+        0.72
+      ],
+      "offset": [
+        0,
+        0,
+        -0.2393
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/toilet.glb",
+      "sha256": "ae0cc0170797dd8026945b4edd08511e6dc2af005df02384b5b277c9bbc6ca94",
+      "bytes": 4192
+    },
+    {
+      "id": "microwave",
+      "category": "kitchen",
+      "name": "Microwave",
+      "tags": [
+        "microwave",
+        "oven",
+        "appliance",
+        "kitchen",
+        "cooking",
+        "heating",
+        "metal",
+        "steel",
+        "modern",
+        "sleek",
+        "black",
+        "silver",
+        "electronics",
+        "glass",
+        "contemporary"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/microwave/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/microwave/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/microwave/floor-plan.png",
+      "dimensions": [
+        0.52,
+        0.27,
+        0.41
+      ],
+      "offset": [
+        0,
+        0,
+        -0.0225
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/microwave.glb",
+      "sha256": "ff17a9e8046a350afef7f72604c40ec2be3dd2fe45a437616ecac22561e997db",
+      "bytes": 5884
+    },
+    {
+      "id": "cutting-board",
+      "category": "kitchen",
+      "name": "Cutting Board",
+      "tags": [
+        "board",
+        "wood",
+        "kitchen",
+        "prep",
+        "chopping",
+        "serving",
+        "block",
+        "rustic",
+        "culinary",
+        "timber",
+        "natural",
+        "chef",
+        "cooking"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/cutting-board/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/cutting-board/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/cutting-board/floor-plan.png",
+      "dimensions": [
+        0.27,
+        0.07,
+        0.41
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/cutting-board.glb",
+      "sha256": "48d9e3d38ea47a7dcfd0fc4e39b3758ff97a4fcfdf17b3d09725280c4855ada8",
+      "bytes": 2408
+    },
+    {
+      "id": "kitchen-utensils",
+      "category": "kitchen",
+      "name": "Kitchen Utensils",
+      "tags": [
+        "utensils",
+        "tools",
+        "kitchenware",
+        "cooking",
+        "prep",
+        "steel",
+        "silicone",
+        "wood",
+        "modern",
+        "gadgets",
+        "accessories",
+        "silverware",
+        "chef",
+        "serving",
+        "baking"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-utensils/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-utensils/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-utensils/floor-plan.png",
+      "dimensions": [
+        0.23,
+        0.49,
+        0.21
+      ],
+      "offset": [
+        0.0184,
+        0,
+        0.0165
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/kitchen-utensils.glb",
+      "sha256": "91400ebfb76d445375fb953e2d3a6c61dc92dbfa39391a4e8d235bcdb1828b3a",
+      "bytes": 6524
+    },
+    {
+      "id": "kitchen-counter",
+      "category": "kitchen",
+      "name": "Kitchen Counter",
+      "tags": [
+        "counter",
+        "countertop",
+        "island",
+        "surface",
+        "workspace",
+        "stone",
+        "granite",
+        "marble",
+        "modern",
+        "kitchen",
+        "cooking",
+        "prep",
+        "sleek",
+        "polished"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-counter/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-counter/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-counter/floor-plan.png",
+      "dimensions": [
+        1.96,
+        0.73,
+        0.63
+      ],
+      "offset": [
+        0.0012,
+        0,
+        -0.0004
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 0.73
+      },
+      "localPath": "Assets/PascalScene/Library/Models/kitchen-counter.glb",
+      "sha256": "95699cf517db7f769ee0bda356ee4d975ba321fbc87d7e4a63aed59f0c900e4f",
+      "bytes": 2580
+    },
+    {
+      "id": "hood",
+      "category": "kitchen",
+      "name": "Hood",
+      "tags": [
+        "hood",
+        "vent",
+        "extractor",
+        "ventilation",
+        "kitchen",
+        "cooking",
+        "appliance",
+        "metal",
+        "steel",
+        "stainless",
+        "modern",
+        "sleek",
+        "industrial",
+        "minimalist"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/hood/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/hood/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/hood/floor-plan.png",
+      "dimensions": [
+        1.21,
+        0.52,
+        0.51
+      ],
+      "offset": [
+        0,
+        0.2718,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "wall-side",
+      "localPath": "Assets/PascalScene/Library/Models/hood.glb",
+      "sha256": "bb9f5d9d136165cb12da57403caa93dead86ea8783c91e1970ff5dca690a3fdd",
+      "bytes": 3312
+    },
+    {
+      "id": "wooden-kitchen-bar-moa2hhh4",
+      "category": "kitchen",
+      "name": "Kitchen Bar",
+      "tags": [
+        "bar",
+        "counter",
+        "island",
+        "breakfast",
+        "modern",
+        "contemporary",
+        "wood",
+        "stone",
+        "quartz",
+        "seating",
+        "dining",
+        "prep",
+        "entertaining"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/wooden-kitchen-bar-moa2hhh4/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/wooden-kitchen-bar-moa2hhh4/models/item_model_c6iR1M2eE2I8k5M3.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/wooden-kitchen-bar-moa2hhh4/floor-plan.png",
+      "dimensions": [
+        2.5,
+        1.06,
+        0.96
+      ],
+      "offset": [
+        0.0003,
+        0.5322,
+        -0.0024
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.49,
+        2.49,
+        2.49
+      ],
+      "surface": {
+        "height": 1.06
+      },
+      "localPath": "Assets/PascalScene/Library/Models/wooden-kitchen-bar-moa2hhh4.glb",
+      "sha256": "044d0f38dde5aa40fd9072edc99ccc0f5098f7b22d61ccd6e4398aa40f19d345",
+      "bytes": 204440
+    },
+    {
+      "id": "kitchen-cabinet",
+      "category": "kitchen",
+      "name": "Kitchen Cabinet",
+      "tags": [
+        "cabinet",
+        "cupboard",
+        "storage",
+        "kitchen",
+        "shaker",
+        "pantry",
+        "wood",
+        "timber",
+        "modern",
+        "contemporary",
+        "minimalist",
+        "organization"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-cabinet/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-cabinet/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-cabinet/floor-plan.png",
+      "dimensions": [
+        1.65,
+        1.09,
+        0.77
+      ],
+      "offset": [
+        0,
+        0.0004,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 1.09
+      },
+      "localPath": "Assets/PascalScene/Library/Models/kitchen-cabinet.glb",
+      "sha256": "32426f302bf71ce22d900107c8eac04f0d58d9a01d8fdb9898bff62fa4903e27",
+      "bytes": 6488
+    },
+    {
+      "id": "kitchen",
+      "category": "kitchen",
+      "name": "Kitchen",
+      "tags": [
+        "kitchen",
+        "cabinetry",
+        "cabinet",
+        "island",
+        "cooking",
+        "storage",
+        "modern",
+        "contemporary",
+        "minimalist",
+        "wood",
+        "marble",
+        "culinary",
+        "pantry"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen/floor-plan.png",
+      "dimensions": [
+        2.38,
+        1.03,
+        0.84
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "surface": {
+        "height": 0.797
+      },
+      "localPath": "Assets/PascalScene/Library/Models/kitchen.glb",
+      "sha256": "0405afea45e4d33caf1c93577edf0450f45cbf223089c4c59382b52d3f0f0336",
+      "bytes": 7208
+    },
+    {
+      "id": "frying-pan",
+      "category": "kitchen",
+      "name": "Frying Pan",
+      "tags": [
+        "frying",
+        "pan",
+        "skillet",
+        "cookware",
+        "kitchen",
+        "cooking",
+        "metal",
+        "steel",
+        "nonstick",
+        "culinary",
+        "modern",
+        "chef",
+        "stove",
+        "utensil"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/frying-pan/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/frying-pan/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/frying-pan/floor-plan.png",
+      "dimensions": [
+        0.36,
+        0.09,
+        0.64
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/frying-pan.glb",
+      "sha256": "098d0c8ce3fbc07462266cb1b024b9ae3d703d1f930c8870356e5ffe5142e920",
+      "bytes": 4472
+    },
+    {
+      "id": "fruits",
+      "category": "kitchen",
+      "name": "Fruits",
+      "tags": [
+        "fruit",
+        "produce",
+        "food",
+        "kitchen",
+        "dining",
+        "centerpiece",
+        "tabletop",
+        "vibrant",
+        "fresh",
+        "organic",
+        "natural",
+        "accessory",
+        "decor",
+        "colorful"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fruits/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fruits/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fruits/floor-plan.png",
+      "dimensions": [
+        0.39,
+        0.27,
+        0.39
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/fruits.glb",
+      "sha256": "250e8a3c34c591c11b039d237f93a5634048a5c6f38c0383123fd45b84872996",
+      "bytes": 16008
+    },
+    {
+      "id": "fridge",
+      "category": "kitchen",
+      "name": "Fridge",
+      "tags": [
+        "fridge",
+        "refrigerator",
+        "freezer",
+        "appliance",
+        "kitchen",
+        "storage",
+        "cooling",
+        "metal",
+        "steel",
+        "modern",
+        "industrial",
+        "minimalist",
+        "silver",
+        "sleek"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fridge/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fridge/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fridge/floor-plan.png",
+      "dimensions": [
+        0.7,
+        1.92,
+        0.72
+      ],
+      "offset": [
+        0,
+        0,
+        -0.0507
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/fridge.glb",
+      "sha256": "6cbda7079947d668703614b3025844b10e4fe55a0c03783b3777f57017a3f27a",
+      "bytes": 2028
+    },
+    {
+      "id": "kitchen-shelf",
+      "category": "kitchen",
+      "name": "Kitchen Shelf",
+      "tags": [
+        "shelf",
+        "shelving",
+        "rack",
+        "ledge",
+        "storage",
+        "organizer",
+        "kitchen",
+        "pantry",
+        "modern",
+        "minimalist",
+        "industrial",
+        "wood",
+        "metal",
+        "utility"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-shelf/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-shelf/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-shelf/floor-plan.png",
+      "dimensions": [
+        2.21,
+        0.89,
+        0.52
+      ],
+      "offset": [
+        -0.0009,
+        0.4478,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "attachTo": "wall-side",
+      "localPath": "Assets/PascalScene/Library/Models/kitchen-shelf.glb",
+      "sha256": "a916592dc36b4b521e72476fb752a53ff7c4d9bf4abbd00cfc9099ec02c24968",
+      "bytes": 3400
+    },
+    {
+      "id": "wine-bottle",
+      "category": "kitchen",
+      "name": "Wine Bottle",
+      "tags": [
+        "countertop",
+        "decor"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/wine-bottle/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/wine-bottle/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/wine-bottle/floor-plan.png",
+      "dimensions": [
+        0.38,
+        0.35,
+        0.17
+      ],
+      "offset": [
+        -0.0461,
+        0,
+        0.0135
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/wine-bottle.glb",
+      "sha256": "9d2c976827cf27ea9faca88831b91eb754f93622cfdba953bed467269f79dd2a",
+      "bytes": 5912
+    },
+    {
+      "id": "stove",
+      "category": "kitchen",
+      "name": "Stove",
+      "tags": [
+        "floor",
+        "large"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/stove/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/stove/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/stove/floor-plan.png",
+      "dimensions": [
+        0.92,
+        0.85,
+        0.76
+      ],
+      "offset": [
+        0.0043,
+        0,
+        -0.0505
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/stove.glb",
+      "sha256": "633f58047c9da1f0ef12b3706f09411471725ec7d1a790f562f89f8945fac0c8",
+      "bytes": 10668
+    },
+    {
+      "id": "ball",
+      "category": "outdoor",
+      "name": "Ball",
+      "tags": [
+        "ball",
+        "sphere",
+        "orb",
+        "globe",
+        "round",
+        "modern",
+        "minimalist",
+        "decor",
+        "garden",
+        "patio",
+        "sculpture",
+        "ornament",
+        "accent",
+        "circular",
+        "contemporary"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ball/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ball/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ball/floor-plan.png",
+      "dimensions": [
+        0.24,
+        0.24,
+        0.24
+      ],
+      "offset": [
+        -0.0001,
+        0.1194,
+        -0.0001
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/ball.glb",
+      "sha256": "3a3c48e9056975ff91f3bc07e0567b8c697d48e8fc3debc34f5c675189a5f3bc",
+      "bytes": 17408
+    },
+    {
+      "id": "bush",
+      "category": "outdoor",
+      "name": "Bush",
+      "tags": [
+        "bush",
+        "shrub",
+        "plant",
+        "greenery",
+        "foliage",
+        "hedge",
+        "natural",
+        "organic",
+        "lush",
+        "landscaping",
+        "garden",
+        "yard",
+        "botanical",
+        "outdoor",
+        "decorative"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bush/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bush/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bush/floor-plan.png",
+      "dimensions": [
+        3,
+        1.04,
+        1.01
+      ],
+      "offset": [
+        -0.1463,
+        0.0094,
+        -0.113
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.96,
+        0.96,
+        0.96
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/bush.glb",
+      "sha256": "eb1157675213b96ed1786dae5a0fbf4ae124457a84cb88222792e71b5628c1e6",
+      "bytes": 2968
+    },
+    {
+      "id": "basket-hoop",
+      "category": "outdoor",
+      "name": "Basket Hoop",
+      "tags": [
+        "hoop",
+        "basketball",
+        "rim",
+        "net",
+        "goal",
+        "sporty",
+        "recreation",
+        "outdoor",
+        "metal",
+        "steel",
+        "athletic",
+        "game",
+        "play",
+        "leisure",
+        "activity"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/basket-hoop/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/basket-hoop/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/basket-hoop/floor-plan.png",
+      "dimensions": [
+        0.58,
+        1.78,
+        0.56
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/basket-hoop.glb",
+      "sha256": "9e2df05c83197ddfc5f3c68e15b7798f82a00267f9bcbc7ea4f80f83fb97a84e",
+      "bytes": 5452
+    },
+    {
+      "id": "parking-spot",
+      "category": "outdoor",
+      "name": "Parking Spot",
+      "tags": [
+        "parking",
+        "space",
+        "stall",
+        "driveway",
+        "pavement",
+        "asphalt",
+        "concrete",
+        "urban",
+        "industrial",
+        "utility",
+        "vehicle",
+        "outdoor"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/parking-spot/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/parking-spot/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/parking-spot/floor-plan.png",
+      "dimensions": [
+        4.95,
+        0.12,
+        2.28
+      ],
+      "offset": [
+        0,
+        0.0121,
+        0.015
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.9,
+        1,
+        0.78
+      ],
+      "surface": {
+        "height": 0.015
+      },
+      "localPath": "Assets/PascalScene/Library/Models/parking-spot.glb",
+      "sha256": "26de0845e222a49ddd73ddf59fd8da7e49add0dc1b6179846c972b7370e07dbb",
+      "bytes": 2624
+    },
+    {
+      "id": "palm",
+      "category": "outdoor",
+      "name": "Palm",
+      "tags": [
+        "palm",
+        "tree",
+        "plant",
+        "tropical",
+        "exotic",
+        "foliage",
+        "greenery",
+        "botanical",
+        "garden",
+        "patio",
+        "outdoor",
+        "lush",
+        "organic",
+        "nature"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/palm/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/palm/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/palm/floor-plan.png",
+      "dimensions": [
+        0.525,
+        4.5,
+        0.496
+      ],
+      "offset": [
+        0,
+        0.08,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.37,
+        0.37,
+        0.37
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/palm.glb",
+      "sha256": "4b80528ce2cd87480ec07a3dd5b68b8ae66c2df9130865e0e32f8d3c70a3847c",
+      "bytes": 14868
+    },
+    {
+      "id": "sunbed",
+      "category": "outdoor",
+      "name": "Sunbed",
+      "tags": [
+        "leisure",
+        "seating",
+        "floor"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sunbed/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sunbed/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sunbed/floor-plan.png",
+      "dimensions": [
+        0.86,
+        1.13,
+        1.01
+      ],
+      "offset": [
+        0,
+        0.0516,
+        0.0137
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/sunbed.glb",
+      "sha256": "7ed6594df7b735d13357a17eb8dc1ed0a4395a7214d55de2828e706c0782305e",
+      "bytes": 3912
+    },
+    {
+      "id": "fir-tree",
+      "category": "outdoor",
+      "name": "Fir",
+      "tags": [
+        "fir",
+        "tree",
+        "plant",
+        "evergreen",
+        "conifer",
+        "foliage",
+        "greenery",
+        "natural",
+        "garden",
+        "outdoor",
+        "botanical",
+        "rustic",
+        "alpine",
+        "woodland"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fir-tree/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fir-tree/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fir-tree/floor-plan.png",
+      "dimensions": [
+        0.27,
+        3,
+        0.23
+      ],
+      "offset": [
+        0.02,
+        0.05,
+        -0.06
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/fir-tree.glb",
+      "sha256": "14a8678d49e8616859b9e50b95ea1f32a6e090f3c9bb864351fc5e4b0f83a845",
+      "bytes": 3700
+    },
+    {
+      "id": "tree",
+      "category": "outdoor",
+      "name": "Tree",
+      "tags": [
+        "vegetation"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/tree/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/tree/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/tree/floor-plan.png",
+      "dimensions": [
+        0.79,
+        5,
+        0.85
+      ],
+      "offset": [
+        -0.02,
+        0.17,
+        -0.04
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/tree.glb",
+      "sha256": "e216b042e11d590b6c34d92233d6eed9b20e1d6ffe333ee576c49044b71bc273",
+      "bytes": 6496
+    },
+    {
+      "id": "skate",
+      "category": "outdoor",
+      "name": "Skate",
+      "tags": [
+        "leisure",
+        "kids",
+        "floor"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/skate/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/skate/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/skate/floor-plan.png",
+      "dimensions": [
+        0.86,
+        0.11,
+        0.2
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/skate.glb",
+      "sha256": "b4c9355fb23c4060084161a8c269584bdfabb622f8d46d2ce13933ed26593e3c",
+      "bytes": 4904
+    },
+    {
+      "id": "1967-chevrolet-camaro-moa24wsf",
+      "category": "outdoor",
+      "name": "1967 Chevrolet Camaro",
+      "tags": [
+        "car"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/1967-chevrolet-camaro-moa24wsf/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/1967-chevrolet-camaro-moa24wsf/models/item_model_vUIp1N69V9RXLqoJ.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/1967-chevrolet-camaro-moa24wsf/floor-plan.png",
+      "dimensions": [
+        4.09,
+        1.22,
+        1.89
+      ],
+      "offset": [
+        -0.0018,
+        0.5987,
+        0.0205
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        4.09,
+        4.09,
+        4.09
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/1967-chevrolet-camaro-moa24wsf.glb",
+      "sha256": "a02218fe5237f38a1554954c8840f6de7dfae4b1b0e561f2c948aa6f1c1ae8da",
+      "bytes": 256524
+    },
+    {
+      "id": "outdoor-playhouse",
+      "category": "outdoor",
+      "name": "Outdoor Playhouse",
+      "tags": [
+        "playhouse",
+        "cottage",
+        "cabin",
+        "fort",
+        "wood",
+        "cedar",
+        "garden",
+        "backyard",
+        "kids",
+        "children",
+        "play",
+        "recreation",
+        "outdoor",
+        "rustic",
+        "timber"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/outdoor-playhouse/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/outdoor-playhouse/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/outdoor-playhouse/floor-plan.png",
+      "dimensions": [
+        0.3,
+        0.47,
+        0.72
+      ],
+      "offset": [
+        -0.0062,
+        0,
+        -0.0268
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/outdoor-playhouse.glb",
+      "sha256": "bc4a87dfe89f8e7b29ac8ff250b36a12bbe29a890f6788a7462733dff6b9a33c",
+      "bytes": 18740
+    },
+    {
+      "id": "patio-umbrella",
+      "category": "outdoor",
+      "name": "Patio Umbrella",
+      "tags": [
+        "umbrella",
+        "parasol",
+        "shade",
+        "canopy",
+        "sunshade",
+        "outdoor",
+        "patio",
+        "garden",
+        "modern",
+        "polyester",
+        "fabric",
+        "aluminum",
+        "poolside",
+        "protection",
+        "summer"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/patio-umbrella/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/patio-umbrella/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/patio-umbrella/floor-plan.png",
+      "dimensions": [
+        0.139,
+        3.603,
+        0.15
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/patio-umbrella.glb",
+      "sha256": "82fd12c08df8f1d2ba686c6e6d29a2d396ca1ed68139459816a27d95de1fa69a",
+      "bytes": 3924
+    },
+    {
+      "id": "pillar",
+      "category": "outdoor",
+      "name": "Pillar",
+      "tags": [
+        "pillar",
+        "column",
+        "pedestal",
+        "plinth",
+        "stone",
+        "concrete",
+        "classical",
+        "architectural",
+        "garden",
+        "ornament",
+        "decoration",
+        "support"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/pillar/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/pillar/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/pillar/floor-plan.png",
+      "dimensions": [
+        0.34,
+        1.26,
+        0.3
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/pillar.glb",
+      "sha256": "f4a7bdeec82942b4b4eaceafe535d7404536dd75d972b19260a4af4b8d86dcee",
+      "bytes": 2488
+    },
+    {
+      "id": "scooter",
+      "category": "outdoor",
+      "name": "Scooter",
+      "tags": [
+        "scooter",
+        "kickscooter",
+        "transport",
+        "mobility",
+        "outdoor",
+        "wheels",
+        "metal",
+        "aluminum",
+        "modern",
+        "sleek",
+        "urban",
+        "active",
+        "travel",
+        "ride",
+        "commute"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/scooter/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/scooter/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/scooter/floor-plan.png",
+      "dimensions": [
+        0.85,
+        0.85,
+        0.45
+      ],
+      "offset": [
+        0.1127,
+        0.0017,
+        0.1744
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/scooter.glb",
+      "sha256": "2ce64f879144dbccd0029977b158d66be6f44e4172edebe0c16f9dc0d0f7aa80",
+      "bytes": 10304
+    },
+    {
+      "id": "tesla",
+      "category": "outdoor",
+      "name": "Tesla Model Y",
+      "tags": [
+        "tesla",
+        "car",
+        "vehicle",
+        "automobile",
+        "electric",
+        "modern",
+        "minimalist",
+        "sleek",
+        "metal",
+        "glass",
+        "luxury",
+        "transportation",
+        "commuting"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/tesla/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/tesla/model.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/tesla/floor-plan.png",
+      "dimensions": [
+        1.98,
+        1.62,
+        4.76
+      ],
+      "offset": [
+        0.0039,
+        -0.0102,
+        -0.0148
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/tesla.glb",
+      "sha256": "ca3a9268057549a0512d22505d26bab1c2df96c33d44f0f30fdb2c5a8650445c",
+      "bytes": 100340
+    },
+    {
+      "id": "dishwasher-movn72ls",
+      "category": "appliance",
+      "name": "Dishwasher",
+      "tags": [
+        "dishwasher",
+        "appliance",
+        "kitchen",
+        "floor"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/users/user_7hUFMrlrAX1vtIwT/dishwasher-movn72ls/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/users/user_7hUFMrlrAX1vtIwT/dishwasher-movn72ls/models/item_model_fFvQuIjpPISAraGN.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/users/user_7hUFMrlrAX1vtIwT/dishwasher-movn72ls/floor-plan.png",
+      "dimensions": [
+        0.79,
+        1.01,
+        0.76
+      ],
+      "offset": [
+        0.0026,
+        0.5004,
+        0.0011
+      ],
+      "rotation": [
+        0,
+        -0.0349,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/dishwasher-movn72ls.glb",
+      "sha256": "7447987fd4709d18537579ac4aeb23af5fb6408e441c7d70be81eae393ea9688",
+      "bytes": 73928
+    },
+    {
+      "id": "fireplace-movn1fnn",
+      "category": "furniture",
+      "name": "Fireplace",
+      "tags": [
+        "fireplace",
+        "hearth",
+        "mantel",
+        "wall"
+      ],
+      "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/users/user_7hUFMrlrAX1vtIwT/fireplace-movn1fnn/thumbnail.png",
+      "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/users/user_7hUFMrlrAX1vtIwT/fireplace-movn1fnn/models/item_model_vNBpPC3gCrIIqFUS.glb",
+      "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/users/user_7hUFMrlrAX1vtIwT/fireplace-movn1fnn/floor-plan.png",
+      "dimensions": [
+        1,
+        0.83,
+        0.18
+      ],
+      "offset": [
+        -0.0001,
+        0.4116,
+        -0.0015
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "localPath": "Assets/PascalScene/Library/Models/fireplace-movn1fnn.glb",
+      "sha256": "67f856ddbece58afb4a05cf8e5b09b67229907bfe4083756b21bfa8cf2fa11c3",
+      "bytes": 48688
+    }
+  ]
+}
