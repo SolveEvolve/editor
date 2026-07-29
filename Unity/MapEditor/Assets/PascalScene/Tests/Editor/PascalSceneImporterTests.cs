@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
@@ -164,6 +165,27 @@ namespace PascalScene.Tests
 
             Assert.That(slab.bounds.size, Is.EqualTo(new Vector3(4f, 0.05f, 3f)));
             Assert.That(ceiling.bounds.size, Is.EqualTo(new Vector3(4f, 0f, 3f)));
+            Object.DestroyImmediate(slab);
+            Object.DestroyImmediate(ceiling);
+        }
+
+        [Test]
+        public void SlabAndCeilingMeshesPreservePolygonHoles()
+        {
+            var outer = new[]
+            {
+                new Vector2(0f, 0f), new Vector2(4f, 0f), new Vector2(4f, 4f), new Vector2(0f, 4f)
+            };
+            var holes = new IReadOnlyList<Vector2>[]
+            {
+                new[] { new Vector2(1f, 1f), new Vector2(1f, 3f), new Vector2(3f, 3f), new Vector2(3f, 1f) }
+            };
+            var slab = PascalSceneMeshFactory.CreatePolygonPrism(outer, 0f, 0.1f, holes: holes);
+            var ceiling = PascalSceneMeshFactory.CreateDoubleSidedSurface(outer, 2.5f, holes: holes);
+
+            Assert.That(slab.triangles.Length, Is.GreaterThan(0));
+            Assert.That(ceiling.triangles.Length, Is.GreaterThan(0));
+            Assert.That(slab.bounds.size, Is.EqualTo(new Vector3(4f, 0.1f, 4f)));
             Object.DestroyImmediate(slab);
             Object.DestroyImmediate(ceiling);
         }

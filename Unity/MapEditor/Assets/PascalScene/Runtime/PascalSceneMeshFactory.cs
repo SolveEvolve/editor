@@ -103,9 +103,10 @@ namespace PascalScene
             IReadOnlyList<Vector2> polygon,
             float bottom,
             float top,
-            string meshName = "Pascal Polygon Prism")
+            string meshName = "Pascal Polygon Prism",
+            IReadOnlyList<IReadOnlyList<Vector2>> holes = null)
         {
-            var points = CleanPolygon(polygon);
+            var points = MergeHoles(CleanPolygon(polygon), holes);
             if (top <= bottom)
             {
                 throw new ArgumentException("Prism top must be above its bottom.");
@@ -168,9 +169,10 @@ namespace PascalScene
         public static Mesh CreateDoubleSidedSurface(
             IReadOnlyList<Vector2> polygon,
             float elevation,
-            string meshName = "Pascal Surface")
+            string meshName = "Pascal Surface",
+            IReadOnlyList<IReadOnlyList<Vector2>> holes = null)
         {
-            var points = CleanPolygon(polygon);
+            var points = MergeHoles(CleanPolygon(polygon), holes);
             var surfaceTriangles = Triangulate(points);
             var vertices = new Vector3[points.Count * 2];
             for (var i = 0; i < points.Count; i++)
@@ -245,6 +247,13 @@ namespace PascalScene
                             continue;
                         }
 
+                        if ((points[candidate] - points[previous]).sqrMagnitude <= Epsilon * Epsilon ||
+                            (points[candidate] - points[current]).sqrMagnitude <= Epsilon * Epsilon ||
+                            (points[candidate] - points[next]).sqrMagnitude <= Epsilon * Epsilon)
+                        {
+                            continue;
+                        }
+
                         if (PointInTriangle(
                                 points[candidate],
                                 points[previous],
@@ -314,6 +323,101 @@ namespace PascalScene
             }
 
             return points;
+        }
+
+        private static List<Vector2> MergeHoles(
+            List<Vector2> outer,
+            IReadOnlyList<IReadOnlyList<Vector2>> holes)
+        {
+            if (holes == null || holes.Count == 0)
+            {
+                return outer;
+            }
+
+            var merged = new List<Vector2>(outer);
+            foreach (var rawHole in holes)
+            {
+                var hole = CleanPolygon(rawHole);
+                if (SignedArea(hole) > 0f)
+                {
+                    hole.Reverse();
+                }
+
+                var holeIndex = 0;
+                for (var i = 1; i < hole.Count; i++)
+                {
+                    if (hole[i].x > hole[holeIndex].x)
+                    {
+                        holeIndex = i;
+                    }
+                }
+
+                var outerIndex = FindVisibleOuterVertex(merged, hole[holeIndex], hole);
+                if (outerIndex < 0)
+                {
+                    throw new ArgumentException("Polygon hole cannot be bridged to its outer contour.");
+                }
+
+                var bridged = new List<Vector2>(merged.Count + hole.Count + 2);
+                for (var i = 0; i <= outerIndex; i++) bridged.Add(merged[i]);
+                for (var i = 0; i <= hole.Count; i++) bridged.Add(hole[(holeIndex + i) % hole.Count]);
+                bridged.Add(merged[outerIndex]);
+                for (var i = outerIndex + 1; i < merged.Count; i++) bridged.Add(merged[i]);
+                merged = bridged;
+            }
+
+            return merged;
+        }
+
+        private static int FindVisibleOuterVertex(
+            IReadOnlyList<Vector2> outer,
+            Vector2 holePoint,
+            IReadOnlyList<Vector2> hole)
+        {
+            var bestIndex = -1;
+            var bestDistance = float.PositiveInfinity;
+            for (var i = 0; i < outer.Count; i++)
+            {
+                var candidate = outer[i];
+                if (candidate.x + Epsilon < holePoint.x)
+                {
+                    continue;
+                }
+
+                var blocked = false;
+                for (var edge = 0; edge < outer.Count; edge++)
+                {
+                    var next = (edge + 1) % outer.Count;
+                    if (edge == i || next == i) continue;
+                    if (SegmentsIntersect(holePoint, candidate, outer[edge], outer[next]))
+                    {
+                        blocked = true;
+                        break;
+                    }
+                }
+
+                if (!blocked)
+                {
+                    var distance = (candidate - holePoint).sqrMagnitude;
+                    if (distance < bestDistance)
+                    {
+                        bestDistance = distance;
+                        bestIndex = i;
+                    }
+                }
+            }
+
+            return bestIndex;
+        }
+
+        private static bool SegmentsIntersect(Vector2 a, Vector2 b, Vector2 c, Vector2 d)
+        {
+            var abC = Cross(a, b, c);
+            var abD = Cross(a, b, d);
+            var cdA = Cross(c, d, a);
+            var cdB = Cross(c, d, b);
+            return ((abC > Epsilon && abD < -Epsilon) || (abC < -Epsilon && abD > Epsilon)) &&
+                   ((cdA > Epsilon && cdB < -Epsilon) || (cdA < -Epsilon && cdB > Epsilon));
         }
 
         private static Mesh CreateMesh(string name, Vector3[] vertices, List<int> triangles)

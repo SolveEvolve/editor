@@ -337,20 +337,14 @@ namespace PascalScene
             PascalSceneBuildSettings settings,
             PascalSceneBuildReport report)
         {
-            if (HasHoles(node))
-            {
-                report.SkippedNodeCount++;
-                report.UnsupportedNodes.Add($"slab holes:{node.Id}");
-                return;
-            }
-
             var elevation = node.Elevation ?? PascalSceneBuildSettings.DefaultSlabElevation;
             var thickness = node.Thickness ?? PascalSceneBuildSettings.DefaultSlabThickness;
             var mesh = PascalSceneMeshFactory.CreatePolygonPrism(
                 ToVector2Polygon(node.GetPolygonPoints()),
                 elevation - thickness,
                 elevation,
-                "Pascal Slab Mesh");
+                "Pascal Slab Mesh",
+                ToVector2Holes(node.Holes));
             AddMesh(gameObject, mesh, settings.SlabMaterial, settings, node.Id);
         }
 
@@ -361,18 +355,12 @@ namespace PascalScene
             PascalSceneBuildSettings settings,
             PascalSceneBuildReport report)
         {
-            if (HasHoles(node))
-            {
-                report.SkippedNodeCount++;
-                report.UnsupportedNodes.Add($"ceiling holes:{node.Id}");
-                return;
-            }
-
             var height = node.Height ?? containingLevelHeight;
             var mesh = PascalSceneMeshFactory.CreateDoubleSidedSurface(
                 ToVector2Polygon(node.GetPolygonPoints()),
                 height,
-                "Pascal Ceiling Mesh");
+                "Pascal Ceiling Mesh",
+                ToVector2Holes(node.Holes));
             AddMesh(gameObject, mesh, settings.CeilingMaterial, settings, node.Id);
         }
 
@@ -459,6 +447,18 @@ namespace PascalScene
         private static bool HasHoles(PascalSceneNode node)
         {
             return node.Holes != null && node.Holes.Any(hole => hole != null && hole.Count >= 3);
+        }
+
+        private static List<IReadOnlyList<Vector2>> ToVector2Holes(List<List<float[]>> holes)
+        {
+            var result = new List<IReadOnlyList<Vector2>>();
+            foreach (var hole in holes ?? Enumerable.Empty<List<float[]>>())
+            {
+                if (hole == null || hole.Count < 3) continue;
+                result.Add(ToVector2Polygon(hole));
+            }
+
+            return result;
         }
 
         private static string ResolveBuildingId(PascalSceneNode level)
