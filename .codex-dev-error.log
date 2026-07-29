@@ -1,0 +1,14 @@
+$ set -a && . ./.env 2>/dev/null; set +a; turbo run dev --env-mode=loose
+bun: command not found: set
+bun: command not found: set
+
+Attention:
+Turborepo now collects completely anonymous telemetry regarding usage.
+This information is used to shape the Turborepo roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://turborepo.dev/docs/telemetry
+
+• turbo 2.9.17
+ ERROR  editor#dev: command (C:\Users\SolveEvolve\Documents\GitHub\editor\apps\editor) C:\Users\SOLVEE~1\AppData\Local\Temp\bun-node-0d9b296af\bun.exe run dev exited (1)
+ ERROR  run failed: command  exited (1)
+error: script "dev" exited with code 1

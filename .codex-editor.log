@@ -1,0 +1,137 @@
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3002
+- Network:       http://100.95.80.114:3002
+✓ Ready in 615ms
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+- Experiments (use with caution):
+  · serverActions
+
+○ Compiling / ...
+[pascal:registry] loaded pascal:core v1 (46 kinds: shelf, spawn, wall, fence, slab, ceiling, door, window, cabinet, cabinet-module, item, column, elevator, roof, roof-segment, stair, stair-segment, zone, site, building, level, guide, scan, measurement, construction-dimension, structural-grid, box-vent, ridge-vent, turbine-vent, cupola, eyebrow-vent, chimney, solar-panel, skylight, dormer, gutter, downspout, duct-segment, duct-fitting, duct-terminal, hvac-equipment, lineset, liquid-line, pipe-segment, pipe-fitting, pipe-trap)
+[pascal:registry] + 1 discovered plugin(s)
+ GET / 200 in 10.8s (next.js: 6.3s, application-code: 4.5s)
+ GET / 200 in 1301ms (next.js: 9ms, application-code: 1291ms)
+[browser] Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+[browser] [pascal:registry] loaded pascal:core v1 (46 kinds: shelf, spawn, wall, fence, slab, ceiling, door, window, cabinet, cabinet-module, item, column, elevator, roof, roof-segment, stair, stair-segment, zone, site, building, level, guide, scan, measurement, construction-dimension, structural-grid, box-vent, ridge-vent, turbine-vent, cupola, eyebrow-vent, chimney, solar-panel, skylight, dormer, gutter, downspout, duct-segment, duct-fitting, duct-terminal, hvac-equipment, lineset, liquid-line, pipe-segment, pipe-fitting, pipe-trap) (lib/bootstrap.ts:51:15)
+[browser] [pascal:registry] + 1 discovered plugin(s) (lib/bootstrap.ts:79:13)
+[browser] [viewer] WebGPU device ready {
+  features: [
+    [32m'depth32float-stencil8'[39m,
+    [32m'rg11b10ufloat-renderable'[39m,
+    [32m'bgra8unorm-storage'[39m,
+    [32m'texture-formats-tier1'[39m,
+    [32m'texture-compression-bc'[39m,
+    [32m'dual-source-blending'[39m,
+    [32m'core-features-and-limits'[39m,
+    [32m'float32-filterable'[39m,
+    [32m'indirect-first-instance'[39m,
+    [32m'float32-blendable'[39m,
+    [32m'depth-clip-control'[39m,
+    [32m'texture-compression-bc-sliced-3d'[39m,
+    [32m'timestamp-query'[39m,
+    [32m'shader-f16'[39m,
+    [32m'clip-distances'[39m,
+    [32m'texture-formats-tier2'[39m,
+    [32m'subgroups'[39m
+  ],
+  label: [32m''[39m
+} (../../packages/viewer/dist/components/viewer/index.js:125:17)
+[browser] [viewer/post-processing] Building pipeline {
+  denoise: [33mfalse[39m,
+  height: [33m945[39m,
+  outline: [33mtrue[39m,
+  perfDisable: { ao: [33mfalse[39m, denoise: [33mfalse[39m, outline: [33mfalse[39m, postFx: [33mfalse[39m },
+  projectId: [32m'local-editor'[39m,
+  rendererCtor: [32m'WebGPURenderer'[39m,
+  shading: [32m'solid'[39m,
+  ssgi: [33mfalse[39m,
+  transparentBackground: [33mfalse[39m,
+  version: [33m0[39m,
+  width: [33m1576[39m
+} (../../packages/viewer/dist/components/viewer/post-processing.js:271:17)
+[browser] [viewer/post-processing] Building pipeline {
+  denoise: [33mfalse[39m,
+  height: [33m945[39m,
+  outline: [33mtrue[39m,
+  perfDisable: { ao: [33mfalse[39m, denoise: [33mfalse[39m, outline: [33mfalse[39m, postFx: [33mfalse[39m },
+  projectId: [32m'local-editor'[39m,
+  rendererCtor: [32m'WebGPURenderer'[39m,
+  shading: [32m'solid'[39m,
+  ssgi: [33mfalse[39m,
+  transparentBackground: [33mfalse[39m,
+  version: [33m0[39m,
+  width: [33m1576[39m
+} (../../packages/viewer/dist/components/viewer/post-processing.js:271:17)
+ GET / 200 in 128ms (next.js: 8ms, application-code: 120ms)
+[browser] Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+[browser] [pascal:registry] loaded pascal:core v1 (46 kinds: shelf, spawn, wall, fence, slab, ceiling, door, window, cabinet, cabinet-module, item, column, elevator, roof, roof-segment, stair, stair-segment, zone, site, building, level, guide, scan, measurement, construction-dimension, structural-grid, box-vent, ridge-vent, turbine-vent, cupola, eyebrow-vent, chimney, solar-panel, skylight, dormer, gutter, downspout, duct-segment, duct-fitting, duct-terminal, hvac-equipment, lineset, liquid-line, pipe-segment, pipe-fitting, pipe-trap) (lib/bootstrap.ts:51:15)
+[browser] [pascal:registry] + 1 discovered plugin(s) (lib/bootstrap.ts:79:13)
+[browser] [viewer] WebGPU device ready {
+  features: [
+    [32m'depth32float-stencil8'[39m,
+    [32m'rg11b10ufloat-renderable'[39m,
+    [32m'bgra8unorm-storage'[39m,
+    [32m'texture-formats-tier1'[39m,
+    [32m'texture-compression-bc'[39m,
+    [32m'dual-source-blending'[39m,
+    [32m'core-features-and-limits'[39m,
+    [32m'float32-filterable'[39m,
+    [32m'indirect-first-instance'[39m,
+    [32m'float32-blendable'[39m,
+    [32m'depth-clip-control'[39m,
+    [32m'texture-compression-bc-sliced-3d'[39m,
+    [32m'timestamp-query'[39m,
+    [32m'clip-distances'[39m,
+    [32m'texture-formats-tier2'[39m,
+    [32m'shader-f16'[39m,
+    [32m'subgroups'[39m
+  ],
+  label: [32m''[39m
+} (../../packages/viewer/dist/components/viewer/index.js:125:17)
+[browser] [viewer/post-processing] Building pipeline {
+  denoise: [33mfalse[39m,
+  height: [33m945[39m,
+  outline: [33mtrue[39m,
+  perfDisable: { ao: [33mfalse[39m, denoise: [33mfalse[39m, outline: [33mfalse[39m, postFx: [33mfalse[39m },
+  projectId: [32m'local-editor'[39m,
+  rendererCtor: [32m'WebGPURenderer'[39m,
+  shading: [32m'solid'[39m,
+  ssgi: [33mfalse[39m,
+  transparentBackground: [33mfalse[39m,
+  version: [33m0[39m,
+  width: [33m1576[39m
+} (../../packages/viewer/dist/components/viewer/post-processing.js:271:17)
+[browser] [viewer/post-processing] Building pipeline {
+  denoise: [33mfalse[39m,
+  height: [33m945[39m,
+  outline: [33mtrue[39m,
+  perfDisable: { ao: [33mfalse[39m, denoise: [33mfalse[39m, outline: [33mfalse[39m, postFx: [33mfalse[39m },
+  projectId: [32m'local-editor'[39m,
+  rendererCtor: [32m'WebGPURenderer'[39m,
+  shading: [32m'solid'[39m,
+  ssgi: [33mfalse[39m,
+  transparentBackground: [33mfalse[39m,
+  version: [33m0[39m,
+  width: [33m1576[39m
+} (../../packages/viewer/dist/components/viewer/post-processing.js:271:17)
+✓ Compiled in 9.7s
+○ Compiling /_error ...
+ GET / 500 in 9.1s (next.js: 7.3s, application-code: 1850ms)
+ GET / 500 in 323ms (next.js: 80ms, application-code: 243ms)
+ GET / 500 in 732ms (next.js: 67ms, application-code: 664ms)
+ GET / 500 in 694ms (next.js: 339ms, application-code: 355ms)
+✓ Compiled in 5.3s
+[pascal:registry] loaded pascal:core v1 (46 kinds: shelf, spawn, wall, fence, slab, ceiling, door, window, cabinet, cabinet-module, item, column, elevator, roof, roof-segment, stair, stair-segment, zone, site, building, level, guide, scan, measurement, construction-dimension, structural-grid, box-vent, ridge-vent, turbine-vent, cupola, eyebrow-vent, chimney, solar-panel, skylight, dormer, gutter, downspout, duct-segment, duct-fitting, duct-terminal, hvac-equipment, lineset, liquid-line, pipe-segment, pipe-fitting, pipe-trap)
+[pascal:registry] + 1 discovered plugin(s)
+ GET / 200 in 1565ms (next.js: 59ms, application-code: 1506ms)
+[browser] Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+✓ Compiled in 672ms
+ GET / 200 in 261ms (next.js: 185ms, application-code: 76ms)
+✓ Compiled in 537ms
+ GET / 200 in 264ms (next.js: 180ms, application-code: 84ms)
+✓ Compiled in 665ms
+ GET / 200 in 233ms (next.js: 171ms, application-code: 62ms)

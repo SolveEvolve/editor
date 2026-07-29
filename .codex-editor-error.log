@@ -1,0 +1,642 @@
+[browser] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[browser] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[browser] [autosave] Blocked: scene dropped from 13 to 3 nodes. Likely accidental deletion. (../../packages/editor/src/hooks/use-auto-save.ts:97:17)
+⨯ ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-client] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+
+./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-ssr] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+⨯ ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-client] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+
+./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-ssr] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+⨯ ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-client] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+
+./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-ssr] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+⨯ ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-client] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+
+./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-ssr] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+⨯ ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-client] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+
+./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-ssr] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+⨯ ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-client] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+
+./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-ssr] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+⨯ ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-client] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+
+./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+[31m[1m>[0m [90m 1 |[0m [36mimport[0m {
+  [90m   |[0m [31m[1m^^^^^^^[0m
+[31m[1m>[0m [90m 2 |[0m   clearSceneHistory,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 3 |[0m   createPascalBuildDocument,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 4 |[0m   emitter,
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+[31m[1m>[0m [90m 5 |[0m   useScene,
+  [90m   |[0m [31m[1m^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 6 |[0m   validateBuildJson,
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m 7 |[0m } [36mfrom[0m [32m'@pascal-app/core'[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m { useViewer } [36mfrom[0m [32m'@pascal-app/viewer'[0m
+  [90m 9 |[0m [36mimport[0m { [33mTreeView[0m, [33mVisualJson[0m } [36mfrom[0m [32m'@visual-json/react'[0m
+  [90m10 |[0m [36mimport[0m { [33mCamera[0m, [33mDownload[0m, [33mMap[0m [36mas[0m [33mMapIcon[0m, [33mSave[0m, [33mTrash2[0m, [33mUpload[0m } [36mfrom[0m [32m'lucide-react'[0m
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-ssr] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+[browser] Uncaught Error: ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1
+Export createPascalBuildDocument doesn't exist in target module
+>  1 | import {
+     | ^^^^^^^
+>  2 |   clearSceneHistory,
+     | ^^^^^^^^^^^^^^^^^^^^
+>  3 |   createPascalBuildDocument,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   emitter,
+     | ^^^^^^^^^^
+>  5 |   useScene,
+     | ^^^^^^^^^^^
+>  6 |   validateBuildJson,
+     | ^^^^^^^^^^^^^^^^^^^^
+>  7 | } from '@pascal-app/core'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import { useViewer } from '@pascal-app/viewer'
+   9 | import { TreeView, VisualJson } from '@visual-json/react'
+  10 | import { Camera, Download, Map as MapIcon, Save, Trash2, Upload } from 'lucide-react'
+
+The export createPascalBuildDocument was not found in module [project]/packages/core/dist/index.js [app-client] (ecmascript).
+Did you mean to import getWallFaceBandForHeight?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component Browser]
+    ./packages/editor/src/index.tsx [Client Component Browser]
+    ./apps/editor/lib/bootstrap.ts [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component Browser]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx [Client Component SSR]
+    ./packages/editor/src/index.tsx [Client Component SSR]
+    ./apps/editor/lib/bootstrap.ts [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Client Component SSR]
+    ./apps/editor/app/client-bootstrap.tsx [Server Component]
+    ./apps/editor/app/layout.tsx [Server Component]
+
+
+    at <unknown> (Error: ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1)
+    at <unknown> (Error: (./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1)

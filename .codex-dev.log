@@ -1,0 +1,266 @@
+
+   • Packages in scope: @pascal-app/core, @pascal-app/editor, @pascal-app/ifc-converter, @pascal-app/mcp, @pascal-app/nodes, @pascal-app/viewer, @pascal/typescript-config, @repo/eslint-config, @repo/typescript-config, @repo/ui, editor, ifc-converter-app
+   • Running dev in 12 packages
+   • Remote caching disabled
+
+@pascal-app/viewer:dev: cache bypass, force executing a530ce8d06663f69
+@pascal-app/core:dev: cache bypass, force executing 1ccb4a77e02c8803
+@pascal-app/core:build: cache miss, executing 6880e1d9f0acb285
+@pascal-app/viewer:build: cache miss, executing 4feeceaaaba39e50
+@pascal-app/viewer:dev: $ tsgo --build --watch
+@pascal-app/core:dev: $ tsgo --build --watch
+@pascal-app/core:build: $ tsc --build
+@pascal-app/viewer:build: $ tsc --build
+@pascal-app/core:dev: [2J[3J[H02:31:18 PM - Starting compilation in watch mode...
+@pascal-app/viewer:dev: [2J[3J[H02:31:18 PM - Starting compilation in watch mode...
+@pascal-app/core:dev: 
+@pascal-app/viewer:dev: 
+@pascal-app/core:dev: 02:31:40 PM - Found 0 errors. Watching for file changes.
+@pascal-app/core:dev: 
+@pascal-app/ifc-converter:build: cache miss, executing 129217c410067e1e
+@pascal-app/mcp:build: cache miss, executing bd478ca970223578
+@pascal-app/ifc-converter:dev: cache bypass, force executing facb3ea004917250
+@pascal-app/mcp:dev: cache bypass, force executing 5ad9aa97ed115563
+@pascal-app/ifc-converter:build: $ tsc --build
+@pascal-app/mcp:build: $ tsc --build
+@pascal-app/ifc-converter:dev: $ tsgo --build --watch
+@pascal-app/mcp:dev: $ tsgo --build --watch
+@pascal-app/ifc-converter:dev: [2J[3J[H02:31:46 PM - Starting compilation in watch mode...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/mcp:dev: [2J[3J[H02:31:46 PM - Starting compilation in watch mode...
+@pascal-app/mcp:dev: 
+@pascal-app/ifc-converter:dev: 02:31:52 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:31:59 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:31:59 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:31:59 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:31:59 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:00 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:00 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:01 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:01 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:04 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:04 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:05 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:05 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:06 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:06 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/viewer:dev: 02:32:07 PM - Found 0 errors. Watching for file changes.
+@pascal-app/viewer:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:07 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:07 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:07 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:07 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:07 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:07 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/nodes:dev: cache bypass, force executing f9c5572c173d354e
+@pascal-app/nodes:build: cache miss, executing ac9ff106a9f7b58e
+@pascal-app/nodes:dev: $ tsgo --build --watch
+@pascal-app/nodes:build: $ tsc --build
+@pascal-app/nodes:dev: [2J[3J[H02:32:10 PM - Starting compilation in watch mode...
+@pascal-app/nodes:dev: 
+@pascal-app/mcp:dev: 02:32:11 PM - Found 0 errors. Watching for file changes.
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: [2J[3J[H02:32:28 PM - File change detected. Starting incremental compilation...
+@pascal-app/mcp:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:28 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:28 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/mcp:dev: 02:32:28 PM - Found 0 errors. Watching for file changes.
+@pascal-app/mcp:dev: 
+@pascal-app/viewer:dev: [2J[3J[H02:32:29 PM - File change detected. Starting incremental compilation...
+@pascal-app/viewer:dev: 
+@pascal-app/viewer:dev: 02:32:29 PM - Found 0 errors. Watching for file changes.
+@pascal-app/viewer:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:29 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:29 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/mcp:dev: [2J[3J[H02:32:29 PM - File change detected. Starting incremental compilation...
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: 02:32:29 PM - Found 0 errors. Watching for file changes.
+@pascal-app/mcp:dev: 
+@pascal-app/viewer:dev: [2J[3J[H02:32:29 PM - File change detected. Starting incremental compilation...
+@pascal-app/viewer:dev: 
+@pascal-app/viewer:dev: 02:32:29 PM - Found 0 errors. Watching for file changes.
+@pascal-app/viewer:dev: 
+@pascal-app/viewer:dev: [2J[3J[H02:32:30 PM - File change detected. Starting incremental compilation...
+@pascal-app/viewer:dev: 
+@pascal-app/viewer:dev: 02:32:30 PM - Found 0 errors. Watching for file changes.
+@pascal-app/viewer:dev: 
+@pascal-app/mcp:dev: [2J[3J[H02:32:30 PM - File change detected. Starting incremental compilation...
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: 02:32:30 PM - Found 0 errors. Watching for file changes.
+@pascal-app/mcp:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:30 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:30 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/viewer:dev: [2J[3J[H02:32:30 PM - File change detected. Starting incremental compilation...
+@pascal-app/viewer:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:30 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:30 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/viewer:dev: 02:32:30 PM - Found 0 errors. Watching for file changes.
+@pascal-app/viewer:dev: 
+@pascal-app/mcp:dev: [2J[3J[H02:32:30 PM - File change detected. Starting incremental compilation...
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: 02:32:30 PM - Found 0 errors. Watching for file changes.
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: [2J[3J[H02:32:30 PM - File change detected. Starting incremental compilation...
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: 02:32:30 PM - Found 0 errors. Watching for file changes.
+@pascal-app/mcp:dev: 
+@pascal-app/viewer:dev: [2J[3J[H02:32:30 PM - File change detected. Starting incremental compilation...
+@pascal-app/viewer:dev: 
+@pascal-app/viewer:dev: 02:32:30 PM - Found 0 errors. Watching for file changes.
+@pascal-app/viewer:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:30 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:30 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/mcp:dev: [2J[3J[H02:32:31 PM - File change detected. Starting incremental compilation...
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: 02:32:31 PM - Found 0 errors. Watching for file changes.
+@pascal-app/mcp:dev: 
+@pascal-app/viewer:dev: [2J[3J[H02:32:31 PM - File change detected. Starting incremental compilation...
+@pascal-app/viewer:dev: 
+@pascal-app/viewer:dev: 02:32:31 PM - Found 0 errors. Watching for file changes.
+@pascal-app/viewer:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:31 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:31 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/mcp:dev: [2J[3J[H02:32:31 PM - File change detected. Starting incremental compilation...
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: 02:32:31 PM - Found 0 errors. Watching for file changes.
+@pascal-app/mcp:dev: 
+@pascal-app/viewer:dev: [2J[3J[H02:32:31 PM - File change detected. Starting incremental compilation...
+@pascal-app/viewer:dev: 
+@pascal-app/viewer:dev: 02:32:31 PM - Found 0 errors. Watching for file changes.
+@pascal-app/viewer:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:31 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:31 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:31 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:31 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:31 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:31 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/mcp:dev: [2J[3J[H02:32:32 PM - File change detected. Starting incremental compilation...
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: 02:32:32 PM - Found 0 errors. Watching for file changes.
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: [2J[3J[H02:32:32 PM - File change detected. Starting incremental compilation...
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: 02:32:32 PM - Found 0 errors. Watching for file changes.
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: [2J[3J[H02:32:32 PM - File change detected. Starting incremental compilation...
+@pascal-app/mcp:dev: 
+@pascal-app/mcp:dev: 02:32:32 PM - Found 0 errors. Watching for file changes.
+@pascal-app/mcp:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:32 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:32 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: [2J[3J[H02:32:32 PM - File change detected. Starting incremental compilation...
+@pascal-app/ifc-converter:dev: 
+@pascal-app/ifc-converter:dev: 02:32:32 PM - Found 0 errors. Watching for file changes.
+@pascal-app/ifc-converter:dev: 
+@pascal-app/viewer:dev: [2J[3J[H02:32:34 PM - File change detected. Starting incremental compilation...
+@pascal-app/viewer:dev: 
+@pascal-app/viewer:dev: 02:32:34 PM - Found 0 errors. Watching for file changes.
+@pascal-app/viewer:dev: 
+@pascal-app/mcp:dev: [2J[3J[H02:32:34 PM - File change detected. Starting incremental compilation...
+@pascal-app/mcp:dev: 
+@pascal-app/viewer:dev: [2J[3J[H02:32:34 PM - File change detected. Starting incremental compilation...
+@pascal-app/viewer:dev: 
+@pascal-app/mcp:dev: 02:32:34 PM - Found 0 errors. Watching for file changes.
+@pascal-app/mcp:dev: 
+@pascal-app/viewer:dev: 02:32:34 PM - Found 0 errors. Watching for file changes.
+@pascal-app/viewer:dev: 
+@pascal-app/viewer:dev: [2J[3J[H02:32:35 PM - File change detected. Starting incremental compilation...
+@pascal-app/viewer:dev: 
+@pascal-app/viewer:dev: 02:32:35 PM - Found 0 errors. Watching for file changes.
+@pascal-app/viewer:dev: 
+@pascal-app/nodes:dev: 02:32:47 PM - Found 0 errors. Watching for file changes.
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: [2J[3J[H02:32:49 PM - File change detected. Starting incremental compilation...
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: 02:32:49 PM - Found 0 errors. Watching for file changes.
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: [2J[3J[H02:32:50 PM - File change detected. Starting incremental compilation...
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: 02:32:50 PM - Found 0 errors. Watching for file changes.
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: [2J[3J[H02:32:50 PM - File change detected. Starting incremental compilation...
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: 02:32:50 PM - Found 0 errors. Watching for file changes.
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: [2J[3J[H02:32:50 PM - File change detected. Starting incremental compilation...
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: 02:32:50 PM - Found 0 errors. Watching for file changes.
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: [2J[3J[H02:32:51 PM - File change detected. Starting incremental compilation...
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: 02:32:51 PM - Found 0 errors. Watching for file changes.
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: [2J[3J[H02:32:51 PM - File change detected. Starting incremental compilation...
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: 02:32:51 PM - Found 0 errors. Watching for file changes.
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: [2J[3J[H02:32:51 PM - File change detected. Starting incremental compilation...
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: 02:32:51 PM - Found 0 errors. Watching for file changes.
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: [2J[3J[H02:32:51 PM - File change detected. Starting incremental compilation...
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: 02:32:51 PM - Found 0 errors. Watching for file changes.
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: [2J[3J[H02:32:52 PM - File change detected. Starting incremental compilation...
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: 02:32:52 PM - Found 0 errors. Watching for file changes.
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: [2J[3J[H02:32:54 PM - File change detected. Starting incremental compilation...
+@pascal-app/nodes:dev: 
+@pascal-app/nodes:dev: 02:32:54 PM - Found 0 errors. Watching for file changes.
+@pascal-app/nodes:dev: 
+ifc-converter-app:dev: cache bypass, force executing fcad9425919f578a
+editor:dev: cache bypass, force executing a6de7dd728f74f83
+ifc-converter-app:dev: $ node scripts/copy-web-ifc-wasm.mjs
+editor:dev: $ dotenv -e ../../.env.local -- next dev --port ${PORT:-3002}
+ifc-converter-app:dev: $ next dev --port 3003
+editor:dev: error: option '-p, --port <port>' argument '${PORT:-3002}' is invalid. '${PORT:-3002}' is not a non-negative number.
+editor:dev: error: script "dev" exited with code 1
+
+ Tasks:    5 successful, 12 total
+Cached:    0 cached, 12 total
+  Time:    2m50.613s 
+Failed:    editor#dev
+
