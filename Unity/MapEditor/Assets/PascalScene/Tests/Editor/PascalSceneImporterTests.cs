@@ -135,6 +135,8 @@ namespace PascalScene.Tests
             Assert.That(mesh.bounds.size.x, Is.EqualTo(4f).Within(0.0001f));
             Assert.That(mesh.bounds.size.y, Is.EqualTo(2.5f).Within(0.0001f));
             Assert.That(mesh.bounds.size.z, Is.EqualTo(0.1f).Within(0.0001f));
+            Assert.That(mesh.uv.Length, Is.EqualTo(mesh.vertexCount));
+            Assert.That(mesh.uv.Any(uv => Mathf.Abs(uv.x) > 1f), Is.True);
             Object.DestroyImmediate(mesh);
         }
 

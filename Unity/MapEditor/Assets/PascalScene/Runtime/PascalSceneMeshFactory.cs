@@ -443,6 +443,25 @@ namespace PascalScene
             mesh.SetVertices(vertices);
             mesh.SetTriangles(triangles, 0);
             mesh.RecalculateNormals();
+            var normals = mesh.normals;
+            var uvs = new Vector2[vertices.Length];
+            for (var i = 0; i < vertices.Length; i++)
+            {
+                var normal = normals[i];
+                var point = vertices[i];
+                if (Mathf.Abs(normal.y) >= Mathf.Abs(normal.x) && Mathf.Abs(normal.y) >= Mathf.Abs(normal.z))
+                {
+                    uvs[i] = new Vector2(point.x, point.z);
+                }
+                else
+                {
+                    var u = Mathf.Abs(normal.x) >= Mathf.Abs(normal.z)
+                        ? (normal.x >= 0f ? point.z : -point.z)
+                        : (normal.z >= 0f ? point.x : -point.x);
+                    uvs[i] = new Vector2(u, 1f - point.y);
+                }
+            }
+            mesh.uv = uvs;
             mesh.RecalculateBounds();
             return mesh;
         }
