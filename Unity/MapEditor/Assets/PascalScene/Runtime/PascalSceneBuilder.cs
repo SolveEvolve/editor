@@ -7,6 +7,7 @@ namespace PascalScene
 {
     public interface IPascalAssetResolver
     {
+        string CatalogVersion { get; }
         GameObject ResolveModel(string assetId);
     }
 
@@ -26,6 +27,24 @@ namespace PascalScene
 
     public static class PascalSceneBuilder
     {
+        private delegate float NodeBuilder(
+            GameObject gameObject,
+            PascalSceneNode node,
+            float containingLevelHeight,
+            PascalSceneBuildContext context);
+
+        private static readonly IReadOnlyDictionary<string, NodeBuilder> NodeBuilders =
+            new Dictionary<string, NodeBuilder>(StringComparer.Ordinal)
+            {
+                ["site"] = BuildContainer,
+                ["building"] = BuildContainer,
+                ["level"] = BuildLevel,
+                ["wall"] = BuildWallNode,
+                ["slab"] = BuildSlabNode,
+                ["ceiling"] = BuildCeilingNode,
+                ["item"] = BuildItemNode
+            };
+
         public static PascalSceneBuildReport Build(
             PascalSceneDocument document,
             Transform sceneParent,
@@ -41,13 +60,30 @@ namespace PascalScene
             RemoveExistingRoot(sceneParent);
 
             var report = new PascalSceneBuildReport();
+            if (document.IsLegacyDocument)
+            {
+                report.Warnings.Add(
+                    "Imported legacy v0 Pascal JSON. Scene materials and catalog version were not exported.");
+            }
+            else if (assetResolver != null &&
+                     !string.Equals(document.CatalogVersion, assetResolver.CatalogVersion, StringComparison.Ordinal))
+            {
+                report.CatalogVersionMismatch = true;
+                report.Warnings.Add(
+                    $"Scene requires catalog '{document.CatalogVersion}', but Unity has '{assetResolver.CatalogVersion}'.");
+            }
             var root = new GameObject(PascalSceneBuildSettings.RootName);
             if (sceneParent != null)
             {
                 root.transform.SetParent(sceneParent, false);
             }
 
-            var levelElevations = CalculateLevelElevations(document);
+            var context = new PascalSceneBuildContext(
+                document,
+                CalculateLevelElevations(document),
+                settings,
+                assetResolver,
+                report);
             var visited = new HashSet<string>();
             var visiting = new HashSet<string>();
             foreach (var rootId in document.RootNodeIds)
@@ -55,11 +91,7 @@ namespace PascalScene
                 BuildNode(
                     rootId,
                     root.transform,
-                    document,
-                    levelElevations,
-                    settings,
-                    assetResolver,
-                    report,
+                    context,
                     visited,
                     visiting,
                     PascalSceneBuildSettings.DefaultLevelHeight);
@@ -76,11 +108,7 @@ namespace PascalScene
                 BuildNode(
                     nodeId,
                     root.transform,
-                    document,
-                    levelElevations,
-                    settings,
-                    assetResolver,
-                    report,
+                    context,
                     visited,
                     visiting,
                     PascalSceneBuildSettings.DefaultLevelHeight);
@@ -139,7 +167,7 @@ namespace PascalScene
                 return Vector3.zero;
             }
 
-            return new Vector3(source[0], source[1], source[2]);
+            return PascalSceneTransform.ToUnityPosition(source);
         }
 
         public static Vector3 ToUnityPlanPoint(float[] source, float elevation = 0f)
@@ -155,11 +183,7 @@ namespace PascalScene
         private static void BuildNode(
             string nodeId,
             Transform parent,
-            PascalSceneDocument document,
-            IReadOnlyDictionary<string, float> levelElevations,
-            PascalSceneBuildSettings settings,
-            IPascalAssetResolver assetResolver,
-            PascalSceneBuildReport report,
+            PascalSceneBuildContext context,
             HashSet<string> visited,
             HashSet<string> visiting,
             float containingLevelHeight)
@@ -169,15 +193,15 @@ namespace PascalScene
                 return;
             }
 
-            if (!document.Nodes.TryGetValue(nodeId, out var node))
+            if (!context.Document.Nodes.TryGetValue(nodeId, out var node))
             {
-                report.Warnings.Add($"Child reference '{nodeId}' does not exist.");
+                context.Report.Warnings.Add($"Child reference '{nodeId}' does not exist.");
                 return;
             }
 
             if (!visiting.Add(nodeId))
             {
-                report.Warnings.Add($"Cycle detected at node '{nodeId}'.");
+                context.Report.Warnings.Add($"Cycle detected at node '{nodeId}'.");
                 return;
             }
 
@@ -185,44 +209,24 @@ namespace PascalScene
             gameObject.transform.SetParent(parent, false);
             gameObject.AddComponent<PascalSceneIdentity>().Configure(node.Id, node.Type);
             gameObject.SetActive(node.Visible);
-            report.ImportedNodeCount++;
+            context.Report.ImportedNodeCount++;
 
             try
             {
-                switch (node.Type)
+                if (NodeBuilders.TryGetValue(node.Type, out var nodeBuilder))
                 {
-                    case "site":
-                    case "building":
-                        ApplyTransform(gameObject.transform, node);
-                        break;
-                    case "level":
-                        var levelElevation = levelElevations.TryGetValue(node.Id, out var value) ? value : 0f;
-                        gameObject.transform.localPosition = new Vector3(0f, levelElevation, 0f);
-                        containingLevelHeight =
-                            node.Height ?? PascalSceneBuildSettings.DefaultLevelHeight;
-                        break;
-                    case "wall":
-                        BuildWall(gameObject, node, containingLevelHeight, settings, report);
-                        break;
-                    case "slab":
-                        BuildSlab(gameObject, node, settings, report);
-                        break;
-                    case "ceiling":
-                        BuildCeiling(gameObject, node, containingLevelHeight, settings, report);
-                        break;
-                    case "item":
-                        BuildItem(gameObject, node, assetResolver, report);
-                        break;
-                    default:
-                        report.SkippedNodeCount++;
-                        report.UnsupportedNodes.Add($"{node.Type}:{node.Id}");
-                        break;
+                    containingLevelHeight = nodeBuilder(gameObject, node, containingLevelHeight, context);
+                }
+                else
+                {
+                    context.Report.SkippedNodeCount++;
+                    context.Report.UnsupportedNodes.Add($"{node.Type}:{node.Id}");
                 }
             }
             catch (Exception exception)
             {
-                report.SkippedNodeCount++;
-                report.Warnings.Add($"{node.Type}:{node.Id} failed: {exception.Message}");
+                context.Report.SkippedNodeCount++;
+                context.Report.Warnings.Add($"{node.Type}:{node.Id} failed: {exception.Message}");
             }
 
             foreach (var childId in node.Children ?? Enumerable.Empty<string>())
@@ -230,11 +234,7 @@ namespace PascalScene
                 BuildNode(
                     childId,
                     gameObject.transform,
-                    document,
-                    levelElevations,
-                    settings,
-                    assetResolver,
-                    report,
+                    context,
                     visited,
                     visiting,
                     containingLevelHeight);
@@ -242,6 +242,67 @@ namespace PascalScene
 
             visiting.Remove(nodeId);
             visited.Add(nodeId);
+        }
+
+        private static float BuildContainer(
+            GameObject gameObject,
+            PascalSceneNode node,
+            float containingLevelHeight,
+            PascalSceneBuildContext context)
+        {
+            ApplyTransform(gameObject.transform, node);
+            return containingLevelHeight;
+        }
+
+        private static float BuildLevel(
+            GameObject gameObject,
+            PascalSceneNode node,
+            float containingLevelHeight,
+            PascalSceneBuildContext context)
+        {
+            var elevation = context.LevelElevations.TryGetValue(node.Id, out var value) ? value : 0f;
+            gameObject.transform.localPosition = new Vector3(0f, elevation, 0f);
+            return node.Height ?? PascalSceneBuildSettings.DefaultLevelHeight;
+        }
+
+        private static float BuildWallNode(
+            GameObject gameObject,
+            PascalSceneNode node,
+            float containingLevelHeight,
+            PascalSceneBuildContext context)
+        {
+            BuildWall(gameObject, node, containingLevelHeight, context.Settings, context.Report);
+            return containingLevelHeight;
+        }
+
+        private static float BuildSlabNode(
+            GameObject gameObject,
+            PascalSceneNode node,
+            float containingLevelHeight,
+            PascalSceneBuildContext context)
+        {
+            BuildSlab(gameObject, node, context.Settings, context.Report);
+            return containingLevelHeight;
+        }
+
+        private static float BuildCeilingNode(
+            GameObject gameObject,
+            PascalSceneNode node,
+            float containingLevelHeight,
+            PascalSceneBuildContext context)
+        {
+            BuildCeiling(gameObject, node, containingLevelHeight, context.Settings, context.Report);
+            return containingLevelHeight;
+        }
+
+        private static float BuildItemNode(
+            GameObject gameObject,
+            PascalSceneNode node,
+            float containingLevelHeight,
+            PascalSceneBuildContext context)
+        {
+            BuildItem(gameObject, node, context.AssetResolver, context.Report);
+            return containingLevelHeight;
         }
 
         private static void BuildWall(
@@ -362,10 +423,7 @@ namespace PascalScene
                 return Quaternion.identity;
             }
 
-            return Quaternion.Euler(
-                radians[0] * Mathf.Rad2Deg,
-                radians[1] * Mathf.Rad2Deg,
-                radians[2] * Mathf.Rad2Deg);
+            return PascalSceneTransform.ToUnityRotationXyzRadians(radians);
         }
 
         private static Vector3 ToUnityScale(float[] scale)
@@ -375,7 +433,7 @@ namespace PascalScene
                 return Vector3.one;
             }
 
-            return new Vector3(scale[0], scale[1], scale[2]);
+            return PascalSceneTransform.ToUnityScale(scale);
         }
 
         private static List<Vector2> ToVector2Polygon(List<float[]> points)
@@ -432,6 +490,29 @@ namespace PascalScene
             {
                 UnityEngine.Object.DestroyImmediate(existing.gameObject);
             }
+        }
+
+        private sealed class PascalSceneBuildContext
+        {
+            public PascalSceneBuildContext(
+                PascalSceneDocument document,
+                IReadOnlyDictionary<string, float> levelElevations,
+                PascalSceneBuildSettings settings,
+                IPascalAssetResolver assetResolver,
+                PascalSceneBuildReport report)
+            {
+                Document = document;
+                LevelElevations = levelElevations;
+                Settings = settings;
+                AssetResolver = assetResolver;
+                Report = report;
+            }
+
+            public PascalSceneDocument Document { get; }
+            public IReadOnlyDictionary<string, float> LevelElevations { get; }
+            public PascalSceneBuildSettings Settings { get; }
+            public IPascalAssetResolver AssetResolver { get; }
+            public PascalSceneBuildReport Report { get; }
         }
     }
 }

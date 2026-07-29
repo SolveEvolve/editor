@@ -2,6 +2,10 @@ import { createHash } from 'node:crypto'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { CATALOG_ITEMS } from '../packages/editor/src/components/ui/item-catalog/catalog-items'
+import {
+  PASCAL_CATALOG_VERSION,
+  PASCAL_MATERIAL_LIBRARY_VERSION,
+} from '../packages/core/src/build-document'
 
 type CatalogEntry = (typeof CATALOG_ITEMS)[number]
 
@@ -14,6 +18,8 @@ type UnityCatalogEntry = CatalogEntry & {
 type UnityCatalogManifest = {
   schemaVersion: 1
   source: 'pascal-editor-catalog'
+  catalogVersion: string
+  materialLibraryVersion: string
   sourceSha256: string
   generatedAt: string
   entries: UnityCatalogEntry[]
@@ -97,6 +103,8 @@ async function sync(): Promise<UnityCatalogManifest> {
   const manifest: UnityCatalogManifest = {
     schemaVersion: 1,
     source: 'pascal-editor-catalog',
+    catalogVersion: PASCAL_CATALOG_VERSION,
+    materialLibraryVersion: PASCAL_MATERIAL_LIBRARY_VERSION,
     sourceSha256,
     generatedAt: new Date().toISOString(),
     entries,
@@ -122,7 +130,12 @@ async function sync(): Promise<UnityCatalogManifest> {
 
 async function verify(): Promise<void> {
   const manifest = JSON.parse(await readFile(manifestPath, 'utf8')) as UnityCatalogManifest
-  if (manifest.schemaVersion !== 1 || manifest.entries.length !== CATALOG_ITEMS.length) {
+  if (
+    manifest.schemaVersion !== 1 ||
+    manifest.catalogVersion !== PASCAL_CATALOG_VERSION ||
+    manifest.materialLibraryVersion !== PASCAL_MATERIAL_LIBRARY_VERSION ||
+    manifest.entries.length !== CATALOG_ITEMS.length
+  ) {
     throw new Error('Catalog manifest is missing entries or has an unsupported schema version.')
   }
 

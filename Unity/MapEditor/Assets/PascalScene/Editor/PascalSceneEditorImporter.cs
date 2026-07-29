@@ -8,7 +8,7 @@ namespace PascalScene.Editor
 {
     public static class PascalSceneEditorImporter
     {
-        private const string ModelsFolder = "Assets/PascalScene/Models";
+        private const string CatalogManifestPath = "Assets/PascalScene/Library/pascal-catalog.json";
         private const string MaterialsFolder = "Assets/PascalScene/Materials";
         private const string GeneratedFolder = "Assets/PascalScene/Generated";
         private const string UrpLitShader = "Universal Render Pipeline/Lit";
@@ -125,9 +125,28 @@ namespace PascalScene.Editor
 
         private sealed class EditorModelResolver : IPascalAssetResolver
         {
+            private readonly PascalCatalogManifest manifest;
+
+            public EditorModelResolver()
+            {
+                var asset = AssetDatabase.LoadAssetAtPath<TextAsset>(CatalogManifestPath);
+                if (asset == null)
+                {
+                    throw new InvalidOperationException(
+                        $"Pascal catalog manifest is missing at '{CatalogManifestPath}'.");
+                }
+
+                manifest = PascalCatalogManifest.Parse(asset.text);
+            }
+
+            public string CatalogVersion => manifest.CatalogVersion;
+
             public GameObject ResolveModel(string assetId)
             {
-                return AssetDatabase.LoadAssetAtPath<GameObject>($"{ModelsFolder}/{assetId}.glb");
+                var entry = manifest.Find(assetId);
+                return entry == null
+                    ? null
+                    : AssetDatabase.LoadAssetAtPath<GameObject>(entry.LocalPath);
             }
         }
     }

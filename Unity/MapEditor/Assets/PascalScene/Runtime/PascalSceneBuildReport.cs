@@ -7,6 +7,7 @@ namespace PascalScene
     {
         public int ImportedNodeCount { get; internal set; }
         public int SkippedNodeCount { get; internal set; }
+        public bool CatalogVersionMismatch { get; internal set; }
         public List<string> MissingModelIds { get; } = new();
         public List<string> UnsupportedNodes { get; } = new();
         public List<string> Warnings { get; } = new();

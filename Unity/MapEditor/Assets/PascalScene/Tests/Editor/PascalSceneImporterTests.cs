@@ -40,6 +40,35 @@ namespace PascalScene.Tests
         }
 
         [Test]
+        public void ParsesVersionedDocumentAndReportsCatalogMismatch()
+        {
+            const string json =
+                "{\"schemaVersion\":1,\"catalogVersion\":\"other-catalog\",\"materialLibraryVersion\":\"materials-2026-07-29\"," +
+                "\"collections\":{},\"materials\":{},\"nodes\":{},\"rootNodeIds\":[]}";
+            var document = PascalSceneDocument.Parse(json);
+            var report = PascalSceneBuilder.Build(
+                document,
+                parent.transform,
+                new PascalSceneBuildSettings(),
+                new DummyModelResolver());
+
+            Assert.That(document.IsLegacyDocument, Is.False);
+            Assert.That(report.CatalogVersionMismatch, Is.True);
+        }
+
+        [Test]
+        public void RejectsMissingChildReferencesBeforeBuilding()
+        {
+            const string json =
+                "{\"nodes\":{\"site_a\":{\"id\":\"site_a\",\"type\":\"site\",\"children\":[\"missing\"]}}," +
+                "\"rootNodeIds\":[\"site_a\"]}";
+
+            Assert.That(
+                () => PascalSceneDocument.Parse(json),
+                Throws.Exception);
+        }
+
+        [Test]
         public void CalculatesLevelElevationsAboveAndBelowGround()
         {
             var document = PascalSceneDocument.Parse(
@@ -64,6 +93,18 @@ namespace PascalScene.Tests
             Assert.That(
                 PascalSceneBuilder.ToUnityPlanPoint(new[] { 1.25f, -3.5f }, 2f),
                 Is.EqualTo(new Vector3(1.25f, 2f, -3.5f)));
+        }
+
+        [Test]
+        public void TransformAdapterMatchesPascalXyzEulerSemantics()
+        {
+            var rotation = PascalSceneTransform.ToUnityRotationXyzRadians(
+                new[] { Mathf.PI * 0.5f, Mathf.PI * 0.5f, 0f });
+
+            Assert.That(rotation.x, Is.EqualTo(0.5f).Within(0.0001f));
+            Assert.That(rotation.y, Is.EqualTo(0.5f).Within(0.0001f));
+            Assert.That(rotation.z, Is.EqualTo(0.5f).Within(0.0001f));
+            Assert.That(rotation.w, Is.EqualTo(0.5f).Within(0.0001f));
         }
 
         [Test]
@@ -142,6 +183,8 @@ namespace PascalScene.Tests
         private sealed class DummyModelResolver : IPascalAssetResolver
         {
             private readonly GameObject model = new("Dummy Model");
+
+            public string CatalogVersion => "catalog-2026-07-29";
 
             public GameObject ResolveModel(string assetId)
             {

@@ -1,8 +1,10 @@
 {
   "schemaVersion": 1,
   "source": "pascal-editor-catalog",
+  "catalogVersion": "catalog-2026-07-29",
+  "materialLibraryVersion": "materials-2026-07-29",
   "sourceSha256": "8fc8a77bc4df7a680146b83610b26c33f21357a59d12edab033739526ff2d2b6",
-  "generatedAt": "2026-07-29T17:07:52.299Z",
+  "generatedAt": "2026-07-29T17:26:09.028Z",
   "entries": [
     {
       "id": "cactus",
