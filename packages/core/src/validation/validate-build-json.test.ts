@@ -1,5 +1,10 @@
 import { afterEach, beforeEach, describe, expect, test } from 'bun:test'
 import { z } from 'zod'
+import {
+  PASCAL_BUILD_SCHEMA_VERSION,
+  PASCAL_CATALOG_VERSION,
+  PASCAL_MATERIAL_LIBRARY_VERSION,
+} from '../build-document'
 import { nodeRegistry, registerNode } from '../registry'
 import type { AnyNodeDefinition } from '../registry/types'
 import { LevelNode, WallNode } from '../schema'
@@ -29,6 +34,33 @@ describe('validateBuildJson', () => {
     const result = validateBuildJson(makeScene())
     expect(result.ok).toBe(true)
     expect(result.schemaIssueCount).toBe(0)
+  })
+
+  test('accepts a complete versioned scene document', () => {
+    const result = validateBuildJson({
+      ...makeScene(),
+      schemaVersion: PASCAL_BUILD_SCHEMA_VERSION,
+      catalogVersion: PASCAL_CATALOG_VERSION,
+      materialLibraryVersion: PASCAL_MATERIAL_LIBRARY_VERSION,
+      collections: {},
+      materials: {},
+      installedPlugins: [],
+    })
+
+    expect(result.ok).toBe(true)
+    expect(result.parsed?.schemaVersion).toBe(PASCAL_BUILD_SCHEMA_VERSION)
+    expect(result.parsed?.collections).toEqual({})
+    expect(result.parsed?.materials).toEqual({})
+  })
+
+  test('rejects an incomplete versioned scene document', () => {
+    const result = validateBuildJson({
+      ...makeScene(),
+      schemaVersion: PASCAL_BUILD_SCHEMA_VERSION,
+    })
+
+    expect(result.ok).toBe(false)
+    expect(result.errors.map((error) => error.code)).toContain('missing_catalog_version')
   })
 
   test('plugin-typed children do not hard-fail their parent level', () => {

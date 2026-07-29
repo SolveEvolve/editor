@@ -348,6 +348,13 @@ export type { SceneGraph } from './utils/clone-scene-graph'
 export { cloneLevelSubtree, cloneSceneGraph, forkSceneGraph } from './utils/clone-scene-graph'
 export { isObject } from './utils/types'
 export {
+  createPascalBuildDocument,
+  PASCAL_BUILD_SCHEMA_VERSION,
+  PASCAL_CATALOG_VERSION,
+  PASCAL_MATERIAL_LIBRARY_VERSION,
+  type PascalBuildDocument,
+} from './build-document'
+export {
   type BuildStats,
   type ParsedBuildJson,
   type SchemaIssue,

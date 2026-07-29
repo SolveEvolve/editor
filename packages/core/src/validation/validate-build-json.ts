@@ -1,4 +1,6 @@
 import { nodeRegistry } from '../registry'
+import { PASCAL_BUILD_SCHEMA_VERSION } from '../build-document'
+import { SceneMaterial } from '../schema/scene-material'
 import { AnyNode, type AnyNodeType } from '../schema/types'
 import { healSceneNodes } from '../utils/heal-scene-graph'
 
@@ -21,8 +23,13 @@ export type BuildStats = {
 }
 
 export type ParsedBuildJson = {
+  schemaVersion?: number
+  catalogVersion?: string
+  materialLibraryVersion?: string
   nodes: Record<string, unknown>
   rootNodeIds: string[]
+  collections?: Record<string, unknown>
+  materials?: Record<string, unknown>
   installedPlugins?: string[]
 }
 
@@ -108,9 +115,51 @@ export function validateBuildJson(input: unknown): ValidateBuildJsonResult {
     }
   }
 
+  const schemaVersionRaw = input.schemaVersion
+  const catalogVersionRaw = input.catalogVersion
+  const materialLibraryVersionRaw = input.materialLibraryVersion
   const nodesRaw = input.nodes
   const rootNodeIdsRaw = input.rootNodeIds
+  const collectionsRaw = input.collections
+  const materialsRaw = input.materials
   const installedPluginsRaw = input.installedPlugins
+  const isLegacyDocument = schemaVersionRaw === undefined
+
+  if (!isLegacyDocument && schemaVersionRaw !== PASCAL_BUILD_SCHEMA_VERSION) {
+    errors.push({
+      severity: 'error',
+      code: 'unsupported_schema_version',
+      message: `Unsupported "schemaVersion" ${String(schemaVersionRaw)}. Expected ${PASCAL_BUILD_SCHEMA_VERSION}.`,
+    })
+  }
+  if (!isLegacyDocument && typeof catalogVersionRaw !== 'string') {
+    errors.push({
+      severity: 'error',
+      code: 'missing_catalog_version',
+      message: 'Missing or invalid "catalogVersion" in a versioned build document.',
+    })
+  }
+  if (!isLegacyDocument && typeof materialLibraryVersionRaw !== 'string') {
+    errors.push({
+      severity: 'error',
+      code: 'missing_material_library_version',
+      message: 'Missing or invalid "materialLibraryVersion" in a versioned build document.',
+    })
+  }
+  if (!isLegacyDocument && !isPlainObject(collectionsRaw)) {
+    errors.push({
+      severity: 'error',
+      code: 'missing_collections',
+      message: 'Missing or invalid "collections" in a versioned build document.',
+    })
+  }
+  if (!isLegacyDocument && !isPlainObject(materialsRaw)) {
+    errors.push({
+      severity: 'error',
+      code: 'missing_materials',
+      message: 'Missing or invalid "materials" in a versioned build document.',
+    })
+  }
 
   if (!isPlainObject(nodesRaw)) {
     errors.push({
@@ -137,6 +186,28 @@ export function validateBuildJson(input: unknown): ValidateBuildJsonResult {
       schemaIssues,
       schemaIssueCount: 0,
     }
+  }
+
+  const collections = isPlainObject(collectionsRaw) ? collectionsRaw : undefined
+  const materials = isPlainObject(materialsRaw) ? materialsRaw : undefined
+  if (materials) {
+    for (const [materialId, material] of Object.entries(materials)) {
+      const parsedMaterial = SceneMaterial.safeParse(material)
+      if (!parsedMaterial.success || parsedMaterial.data.id !== materialId) {
+        errors.push({
+          severity: 'error',
+          code: 'invalid_scene_material',
+          message: `Scene material "${materialId}" is invalid or does not match its key.`,
+        })
+      }
+    }
+  }
+  if (isLegacyDocument) {
+    warnings.push({
+      severity: 'warning',
+      code: 'legacy_build_document',
+      message: 'This build has no schemaVersion; it will import with legacy document defaults.',
+    })
   }
 
   // Heal known pre-existing corruption (null children, zero-length walls) up
@@ -370,8 +441,15 @@ export function validateBuildJson(input: unknown): ValidateBuildJsonResult {
     ok,
     parsed: ok
       ? {
+          ...(isLegacyDocument ? {} : { schemaVersion: schemaVersionRaw as number }),
+          ...(typeof catalogVersionRaw === 'string' ? { catalogVersion: catalogVersionRaw } : {}),
+          ...(typeof materialLibraryVersionRaw === 'string'
+            ? { materialLibraryVersion: materialLibraryVersionRaw }
+            : {}),
           nodes,
           rootNodeIds,
+          ...(collections ? { collections } : {}),
+          ...(materials ? { materials } : {}),
           ...(installedPlugins ? { installedPlugins } : {}),
         }
       : null,
