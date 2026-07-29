@@ -1,4 +1,5 @@
-import { AnyNode } from '@pascal-app/core/schema'
+import { PASCAL_BUILD_SCHEMA_VERSION } from '@pascal-app/core'
+import { AnyNode, SceneMaterial } from '@pascal-app/core/schema'
 import { z } from 'zod'
 
 /**
@@ -14,9 +15,13 @@ import { z } from 'zod'
  */
 export const apiGraphSchema = z
   .object({
+    schemaVersion: z.literal(PASCAL_BUILD_SCHEMA_VERSION).optional(),
+    catalogVersion: z.string().min(1).optional(),
+    materialLibraryVersion: z.string().min(1).optional(),
     nodes: z.record(z.string(), z.unknown()),
     rootNodeIds: z.array(z.string()),
     collections: z.unknown().optional(),
+    materials: z.record(z.string(), SceneMaterial).optional(),
     installedPlugins: z.array(z.string().min(1)).optional(),
   })
   .superRefine((value, ctx) => {

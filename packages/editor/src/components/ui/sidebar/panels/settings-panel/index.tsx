@@ -1,9 +1,11 @@
 import {
   clearSceneHistory,
+  createPascalBuildDocument,
   emitter,
   useScene,
   validateBuildJson,
 } from '@pascal-app/core'
+import type { ParsedBuildJson } from '@pascal-app/core'
 import { useViewer } from '@pascal-app/viewer'
 import { TreeView, VisualJson } from '@visual-json/react'
 import { Camera, Download, Map as MapIcon, Save, Trash2, Upload } from 'lucide-react'
@@ -186,6 +188,8 @@ export function SettingsPanel({
   const fileInputRef = useRef<HTMLInputElement>(null)
   const nodes = useScene((state) => state.nodes)
   const rootNodeIds = useScene((state) => state.rootNodeIds)
+  const collections = useScene((state) => state.collections)
+  const materials = useScene((state) => state.materials)
   const installedPlugins = useScene((state) => state.installedPlugins)
   const setScene = useScene((state) => state.setScene)
   const clearScene = useScene((state) => state.clearScene)
@@ -214,7 +218,13 @@ export function SettingsPanel({
   const isLocalProject = false // Props-based; only show cloud sections when projectId provided
 
   const handleSaveBuild = () => {
-    const sceneData = { nodes, rootNodeIds, installedPlugins }
+    const sceneData = createPascalBuildDocument({
+      nodes,
+      rootNodeIds,
+      collections,
+      materials,
+      installedPlugins,
+    })
     const json = JSON.stringify(sceneData, null, 2)
     const blob = new Blob([json], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
@@ -270,17 +280,19 @@ export function SettingsPanel({
     e.target.value = ''
   }
 
-  const handleConfirmImport = (parsed: {
-    nodes: Record<string, unknown>
-    rootNodeIds: string[]
-    installedPlugins?: string[]
-  }) => {
+  const handleConfirmImport = (parsed: ParsedBuildJson) => {
     const currentScene = useScene.getState()
     setScene(
       parsed.nodes as Parameters<typeof setScene>[0],
       parsed.rootNodeIds as Parameters<typeof setScene>[1],
       {
         installedPlugins: parsed.installedPlugins ?? currentScene.installedPlugins,
+        collections:
+          (parsed.collections as NonNullable<Parameters<typeof setScene>[2]>['collections']) ??
+          currentScene.collections,
+        materials:
+          (parsed.materials as NonNullable<Parameters<typeof setScene>[2]>['materials']) ??
+          currentScene.materials,
         hasExplicitPluginInstallState:
           parsed.installedPlugins !== undefined || currentScene.hasExplicitPluginInstallState,
       },
