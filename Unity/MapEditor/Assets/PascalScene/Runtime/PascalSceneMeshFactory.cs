@@ -67,14 +67,22 @@ namespace PascalScene
                 throw new ArgumentException("Curved wall requires a non-zero chord and curve offset.");
             }
 
-            var normal = new Vector2(-chord.y, chord.x).normalized * Mathf.Sign(sagitta);
+            var direction = Mathf.Sign(sagitta);
+            var normal = new Vector2(-chord.y, chord.x).normalized;
             var radius = (chordLength * chordLength) / (8f * Mathf.Abs(sagitta)) + Mathf.Abs(sagitta) * 0.5f;
             var midpoint = (start + end) * 0.5f;
-            var center = midpoint + normal * (Mathf.Abs(sagitta) - radius);
+            var center = midpoint + normal * (radius - Mathf.Abs(sagitta)) * direction;
             var startAngle = Mathf.Atan2(start.y - center.y, start.x - center.x);
             var endAngle = Mathf.Atan2(end.y - center.y, end.x - center.x);
             var delta = Mathf.DeltaAngle(startAngle * Mathf.Rad2Deg, endAngle * Mathf.Rad2Deg) * Mathf.Deg2Rad;
-            if (Mathf.Sign(delta) != Mathf.Sign(sagitta)) delta += Mathf.Sign(sagitta) * Mathf.PI * 2f;
+            if (direction > 0f)
+            {
+                while (delta <= 0f) delta += Mathf.PI * 2f;
+            }
+            else
+            {
+                while (delta >= 0f) delta -= Mathf.PI * 2f;
+            }
             var segments = Mathf.Clamp(Mathf.CeilToInt(Mathf.Abs(delta) * radius / 0.2f), 8, 64);
             var outer = new List<Vector2>(segments + 1);
             var inner = new List<Vector2>(segments + 1);
