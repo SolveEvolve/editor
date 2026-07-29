@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "catalog-2026-07-29",
+  "materialLibraryVersion": "materials-2026-07-29",
+  "nodes": {
+    "site_1ugtd7v8wk30fkj1": {
+      "object": "node",
+      "id": "site_1ugtd7v8wk30fkj1",
+      "type": "site",
+      "parentId": null,
+      "visible": true,
+      "metadata": {},
+      "polygon": {
+        "type": "polygon",
+        "points": [
+          [
+            -15,
+            -15
+          ],
+          [
+            15,
+            -15
+          ],
+          [
+            15,
+            15
+          ],
+          [
+            -15,
+            15
+          ]
+        ]
+      },
+      "children": [
+        "building_p0plkzhjq0vukctn"
+      ]
+    },
+    "building_p0plkzhjq0vukctn": {
+      "object": "node",
+      "id": "building_p0plkzhjq0vukctn",
+      "type": "building",
+      "parentId": null,
+      "visible": true,
+      "metadata": {},
+      "children": [
+        "level_wc3pp6nvehdthlep"
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    "level_wc3pp6nvehdthlep": {
+      "object": "node",
+      "id": "level_wc3pp6nvehdthlep",
+      "type": "level",
+      "parentId": null,
+      "visible": true,
+      "metadata": {},
+      "children": [
+        "wall_2k105m2laesoixbq",
+        "wall_fyh3d9t8e36ikw40",
+        "wall_rmaklj2hi39l7517",
+        "wall_yf31vpdu3yi5x19j",
+        "wall_8oek9ej89xws0woz",
+        "wall_okcd3bxenkbbm0ac",
+        "wall_52o8fvuz4hjoqy72",
+        "wall_b7sy1hyqc0rvzvl8",
+        "slab_l3lt3xxvie18goym",
+        "ceiling_vsrb6cke9yqwfba4",
+        "item_khe19zm83agz5wdm",
+        "item_rpf82tp4apqba0bo",
+        "item_dk7infy6epyouzri"
+      ],
+      "level": 0,
+      "height": 2.5
+    },
+    "wall_2k105m2laesoixbq": {
+      "object": "node",
+      "id": "wall_2k105m2laesoixbq",
+      "type": "wall",
+      "name": "Wall 1",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "children": [],
+      "start": [
+        -3,
+        6
+      ],
+      "end": [
+        -3,
+        -2
+      ],
+      "frontSide": "interior",
+      "backSide": "exterior"
+    },
+    "wall_fyh3d9t8e36ikw40": {
+      "object": "node",
+      "id": "wall_fyh3d9t8e36ikw40",
+      "type": "wall",
+      "name": "Wall 2",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "children": [],
+      "start": [
+        -3,
+        -2
+      ],
+      "end": [
+        0,
+        -2
+      ],
+      "frontSide": "interior",
+      "backSide": "exterior"
+    },
+    "wall_rmaklj2hi39l7517": {
+      "object": "node",
+      "id": "wall_rmaklj2hi39l7517",
+      "type": "wall",
+      "name": "Wall 3",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "children": [],
+      "start": [
+        0,
+        -2
+      ],
+      "end": [
+        0,
+        -1
+      ],
+      "frontSide": "interior",
+      "backSide": "exterior"
+    },
+    "wall_yf31vpdu3yi5x19j": {
+      "object": "node",
+      "id": "wall_yf31vpdu3yi5x19j",
+      "type": "wall",
+      "name": "Wall 4",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "children": [],
+      "start": [
+        0,
+        -1
+      ],
+      "end": [
+        3,
+        -1
+      ],
+      "frontSide": "interior",
+      "backSide": "exterior"
+    },
+    "wall_8oek9ej89xws0woz": {
+      "object": "node",
+      "id": "wall_8oek9ej89xws0woz",
+      "type": "wall",
+      "name": "Wall 5",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "children": [],
+      "start": [
+        3,
+        -1
+      ],
+      "end": [
+        3,
+        -2
+      ],
+      "frontSide": "interior",
+      "backSide": "exterior"
+    },
+    "wall_okcd3bxenkbbm0ac": {
+      "object": "node",
+      "id": "wall_okcd3bxenkbbm0ac",
+      "type": "wall",
+      "name": "Wall 6",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "children": [],
+      "start": [
+        3,
+        -2
+      ],
+      "end": [
+        6,
+        -2
+      ],
+      "frontSide": "interior",
+      "backSide": "exterior"
+    },
+    "wall_52o8fvuz4hjoqy72": {
+      "object": "node",
+      "id": "wall_52o8fvuz4hjoqy72",
+      "type": "wall",
+      "name": "Wall 7",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "children": [],
+      "start": [
+        6,
+        -2
+      ],
+      "end": [
+        6,
+        6
+      ],
+      "frontSide": "interior",
+      "backSide": "exterior"
+    },
+    "wall_b7sy1hyqc0rvzvl8": {
+      "object": "node",
+      "id": "wall_b7sy1hyqc0rvzvl8",
+      "type": "wall",
+      "name": "Wall 8",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "children": [],
+      "start": [
+        6,
+        6
+      ],
+      "end": [
+        -3,
+        6
+      ],
+      "frontSide": "interior",
+      "backSide": "exterior"
+    },
+    "slab_l3lt3xxvie18goym": {
+      "object": "node",
+      "id": "slab_l3lt3xxvie18goym",
+      "type": "slab",
+      "name": "Room 1 Slab",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "polygon": [
+        [
+          -3,
+          6
+        ],
+        [
+          -3,
+          -2
+        ],
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -2
+        ],
+        [
+          6,
+          -2
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "holes": [],
+      "holeMetadata": [],
+      "elevation": 0.05,
+      "thickness": 0.05,
+      "recessed": false,
+      "autoFromWalls": true
+    },
+    "ceiling_vsrb6cke9yqwfba4": {
+      "object": "node",
+      "id": "ceiling_vsrb6cke9yqwfba4",
+      "type": "ceiling",
+      "name": "Room 1 Ceiling",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "children": [],
+      "polygon": [
+        [
+          -3,
+          6
+        ],
+        [
+          -3,
+          -2
+        ],
+        [
+          0,
+          -2
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -2
+        ],
+        [
+          6,
+          -2
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "holes": [],
+      "holeMetadata": [],
+      "autoFromWalls": true
+    },
+    "item_khe19zm83agz5wdm": {
+      "object": "node",
+      "id": "item_khe19zm83agz5wdm",
+      "type": "item",
+      "name": "Sofa",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "position": [
+        -0.25,
+        0,
+        4.25
+      ],
+      "rotation": [
+        0,
+        3.141592653589793,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "children": [],
+      "asset": {
+        "id": "sofa",
+        "category": "furniture",
+        "name": "Sofa",
+        "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sofa/thumbnail.png",
+        "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sofa/floor-plan.png",
+        "source": "library",
+        "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sofa/model.glb",
+        "dimensions": [
+          2.06,
+          0.74,
+          1.01
+        ],
+        "tags": [
+          "floor",
+          "seating"
+        ],
+        "offset": [
+          -0.0023,
+          0.009,
+          0.0459
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "item_rpf82tp4apqba0bo": {
+      "object": "node",
+      "id": "item_rpf82tp4apqba0bo",
+      "type": "item",
+      "name": "Dining Table",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "position": [
+        -1.25,
+        0,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "children": [],
+      "asset": {
+        "id": "dining-table",
+        "category": "furniture",
+        "name": "Dining Table",
+        "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-table/thumbnail.png",
+        "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-table/floor-plan.png",
+        "source": "library",
+        "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-table/model.glb",
+        "dimensions": [
+          2.16,
+          0.7,
+          0.95
+        ],
+        "tags": [
+          "table",
+          "dining",
+          "furniture",
+          "wood",
+          "modern",
+          "minimalist",
+          "kitchen",
+          "eating",
+          "surface",
+          "contemporary",
+          "gathering",
+          "walnut"
+        ],
+        "offset": [
+          0,
+          0,
+          -0.0077
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "surface": {
+          "height": 0.7
+        }
+      }
+    },
+    "item_dk7infy6epyouzri": {
+      "object": "node",
+      "id": "item_dk7infy6epyouzri",
+      "type": "item",
+      "name": "Dining Chair",
+      "parentId": "level_wc3pp6nvehdthlep",
+      "visible": true,
+      "metadata": {},
+      "position": [
+        3.75,
+        0,
+        -0.25
+      ],
+      "rotation": [
+        0,
+        11.780972450961723,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "children": [],
+      "asset": {
+        "id": "dining-chair",
+        "category": "furniture",
+        "name": "Dining Chair",
+        "thumbnail": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-chair/thumbnail.png",
+        "floorPlanUrl": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-chair/floor-plan.png",
+        "source": "library",
+        "src": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-chair/model.glb",
+        "dimensions": [
+          0.47,
+          0.87,
+          0.5
+        ],
+        "tags": [
+          "chair",
+          "seating",
+          "dining",
+          "furniture",
+          "modern",
+          "wood",
+          "upholstered",
+          "kitchen",
+          "seat",
+          "minimalist",
+          "timber",
+          "bistro"
+        ],
+        "offset": [
+          0,
+          0,
+          0.0016
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  },
+  "rootNodeIds": [
+    "site_1ugtd7v8wk30fkj1"
+  ],
+  "collections": {},
+  "materials": {},
+  "installedPlugins": [
+    "pascal:trees"
+  ]
+}
