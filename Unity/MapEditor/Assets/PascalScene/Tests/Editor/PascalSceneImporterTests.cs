@@ -85,6 +85,21 @@ namespace PascalScene.Tests
         }
 
         [Test]
+        public void CalculatesIndependentVerticalStacksPerBuilding()
+        {
+            var document = PascalSceneDocument.Parse(
+                "{\"nodes\":{\"a0\":{\"id\":\"a0\",\"type\":\"level\",\"parentId\":\"a\",\"level\":0,\"height\":3}," +
+                "\"a1\":{\"id\":\"a1\",\"type\":\"level\",\"parentId\":\"a\",\"level\":1,\"height\":2}," +
+                "\"b0\":{\"id\":\"b0\",\"type\":\"level\",\"parentId\":\"b\",\"level\":0,\"height\":4}}," +
+                "\"rootNodeIds\":[\"a0\",\"a1\",\"b0\"]}");
+
+            var elevations = PascalSceneBuilder.CalculateLevelElevations(document);
+
+            Assert.That(elevations["a1"], Is.EqualTo(3f));
+            Assert.That(elevations["b0"], Is.EqualTo(0f));
+        }
+
+        [Test]
         public void CoordinateConversionPreservesMetersAndAxes()
         {
             Assert.That(
@@ -119,6 +134,18 @@ namespace PascalScene.Tests
             Assert.That(mesh.bounds.size.x, Is.EqualTo(4f).Within(0.0001f));
             Assert.That(mesh.bounds.size.y, Is.EqualTo(2.5f).Within(0.0001f));
             Assert.That(mesh.bounds.size.z, Is.EqualTo(0.1f).Within(0.0001f));
+            Object.DestroyImmediate(mesh);
+        }
+
+        [Test]
+        public void CurvedWallMeshUsesArcAndBaseElevation()
+        {
+            var mesh = PascalSceneMeshFactory.CreateWall(
+                new[] { 0f, 0f }, new[] { 4f, 0f }, 2f, 0.1f, 1f, 0.5f);
+
+            Assert.That(mesh.bounds.min.y, Is.EqualTo(0.5f).Within(0.0001f));
+            Assert.That(mesh.bounds.size.y, Is.EqualTo(2f).Within(0.0001f));
+            Assert.That(mesh.vertexCount, Is.GreaterThan(16));
             Object.DestroyImmediate(mesh);
         }
 

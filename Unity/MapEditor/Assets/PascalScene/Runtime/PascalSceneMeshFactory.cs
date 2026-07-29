@@ -8,7 +8,13 @@ namespace PascalScene
     {
         private const float Epsilon = 0.00001f;
 
-        public static Mesh CreateWall(float[] start, float[] end, float height, float thickness)
+        public static Mesh CreateWall(
+            float[] start,
+            float[] end,
+            float height,
+            float thickness,
+            float curveOffset = 0f,
+            float baseElevation = 0f)
         {
             RequirePoint(start, nameof(start));
             RequirePoint(end, nameof(end));
@@ -26,6 +32,11 @@ namespace PascalScene
                 throw new ArgumentException("Wall start and end must be different.");
             }
 
+            if (Mathf.Abs(curveOffset) > Epsilon)
+            {
+                return CreateCurvedWall(a, b, height, thickness, curveOffset, baseElevation);
+            }
+
             var perpendicular = new Vector2(-direction.y, direction.x).normalized * (thickness * 0.5f);
             return CreatePolygonPrism(
                 new List<Vector2>
@@ -35,9 +46,49 @@ namespace PascalScene
                     b - perpendicular,
                     a - perpendicular
                 },
-                0f,
-                height,
+                baseElevation,
+                baseElevation + height,
                 "Pascal Wall Mesh");
+        }
+
+        private static Mesh CreateCurvedWall(
+            Vector2 start,
+            Vector2 end,
+            float height,
+            float thickness,
+            float curveOffset,
+            float baseElevation)
+        {
+            var chord = end - start;
+            var chordLength = chord.magnitude;
+            var sagitta = curveOffset;
+            if (chordLength <= Epsilon || Mathf.Abs(sagitta) <= Epsilon)
+            {
+                throw new ArgumentException("Curved wall requires a non-zero chord and curve offset.");
+            }
+
+            var normal = new Vector2(-chord.y, chord.x).normalized * Mathf.Sign(sagitta);
+            var radius = (chordLength * chordLength) / (8f * Mathf.Abs(sagitta)) + Mathf.Abs(sagitta) * 0.5f;
+            var midpoint = (start + end) * 0.5f;
+            var center = midpoint + normal * (Mathf.Abs(sagitta) - radius);
+            var startAngle = Mathf.Atan2(start.y - center.y, start.x - center.x);
+            var endAngle = Mathf.Atan2(end.y - center.y, end.x - center.x);
+            var delta = Mathf.DeltaAngle(startAngle * Mathf.Rad2Deg, endAngle * Mathf.Rad2Deg) * Mathf.Deg2Rad;
+            if (Mathf.Sign(delta) != Mathf.Sign(sagitta)) delta += Mathf.Sign(sagitta) * Mathf.PI * 2f;
+            var segments = Mathf.Clamp(Mathf.CeilToInt(Mathf.Abs(delta) * radius / 0.2f), 8, 64);
+            var outer = new List<Vector2>(segments + 1);
+            var inner = new List<Vector2>(segments + 1);
+            for (var i = 0; i <= segments; i++)
+            {
+                var angle = startAngle + delta * i / segments;
+                var radial = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+                outer.Add(center + radial * (radius + thickness * 0.5f));
+                inner.Add(center + radial * (radius - thickness * 0.5f));
+            }
+
+            inner.Reverse();
+            outer.AddRange(inner);
+            return CreatePolygonPrism(outer, baseElevation, baseElevation + height, "Pascal Curved Wall Mesh");
         }
 
         public static Mesh CreatePolygonPrism(

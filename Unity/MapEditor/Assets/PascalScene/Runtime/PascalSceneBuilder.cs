@@ -122,8 +122,6 @@ namespace PascalScene
         {
             var levels = document.Nodes.Values
                 .Where(node => node.Type == "level")
-                .OrderBy(node => node.Level ?? 0f)
-                .ThenBy(node => node.Id, StringComparer.Ordinal)
                 .ToList();
             var result = new Dictionary<string, float>();
             if (levels.Count == 0)
@@ -131,29 +129,31 @@ namespace PascalScene
                 return result;
             }
 
-            var groups = levels
-                .GroupBy(node => node.Level ?? 0f)
-                .OrderBy(group => group.Key)
-                .ToList();
-            var nonNegative = groups.Where(group => group.Key >= 0f).ToList();
-            var elevation = 0f;
-            foreach (var group in nonNegative)
+            foreach (var buildingLevels in levels.GroupBy(ResolveBuildingId, StringComparer.Ordinal))
             {
-                foreach (var level in group)
+                var groups = buildingLevels
+                    .GroupBy(node => node.Level ?? 0f)
+                    .OrderBy(group => group.Key)
+                    .ToList();
+                var elevation = 0f;
+                foreach (var group in groups.Where(group => group.Key >= 0f))
                 {
-                    result[level.Id] = elevation;
+                    foreach (var level in group)
+                    {
+                        result[level.Id] = elevation;
+                    }
+
+                    elevation += group.Max(level => level.Height ?? PascalSceneBuildSettings.DefaultLevelHeight);
                 }
 
-                elevation += group.Max(level => level.Height ?? PascalSceneBuildSettings.DefaultLevelHeight);
-            }
-
-            elevation = 0f;
-            foreach (var group in groups.Where(group => group.Key < 0f).OrderByDescending(group => group.Key))
-            {
-                elevation -= group.Max(level => level.Height ?? PascalSceneBuildSettings.DefaultLevelHeight);
-                foreach (var level in group)
+                elevation = 0f;
+                foreach (var group in groups.Where(group => group.Key < 0f).OrderByDescending(group => group.Key))
                 {
-                    result[level.Id] = elevation;
+                    elevation -= group.Max(level => level.Height ?? PascalSceneBuildSettings.DefaultLevelHeight);
+                    foreach (var level in group)
+                    {
+                        result[level.Id] = elevation;
+                    }
                 }
             }
 
@@ -271,7 +271,7 @@ namespace PascalScene
             float containingLevelHeight,
             PascalSceneBuildContext context)
         {
-            BuildWall(gameObject, node, containingLevelHeight, context.Settings, context.Report);
+            BuildWall(gameObject, node, containingLevelHeight, context, context.Settings, context.Report);
             return containingLevelHeight;
         }
 
@@ -309,22 +309,25 @@ namespace PascalScene
             GameObject gameObject,
             PascalSceneNode node,
             float containingLevelHeight,
+            PascalSceneBuildContext context,
             PascalSceneBuildSettings settings,
             PascalSceneBuildReport report)
         {
-            if (Mathf.Abs(node.CurveOffset ?? 0f) > 0.00001f)
+            var baseElevation = ResolveSupportElevation(node, context.Document);
+            var height = node.Height ?? containingLevelHeight - baseElevation;
+            if (height <= 0f)
             {
                 report.SkippedNodeCount++;
-                report.UnsupportedNodes.Add($"curved wall:{node.Id}");
+                report.UnsupportedNodes.Add($"wall non-positive effective height:{node.Id}");
                 return;
             }
-
-            var height = node.Height ?? containingLevelHeight;
             var mesh = PascalSceneMeshFactory.CreateWall(
                 node.Start,
                 node.End,
                 height,
-                node.Thickness ?? PascalSceneBuildSettings.DefaultWallThickness);
+                node.Thickness ?? PascalSceneBuildSettings.DefaultWallThickness,
+                node.CurveOffset ?? 0f,
+                baseElevation);
             AddMesh(gameObject, mesh, settings.WallMaterial, settings, node.Id);
         }
 
@@ -407,6 +410,7 @@ namespace PascalScene
             settings.PersistMesh?.Invoke(mesh, nodeId);
             gameObject.AddComponent<MeshFilter>().sharedMesh = mesh;
             gameObject.AddComponent<MeshRenderer>().sharedMaterial = material;
+            gameObject.AddComponent<MeshCollider>().sharedMesh = mesh;
         }
 
         private static void ApplyTransform(Transform transform, PascalSceneNode node)
@@ -455,6 +459,22 @@ namespace PascalScene
         private static bool HasHoles(PascalSceneNode node)
         {
             return node.Holes != null && node.Holes.Any(hole => hole != null && hole.Count >= 3);
+        }
+
+        private static string ResolveBuildingId(PascalSceneNode level)
+        {
+            return level.ParentId ?? string.Empty;
+        }
+
+        private static float ResolveSupportElevation(PascalSceneNode node, PascalSceneDocument document)
+        {
+            if (!string.IsNullOrWhiteSpace(node.SupportSlabId) &&
+                document.Nodes.TryGetValue(node.SupportSlabId, out var slab) && slab.Type == "slab")
+            {
+                return slab.Elevation ?? PascalSceneBuildSettings.DefaultSlabElevation;
+            }
+
+            return 0f;
         }
 
         private static string GetDisplayName(PascalSceneNode node)

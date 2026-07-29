@@ -182,6 +182,12 @@ namespace PascalScene
         [JsonProperty("elevation")]
         public float? Elevation { get; set; }
 
+        [JsonProperty("supportSlabId")]
+        public string SupportSlabId { get; set; }
+
+        [JsonProperty("recessed")]
+        public bool Recessed { get; set; }
+
         [JsonProperty("curveOffset")]
         public float? CurveOffset { get; set; }
 
