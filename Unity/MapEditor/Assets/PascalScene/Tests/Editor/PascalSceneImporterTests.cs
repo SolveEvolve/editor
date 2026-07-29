@@ -151,6 +151,20 @@ namespace PascalScene.Tests
         }
 
         [Test]
+        public void ConnectedStraightWallsProduceMiteredFootprints()
+        {
+            var document = PascalSceneDocument.Parse(
+                "{\"nodes\":{\"level\":{\"id\":\"level\",\"type\":\"level\",\"level\":0,\"children\":[\"a\",\"b\"]}," +
+                "\"a\":{\"id\":\"a\",\"type\":\"wall\",\"start\":[0,0],\"end\":[2,0],\"children\":[]}," +
+                "\"b\":{\"id\":\"b\",\"type\":\"wall\",\"start\":[2,0],\"end\":[2,2],\"children\":[]}},\"rootNodeIds\":[\"level\"]}");
+
+            PascalSceneBuilder.Build(document, parent.transform, new PascalSceneBuildSettings());
+
+            var walls = parent.GetComponentsInChildren<MeshFilter>();
+            Assert.That(walls.Count(filter => filter.sharedMesh != null), Is.EqualTo(2));
+        }
+
+        [Test]
         public void SlabAndCeilingMeshesMatchPolygonBounds()
         {
             var polygon = new[]

@@ -51,6 +51,23 @@ namespace PascalScene
                 "Pascal Wall Mesh");
         }
 
+        public static Mesh CreateWallFromFootprint(
+            IReadOnlyList<Vector2> footprint,
+            float height,
+            float baseElevation)
+        {
+            if (height <= 0f)
+            {
+                throw new ArgumentOutOfRangeException(nameof(height));
+            }
+
+            return CreatePolygonPrism(
+                footprint,
+                baseElevation,
+                baseElevation + height,
+                "Pascal Mitered Wall Mesh");
+        }
+
         private static Mesh CreateCurvedWall(
             Vector2 start,
             Vector2 end,

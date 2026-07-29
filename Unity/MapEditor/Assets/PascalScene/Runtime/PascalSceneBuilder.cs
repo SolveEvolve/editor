@@ -321,13 +321,16 @@ namespace PascalScene
                 report.UnsupportedNodes.Add($"wall non-positive effective height:{node.Id}");
                 return;
             }
-            var mesh = PascalSceneMeshFactory.CreateWall(
-                node.Start,
-                node.End,
-                height,
-                node.Thickness ?? PascalSceneBuildSettings.DefaultWallThickness,
-                node.CurveOffset ?? 0f,
-                baseElevation);
+            var mesh = Mathf.Abs(node.CurveOffset ?? 0f) > 0.00001f
+                ? PascalSceneMeshFactory.CreateWall(
+                    node.Start,
+                    node.End,
+                    height,
+                    node.Thickness ?? PascalSceneBuildSettings.DefaultWallThickness,
+                    node.CurveOffset ?? 0f,
+                    baseElevation)
+                : PascalSceneMeshFactory.CreateWallFromFootprint(
+                    GetMiteredWallFootprint(node, context.Document), height, baseElevation);
             AddMesh(gameObject, mesh, settings.WallMaterial, settings, node.Id);
         }
 
@@ -476,6 +479,64 @@ namespace PascalScene
 
             return 0f;
         }
+
+        private static List<Vector2> GetMiteredWallFootprint(
+            PascalSceneNode wall,
+            PascalSceneDocument document)
+        {
+            var start = ToPlanPoint(wall.Start);
+            var end = ToPlanPoint(wall.End);
+            var direction = (end - start).normalized;
+            var halfThickness = (wall.Thickness ?? PascalSceneBuildSettings.DefaultWallThickness) * 0.5f;
+            var normal = new Vector2(-direction.y, direction.x);
+            var startPair = GetMiterPair(wall, start, -direction, normal, halfThickness, document);
+            var endPair = GetMiterPair(wall, end, direction, normal, halfThickness, document);
+            return new List<Vector2> { startPair.right, endPair.right, endPair.left, startPair.left };
+        }
+
+        private static (Vector2 left, Vector2 right) GetMiterPair(
+            PascalSceneNode wall,
+            Vector2 joint,
+            Vector2 outward,
+            Vector2 normal,
+            float halfThickness,
+            PascalSceneDocument document)
+        {
+            var left = joint + normal * halfThickness;
+            var right = joint - normal * halfThickness;
+            var sibling = document.Nodes.Values.FirstOrDefault(candidate =>
+                candidate.Id != wall.Id && candidate.Type == "wall" &&
+                Mathf.Abs(candidate.CurveOffset ?? 0f) <= 0.00001f &&
+                (Approximately(ToPlanPoint(candidate.Start), joint) || Approximately(ToPlanPoint(candidate.End), joint)));
+            if (sibling == null) return (left, right);
+
+            var siblingOther = Approximately(ToPlanPoint(sibling.Start), joint)
+                ? ToPlanPoint(sibling.End)
+                : ToPlanPoint(sibling.Start);
+            var siblingDirection = (siblingOther - joint).normalized;
+            if (Mathf.Abs(Cross2(outward, siblingDirection)) < 0.02f) return (left, right);
+            var siblingNormal = new Vector2(-siblingDirection.y, siblingDirection.x);
+            var siblingHalf = (sibling.Thickness ?? PascalSceneBuildSettings.DefaultWallThickness) * 0.5f;
+            var siblingLeft = joint + siblingNormal * siblingHalf;
+            var siblingRight = joint - siblingNormal * siblingHalf;
+            return (
+                IntersectLines(left, outward, Vector2.Dot(normal, siblingNormal) >= 0f ? siblingLeft : siblingRight, siblingDirection, left),
+                IntersectLines(right, outward, Vector2.Dot(-normal, siblingNormal) >= 0f ? siblingLeft : siblingRight, siblingDirection, right));
+        }
+
+        private static Vector2 IntersectLines(Vector2 pointA, Vector2 directionA, Vector2 pointB, Vector2 directionB, Vector2 fallback)
+        {
+            var cross = Cross2(directionA, directionB);
+            if (Mathf.Abs(cross) < 0.00001f) return fallback;
+            var t = Cross2(pointB - pointA, directionB) / cross;
+            return Mathf.Abs(t) > 0.5f ? fallback : pointA + directionA * t;
+        }
+
+        private static Vector2 ToPlanPoint(float[] point) => new Vector2(point[0], point[1]);
+
+        private static bool Approximately(Vector2 a, Vector2 b) => (a - b).sqrMagnitude <= 0.000001f;
+
+        private static float Cross2(Vector2 a, Vector2 b) => a.x * b.y - a.y * b.x;
 
         private static string GetDisplayName(PascalSceneNode node)
         {
