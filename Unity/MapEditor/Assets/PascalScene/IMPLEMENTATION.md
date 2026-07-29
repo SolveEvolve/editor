@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Phase 2 — versioned build contract and compiler foundation.
+Phase 3 — architectural shell parity.
 
 ## Completed commits
 
@@ -11,22 +11,25 @@ Phase 2 — versioned build contract and compiler foundation.
 - `4d576c28 assets(unity): add local Pascal model library`
 - `a6dd3955 feat(core): define versioned Pascal build document`
 - `ed7132c7 feat(editor): export complete Pascal build state`
+- `d59534e4 refactor(unity): add registry-driven scene compiler`
+- `e9ad903a feat(unity): reproduce Pascal vertical model`
+- `e42abc4a feat(unity): add curved wall geometry`
+- `d1186bf6 feat(unity): support slab and ceiling holes`
+- `98a2b4b9 feat(unity): add curved and mitered wall geometry`
 
 ## Verification commands
 
 - Unity EditMode: `PascalScene.Tests.Editor`
-- Web: `C:\Users\SolveEvolve\.bun\bin\bun.exe test packages\core\src\build-document.test.ts packages\core\src\validation\validate-build-json.test.ts`
+- Catalog: `C:\Users\SolveEvolve\.bun\bin\bun.exe tooling\sync-pascal-unity-catalog.ts --check`
 - Web type check: `C:\Users\SolveEvolve\.bun\bin\bun.exe run check-types`
-- Catalog verification: `C:\Users\SolveEvolve\.bun\bin\bun.exe tooling\sync-pascal-unity-catalog.ts --check`
 
 ## Deferred node families
 
-- HVAC and plumbing
-- Roof accessories
-- Zones, grids, guides, scans, and measurements
-- Spawn/camera behavior and external plugins
-- Runtime file acquisition, animation playback, and presentation parity
+- Doors, windows, and hosted wall cutouts
+- Pascal material-slot and trim/band material parity
+- HVAC and plumbing; roofs, stairs, columns, fences, shelves, cabinets
+- Runtime file acquisition, animation playback, lighting, cameras, and presentation parity
 
 ## Feedback gate
 
-Hard feedback gate 1 is ready for review. Do not begin Phase 3 without approval.
+Hard feedback gate 2 is ready for review. Do not begin Phase 4 without approval.
