@@ -1,0 +1,24 @@
+{
+  "name": "Proto August Scan",
+  "format": "spz",
+  "version": 4,
+  "assets": [
+    {
+      "name": "Main downsampled scan",
+      "file": "proto-august-scan-464k.spz",
+      "url": "/test-assets/gaussian-splats/proto-august-scan-converted/proto-august-scan-464k.spz",
+      "splats": 464114,
+      "bytes": 15279381,
+      "sha256": "673DD9661845AF0CDFB6219E09ED55E24686374C896156387F976217DA6A2AE1"
+    },
+    {
+      "name": "Environment cloud",
+      "file": "proto-august-environment.spz",
+      "url": "/test-assets/gaussian-splats/proto-august-scan-converted/proto-august-environment.spz",
+      "splats": 1741,
+      "bytes": 70781,
+      "sha256": "E197A5A29995ECB1C6A027AF1C2D1F816D7D3FAFE01DA5C791FBE5A823DC5705"
+    }
+  ],
+  "preview": "preview.jpg"
+}

@@ -1,5 +1,8 @@
-import { PASCAL_BUILD_SCHEMA_VERSION } from '@pascal-app/core'
-import { AnyNode, SceneMaterial } from '@pascal-app/core/schema'
+import {
+  AnyNode,
+  PASCAL_BUILD_SCHEMA_VERSION,
+  SceneMaterial,
+} from '@pascal-app/core/schema'
 import { z } from 'zod'
 
 /**

@@ -1,5 +1,6 @@
 // Base
 
+export { PASCAL_BUILD_SCHEMA_VERSION } from '../build-document'
 export {
   SOLAR_PANEL_PRESET_LABELS,
   SOLAR_PANEL_PRESETS,
@@ -196,7 +197,12 @@ export {
   roofFacePointToSegment,
   segmentPointToRoofWallFace,
 } from './nodes/roof-segment-walls'
-export { ScanNode } from './nodes/scan'
+export {
+  detectScanAssetFormat,
+  SCAN_ASSET_FORMATS,
+  ScanAssetFormat,
+  ScanNode,
+} from './nodes/scan'
 export { ShelfNode } from './nodes/shelf'
 export { SiteNode } from './nodes/site'
 export {

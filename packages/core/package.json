@@ -67,7 +67,7 @@
     "@react-three/drei": "^10",
     "@react-three/fiber": "^9",
     "react": "^18 || ^19",
-    "three": "^0.185"
+    "three": "^0.185 || ^0.186"
   },
   "dependencies": {
     "dedent": "^1.7.1",

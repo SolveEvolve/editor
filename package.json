@@ -40,7 +40,7 @@
     "@types/react-dom": "19.2.3",
     "@types/three": "0.184.1",
     "react-grab": "0.1.50",
-    "three": "0.185.1"
+    "three": "github:mrdoob/three.js#444f238c63b594fbaf1d5adde301fa7e10c29a83"
   },
   "optionalDependencies": {
     "@tailwindcss/oxide-darwin-arm64": "4.3.0",

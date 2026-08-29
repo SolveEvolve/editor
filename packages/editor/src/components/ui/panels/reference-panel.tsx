@@ -390,6 +390,24 @@ export function ReferencePanel() {
         <SliderControl
           label={
             <>
+              X<sub className="ml-[1px] text-[11px] opacity-70">rot</sub>
+            </>
+          }
+          max={180}
+          min={-180}
+          onChange={(degrees) =>
+            handleUpdate({
+              rotation: [(degrees * Math.PI) / 180, node.rotation[1], node.rotation[2]],
+            })
+          }
+          precision={0}
+          step={1}
+          unit="°"
+          value={Math.round((node.rotation[0] * 180) / Math.PI)}
+        />
+        <SliderControl
+          label={
+            <>
               Y<sub className="ml-[1px] text-[11px] opacity-70">rot</sub>
             </>
           }
@@ -405,6 +423,24 @@ export function ReferencePanel() {
           step={1}
           unit="°"
           value={Math.round((node.rotation[1] * 180) / Math.PI)}
+        />
+        <SliderControl
+          label={
+            <>
+              Z<sub className="ml-[1px] text-[11px] opacity-70">rot</sub>
+            </>
+          }
+          max={180}
+          min={-180}
+          onChange={(degrees) =>
+            handleUpdate({
+              rotation: [node.rotation[0], node.rotation[1], (degrees * Math.PI) / 180],
+            })
+          }
+          precision={0}
+          step={1}
+          unit="°"
+          value={Math.round((node.rotation[2] * 180) / Math.PI)}
         />
         <div className="flex gap-1.5 px-1 pt-2 pb-1">
           <ActionButton

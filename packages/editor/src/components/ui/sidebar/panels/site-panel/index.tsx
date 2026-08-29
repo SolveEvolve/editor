@@ -3,6 +3,7 @@ import {
   type AnyNodeId,
   type BuildingNode,
   DEFAULT_LEVEL_HEIGHT,
+  detectScanAssetFormat,
   emitter,
   type GuideNode,
   LevelNode,
@@ -410,6 +411,8 @@ const ReferenceItem = memo(function ReferenceItem({
 })
 
 const MAX_FILE_SIZE = 200 * 1024 * 1024 // 200MB
+const ACCEPTED_REFERENCE_FILE_TYPES =
+  '.glb,.gltf,.spz,.splat,.ksplat,.ply,image/jpeg,image/png,image/webp,image/gif'
 
 interface LevelReferencesProps {
   levelId: string
@@ -458,8 +461,7 @@ const LevelReferences = memo(function LevelReferences({
     e.target.value = ''
 
     // Auto-detect type based on file extension/mime type
-    const isScan =
-      file.name.toLowerCase().endsWith('.glb') || file.name.toLowerCase().endsWith('.gltf')
+    const isScan = detectScanAssetFormat(file.name) !== null
     const isImage = file.type.startsWith('image/')
     const type = isScan ? 'scan' : 'guide'
 
@@ -467,7 +469,10 @@ const LevelReferences = memo(function LevelReferences({
       useUploadStore.getState().startUpload(levelId, type, file.name)
       useUploadStore
         .getState()
-        .setError(levelId, 'Invalid file type. Please upload a .glb/.gltf scan or an image.')
+        .setError(
+          levelId,
+          'Invalid file type. Upload a .glb, .gltf, .spz, .splat, .ksplat, or Gaussian .ply scan, or an image.',
+        )
       return
     }
 
@@ -572,7 +577,7 @@ const LevelReferences = memo(function LevelReferences({
               </button>
 
               <input
-                accept=".glb,.gltf,image/jpeg,image/png,image/webp,image/gif"
+                accept={ACCEPTED_REFERENCE_FILE_TYPES}
                 className="hidden"
                 onChange={handleAddAsset}
                 ref={scanInputRef}

@@ -3,6 +3,7 @@
 import {
   type AnyNodeId,
   type BuildingNode,
+  detectScanAssetFormat,
   type GuideNode,
   type LevelNode,
   type ScanNode,
@@ -22,9 +23,10 @@ import { Popover, PopoverContent, PopoverTrigger } from '../primitives/popover'
 import { ActionButton } from './action-button'
 
 const MAX_FILE_SIZE = 200 * 1024 * 1024 // 200MB
-const ACCEPTED_FILE_TYPES = '.glb,.gltf,image/jpeg,image/png,image/webp,image/gif'
+const ACCEPTED_FILE_TYPES =
+  '.glb,.gltf,.spz,.splat,.ksplat,.ply,image/jpeg,image/png,image/webp,image/gif'
 const REFERENCES_EMPTY_TEXT =
-  'Upload GLB meshes as scan references or blueprint images as guide references.'
+  'Upload mesh or Gaussian splat scans, or blueprint images as guide references. SPZ is recommended for large captures.'
 
 // ── Helper: get guide images for the current level ──────────────────────────
 
@@ -82,6 +84,36 @@ function useLowerReferenceLevels(): LevelNode[] {
 
 // ── Shared upload button for dropdowns ──────────────────────────────────────
 
+function ScanRotationControls({
+  scan,
+  onChange,
+}: {
+  scan: ScanNode
+  onChange: (rotation: [number, number, number]) => void
+}) {
+  return (
+    <div className="space-y-0.5 border-border/35 border-t pt-1.5">
+      {(['X', 'Y', 'Z'] as const).map((axis, index) => (
+        <SliderControl
+          key={axis}
+          label={`${axis} rotation`}
+          max={180}
+          min={-180}
+          onChange={(degrees) => {
+            const rotation = [...scan.rotation] as [number, number, number]
+            rotation[index] = (degrees * Math.PI) / 180
+            onChange(rotation)
+          }}
+          precision={0}
+          step={1}
+          unit="°"
+          value={Math.round((scan.rotation[index]! * 180) / Math.PI)}
+        />
+      ))}
+    </div>
+  )
+}
+
 function UploadButton({ onError }: { onError: (message: string | null) => void }) {
   const fileInputRef = useRef<HTMLInputElement>(null)
   const levelId = useViewer((s) => s.selection.levelId)
@@ -104,11 +136,10 @@ function UploadButton({ onError }: { onError: (message: string | null) => void }
         return
       }
 
-      const isScan =
-        file.name.toLowerCase().endsWith('.glb') || file.name.toLowerCase().endsWith('.gltf')
+      const isScan = detectScanAssetFormat(file.name) !== null
       const isImage = file.type.startsWith('image/')
       if (!(isScan || isImage)) {
-        onError('Upload a .glb/.gltf scan or an image.')
+        onError('Upload a .glb, .gltf, .spz, .splat, .ksplat, or Gaussian .ply scan, or an image.')
         return
       }
 
@@ -507,6 +538,10 @@ function ScansControl() {
                     unit="%"
                     value={scan.opacity}
                   />
+                  <ScanRotationControls
+                    onChange={(rotation) => updateNode(scan.id, { rotation })}
+                    scan={scan}
+                  />
                 </div>
               ))}
             </div>
@@ -588,7 +623,7 @@ function ReferenceListSection({
       </div>
 
       {hasItems ? (
-        <div className="max-h-40 space-y-2 overflow-y-auto pr-1">
+        <div className="max-h-72 space-y-2 overflow-y-auto pr-1">
           {nodes.map((node, index) => (
             <div
               className={cn(
@@ -644,6 +679,12 @@ function ReferenceListSection({
                 unit="%"
                 value={node.opacity}
               />
+              {node.type === 'scan' && (
+                <ScanRotationControls
+                  onChange={(rotation) => updateNode(node.id, { rotation })}
+                  scan={node}
+                />
+              )}
             </div>
           ))}
         </div>
