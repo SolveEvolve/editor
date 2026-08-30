@@ -640,3 +640,430 @@ Import traces:
 
     at <unknown> (Error: ./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1)
     at <unknown> (Error: (./packages/editor/src/components/ui/sidebar/panels/settings-panel/index.tsx:1:1)
+[browser] [editor] viewer scene readiness timed out; showing editor shell anyway { sceneReadyKey: [33m1[39m } (../../packages/editor/src/components/editor/index.tsx:1262:15)
+[browser] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[browser] Image with src "/icons/fence.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[browser] [autosave] Blocked: scene dropped from 13 to 3 nodes. Likely accidental deletion. (../../packages/editor/src/hooks/use-auto-save.ts:97:17)
+[browser] [autosave] Blocked: scene dropped from 13 to 4 nodes. Likely accidental deletion. (../../packages/editor/src/hooks/use-auto-save.ts:97:17)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ 
+[browser] [viewer] WebGPU uncaptured error: Vertex range (first: 0, count: 6) requires a larger buffer (72) than the bound buffer size (24) of the vertex buffer at slot 0 with stride 12.
+ - While encoding [RenderPassEncoder (unlabeled)].Draw(6, 1, 0, 0).
+ - While finishing [CommandEncoder "renderContext_3"].
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] THREE.WebGPURenderer: Uncaptured WebGPU GPUValidationError: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ 
+[browser] [viewer] WebGPU uncaptured error: [Invalid CommandBuffer from CommandEncoder "renderContext_3"] is invalid due to a previous error.
+ - While calling [Queue].Submit([[Invalid CommandBuffer from CommandEncoder "renderContext_3"]])
+ [object GPUValidationError] 
+    at GPUDeviceWatcher.useEffect.onUncapturedError (../../packages/viewer/dist/components/viewer/index.js:136:21)
+  134 |         // best). Pipe them to console.error so silent mobile crashes show up.
+  135 |         const onUncapturedError = (event) => {
+> 136 |             console.error('[viewer] WebGPU uncaptured error:', event?.error?.message, eve...
+      |                     ^
+  137 |         };
+  138 |         device.addEventListener?.('uncapturederror', onUncapturedError);
+  139 |         return () => { (../../packages/viewer/dist/components/viewer/index.js:136:21)
+[browser] [autosave] Blocked: scene dropped from 16 to 3 nodes. Likely accidental deletion. (../../packages/editor/src/hooks/use-auto-save.ts:97:17)

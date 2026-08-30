@@ -135,3 +135,79 @@ https://nextjs.org/telemetry
  GET / 200 in 264ms (next.js: 180ms, application-code: 84ms)
 ✓ Compiled in 665ms
  GET / 200 in 233ms (next.js: 171ms, application-code: 62ms)
+[browser] [pascal:registry] loaded pascal:core v1 (46 kinds: shelf, spawn, wall, fence, slab, ceiling, door, window, cabinet, cabinet-module, item, column, elevator, roof, roof-segment, stair, stair-segment, zone, site, building, level, guide, scan, measurement, construction-dimension, structural-grid, box-vent, ridge-vent, turbine-vent, cupola, eyebrow-vent, chimney, solar-panel, skylight, dormer, gutter, downspout, duct-segment, duct-fitting, duct-terminal, hvac-equipment, lineset, liquid-line, pipe-segment, pipe-fitting, pipe-trap) (lib/bootstrap.ts:51:15)
+[browser] [pascal:registry] + 1 discovered plugin(s) (lib/bootstrap.ts:79:13)
+[browser] [viewer] WebGPU device ready {
+  features: [
+    [32m'depth32float-stencil8'[39m,
+    [32m'rg11b10ufloat-renderable'[39m,
+    [32m'texture-formats-tier1'[39m,
+    [32m'bgra8unorm-storage'[39m,
+    [32m'texture-compression-bc'[39m,
+    [32m'dual-source-blending'[39m,
+    [32m'core-features-and-limits'[39m,
+    [32m'float32-filterable'[39m,
+    [32m'indirect-first-instance'[39m,
+    [32m'float32-blendable'[39m,
+    [32m'depth-clip-control'[39m,
+    [32m'texture-compression-bc-sliced-3d'[39m,
+    [32m'texture-formats-tier2'[39m,
+    [32m'timestamp-query'[39m,
+    [32m'clip-distances'[39m,
+    [32m'shader-f16'[39m,
+    [32m'subgroups'[39m
+  ],
+  label: [32m''[39m
+} (../../packages/viewer/dist/components/viewer/index.js:125:17)
+[browser] [viewer/post-processing] Building pipeline {
+  denoise: [33mfalse[39m,
+  height: [33m945[39m,
+  outline: [33mtrue[39m,
+  perfDisable: { ao: [33mfalse[39m, denoise: [33mfalse[39m, outline: [33mfalse[39m, postFx: [33mfalse[39m },
+  projectId: [32m'local-editor'[39m,
+  rendererCtor: [32m'WebGPURenderer'[39m,
+  shading: [32m'solid'[39m,
+  ssgi: [33mfalse[39m,
+  transparentBackground: [33mfalse[39m,
+  version: [33m0[39m,
+  width: [33m1576[39m
+} (../../packages/viewer/dist/components/viewer/post-processing.js:271:17)
+[browser] [viewer/post-processing] Building pipeline {
+  denoise: [33mfalse[39m,
+  height: [33m945[39m,
+  outline: [33mtrue[39m,
+  perfDisable: { ao: [33mfalse[39m, denoise: [33mfalse[39m, outline: [33mfalse[39m, postFx: [33mfalse[39m },
+  projectId: [32m'local-editor'[39m,
+  rendererCtor: [32m'WebGPURenderer'[39m,
+  shading: [32m'solid'[39m,
+  ssgi: [33mfalse[39m,
+  transparentBackground: [33mfalse[39m,
+  version: [33m0[39m,
+  width: [33m1576[39m
+} (../../packages/viewer/dist/components/viewer/post-processing.js:271:17)
+[browser] [viewer/post-processing] Building pipeline {
+  denoise: [33mfalse[39m,
+  height: [33m945[39m,
+  outline: [33mtrue[39m,
+  perfDisable: { ao: [33mfalse[39m, denoise: [33mfalse[39m, outline: [33mfalse[39m, postFx: [33mfalse[39m },
+  projectId: [32m'local-editor'[39m,
+  rendererCtor: [32m'WebGPURenderer'[39m,
+  shading: [32m'solid'[39m,
+  ssgi: [33mfalse[39m,
+  transparentBackground: [33mfalse[39m,
+  version: [33m0[39m,
+  width: [33m1864[39m
+} (../../packages/viewer/dist/components/viewer/post-processing.js:271:17)
+[browser] [viewer/post-processing] Building pipeline {
+  denoise: [33mfalse[39m,
+  height: [33m945[39m,
+  outline: [33mtrue[39m,
+  perfDisable: { ao: [33mfalse[39m, denoise: [33mfalse[39m, outline: [33mfalse[39m, postFx: [33mfalse[39m },
+  projectId: [32m'local-editor'[39m,
+  rendererCtor: [32m'WebGPURenderer'[39m,
+  shading: [32m'solid'[39m,
+  ssgi: [33mfalse[39m,
+  transparentBackground: [33mfalse[39m,
+  version: [33m0[39m,
+  width: [33m1564[39m
+} (../../packages/viewer/dist/components/viewer/post-processing.js:271:17)

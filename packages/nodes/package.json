@@ -17,8 +17,9 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc --build",
-    "dev": "tsgo --build --watch",
+    "build": "tsc --build && bun run build:worker",
+    "build:worker": "bun build ./src/scan/spz-worker.ts --target=browser --format=esm --minify --outfile=./dist/scan/spz-worker.js",
+    "dev": "bun run build:worker && tsgo --build --watch",
     "test": "bun test",
     "prepublishOnly": "bun run build && bun test"
   },

@@ -19,7 +19,13 @@ declare module 'three/addons/loaders/SPLATLoader.js' {
 declare module 'three/addons/loaders/SPZLoader.js' {
   import { BufferGeometry, Loader } from 'three'
 
-  export class SPZLoader extends Loader<BufferGeometry> {}
+  export class SPZLoader extends Loader<BufferGeometry> {
+    parse(
+      buffer: ArrayBuffer,
+      onLoad?: (geometry: BufferGeometry) => void,
+      onError?: (error: unknown) => void,
+    ): BufferGeometry | Promise<BufferGeometry>
+  }
 }
 
 declare module 'three/addons/objects/GaussianSplat.js' {
