@@ -9,6 +9,8 @@ import {
   useViewer,
 } from '@pascal-app/viewer'
 import {
+  ArrowDown,
+  ArrowUp,
   Box,
   Camera,
   Check,
@@ -443,6 +445,30 @@ export const ViewerControlsBar = ({
               className="h-[28px] w-[28px] object-contain opacity-70 transition-opacity group-hover:opacity-100"
               src="/icons/rotate.webp"
             />
+          </ActionButton>
+
+          <ActionButton
+            aria-label="Raise orbit center"
+            className="hidden hover:bg-white/5 sm:inline-flex"
+            label="Raise orbit center"
+            onClick={() => emitter.emit('camera-controls:pivot-up')}
+            size="icon"
+            tooltipSide="top"
+            variant="ghost"
+          >
+            <ArrowUp className="h-5 w-5" />
+          </ActionButton>
+
+          <ActionButton
+            aria-label="Lower orbit center"
+            className="hidden hover:bg-white/5 sm:inline-flex"
+            label="Lower orbit center"
+            onClick={() => emitter.emit('camera-controls:pivot-down')}
+            size="icon"
+            tooltipSide="top"
+            variant="ghost"
+          >
+            <ArrowDown className="h-5 w-5" />
           </ActionButton>
 
           <ActionButton

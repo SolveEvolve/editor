@@ -218,6 +218,8 @@ type CameraControlEvents = {
   'camera-controls:top-view': undefined
   'camera-controls:orbit-cw': undefined
   'camera-controls:orbit-ccw': undefined
+  'camera-controls:pivot-up': undefined
+  'camera-controls:pivot-down': undefined
   'camera-controls:fit-scene': CameraControlFitSceneEvent
   'camera-controls:generate-thumbnail': ThumbnailGenerateEvent
   'camera-controls:apply-pose': CameraPose

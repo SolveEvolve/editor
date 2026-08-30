@@ -39,6 +39,12 @@ import {
   useMovingNode,
 } from '../../store/use-interaction-scope'
 import { createCameraDraggingLifecycle } from './camera-dragging-lifecycle'
+import {
+  type CameraNavigationKeyState,
+  hasCameraNavigationInput,
+  isCameraNavigationKey,
+  setCameraNavigationKey,
+} from './camera-navigation'
 
 const currentTarget = new Vector3()
 const tempBox = new Box3()
@@ -51,10 +57,13 @@ const transitionFreezePosition = new Vector3()
 const transitionFreezeTarget = new Vector3()
 const keyboardPanSpherical = new Spherical()
 const DEFAULT_MAX_POLAR_ANGLE = Math.PI / 2 - 0.1
-const DEBUG_MAX_POLAR_ANGLE = Math.PI - 0.05
+const UNDERGROUND_MAX_POLAR_ANGLE = Math.PI - 0.05
 const KEYBOARD_PAN_VIEW_WIDTH_PER_SECOND = 0.65
 const KEYBOARD_PAN_MIN_SPEED = 2
 const KEYBOARD_PAN_MAX_SPEED = 55
+const PIVOT_STEP_VIEW_WIDTH = 0.08
+const PIVOT_STEP_MIN = 0.25
+const PIVOT_STEP_MAX = 4
 type CameraMode = ReturnType<typeof useViewer.getState>['cameraMode']
 type CameraPoseSnapshot = {
   mode: CameraMode
@@ -120,45 +129,6 @@ function isEditableKeyboardTarget(target: EventTarget | null) {
     target instanceof HTMLSelectElement ||
     (target instanceof HTMLElement && target.isContentEditable)
   )
-}
-
-type KeyboardPanState = {
-  forward: boolean
-  backward: boolean
-  left: boolean
-  right: boolean
-}
-
-function setKeyboardPanKey(state: KeyboardPanState, code: string, pressed: boolean): boolean {
-  if (code === 'KeyW') {
-    const changed = state.forward !== pressed
-    state.forward = pressed
-    return changed
-  }
-  if (code === 'KeyS') {
-    const changed = state.backward !== pressed
-    state.backward = pressed
-    return changed
-  }
-  if (code === 'KeyA') {
-    const changed = state.left !== pressed
-    state.left = pressed
-    return changed
-  }
-  if (code === 'KeyD') {
-    const changed = state.right !== pressed
-    state.right = pressed
-    return changed
-  }
-  return false
-}
-
-function isKeyboardPanKey(code: string): boolean {
-  return code === 'KeyW' || code === 'KeyA' || code === 'KeyS' || code === 'KeyD'
-}
-
-function hasKeyboardPanInput(state: KeyboardPanState): boolean {
-  return state.forward || state.backward || state.left || state.right
 }
 
 type CameraViewportSize = {
@@ -355,11 +325,13 @@ export const CustomCameraControls = () => {
     plan: CameraPoseApplicationPlan
   } | null>(null)
   const suppressPoseEvents = useRef(false)
-  const keyboardPanKeys = useRef<KeyboardPanState>({
+  const keyboardPanKeys = useRef<CameraNavigationKeyState>({
     forward: false,
     backward: false,
     left: false,
     right: false,
+    up: false,
+    down: false,
   })
   const isPreviewMode = useEditor((s) => s.isPreviewMode)
   const isFirstPersonMode = useEditor((s) => s.isFirstPersonMode)
@@ -373,8 +345,9 @@ export const CustomCameraControls = () => {
   )
   const currentLevelId = selection.levelId
   const firstLoad = useRef(true)
-  const maxPolarAngle =
-    !isPreviewMode && allowUndergroundCamera ? DEBUG_MAX_POLAR_ANGLE : DEFAULT_MAX_POLAR_ANGLE
+  const maxPolarAngle = allowUndergroundCamera
+    ? UNDERGROUND_MAX_POLAR_ANGLE
+    : DEFAULT_MAX_POLAR_ANGLE
 
   const camera = useThree((state) => state.camera)
   const gl = useThree((state) => state.gl)
@@ -664,7 +637,8 @@ export const CustomCameraControls = () => {
     const panKeys = keyboardPanKeys.current
     const horizontal = (panKeys.right ? 1 : 0) - (panKeys.left ? 1 : 0)
     const vertical = (panKeys.forward ? 1 : 0) - (panKeys.backward ? 1 : 0)
-    if (horizontal === 0 && vertical === 0) return
+    const elevation = (panKeys.up ? 1 : 0) - (panKeys.down ? 1 : 0)
+    if (horizontal === 0 && vertical === 0 && elevation === 0) return
 
     const control = controls.current
 
@@ -674,10 +648,20 @@ export const CustomCameraControls = () => {
       Math.max(viewWidth * KEYBOARD_PAN_VIEW_WIDTH_PER_SECOND, KEYBOARD_PAN_MIN_SPEED),
       KEYBOARD_PAN_MAX_SPEED,
     )
-    const step = (speed * Math.min(delta, 0.05)) / Math.hypot(horizontal, vertical)
+    const step =
+      (speed * Math.min(delta, 0.05)) / Math.hypot(horizontal, vertical, elevation)
 
     if (horizontal !== 0) control.truck(horizontal * step, 0, true)
     if (vertical !== 0) control.forward(vertical * step, true)
+    if (elevation !== 0) {
+      control.getTarget(currentTarget)
+      control.moveTo(
+        currentTarget.x,
+        currentTarget.y + elevation * step,
+        currentTarget.z,
+        true,
+      )
+    }
   }, 0)
 
   // Configure mouse buttons based on control mode and camera mode
@@ -690,7 +674,7 @@ export const CustomCameraControls = () => {
 
     return {
       left: isPreviewMode ? CameraControlsImpl.ACTION.SCREEN_PAN : CameraControlsImpl.ACTION.NONE,
-      middle: CameraControlsImpl.ACTION.SCREEN_PAN,
+      middle: CameraControlsImpl.ACTION.TRUCK,
       right: CameraControlsImpl.ACTION.ROTATE,
       wheel: wheelAction,
     }
@@ -758,6 +742,8 @@ export const CustomCameraControls = () => {
       keyboardPanKeys.current.backward = false
       keyboardPanKeys.current.left = false
       keyboardPanKeys.current.right = false
+      keyboardPanKeys.current.up = false
+      keyboardPanKeys.current.down = false
     }
 
     const setNavigationCursor = (cursor: 'grab' | 'grabbing') => {
@@ -808,7 +794,7 @@ export const CustomCameraControls = () => {
           ? CameraControlsImpl.ACTION.ZOOM
           : CameraControlsImpl.ACTION.DOLLY
       controls.current.mouseButtons.wheel = wheelAction
-      controls.current.mouseButtons.middle = CameraControlsImpl.ACTION.SCREEN_PAN
+      controls.current.mouseButtons.middle = CameraControlsImpl.ACTION.TRUCK
       controls.current.mouseButtons.right = CameraControlsImpl.ACTION.ROTATE
       if (isPreviewMode) {
         // In preview mode, left-click is always pan (viewer-style)
@@ -821,12 +807,12 @@ export const CustomCameraControls = () => {
     }
 
     const onKeyDown = (event: KeyboardEvent) => {
-      if (isKeyboardPanKey(event.code)) {
+      if (isCameraNavigationKey(event.code)) {
         if (
           !(event.metaKey || event.ctrlKey || event.altKey) &&
           !isEditableKeyboardTarget(event.target)
         ) {
-          const changed = setKeyboardPanKey(keyboardPanKeys.current, event.code, true)
+          const changed = setCameraNavigationKey(keyboardPanKeys.current, event.code, true)
           if (changed) beginLocalCameraInteraction()
           event.preventDefault()
           event.stopPropagation()
@@ -856,10 +842,10 @@ export const CustomCameraControls = () => {
     }
 
     const onKeyUp = (event: KeyboardEvent) => {
-      if (isKeyboardPanKey(event.code)) {
-        const changed = setKeyboardPanKey(keyboardPanKeys.current, event.code, false)
+      if (isCameraNavigationKey(event.code)) {
+        const changed = setCameraNavigationKey(keyboardPanKeys.current, event.code, false)
         if (changed) {
-          if (!hasKeyboardPanInput(keyboardPanKeys.current)) {
+          if (!hasCameraNavigationInput(keyboardPanKeys.current)) {
             cameraDraggingLifecycle.end()
           }
           event.preventDefault()
@@ -970,6 +956,28 @@ export const CustomCameraControls = () => {
   const previewTargetNodeId = isPreviewMode
     ? (selection.zoneId ?? selection.levelId ?? selection.buildingId)
     : null
+
+  const movePivotVertically = useCallback(
+    (direction: -1 | 1) => {
+      const control = controls.current
+      if (isFirstPersonMode || !control) return
+
+      beginLocalCameraInteraction({ dragging: false })
+      control.getPosition(tempPosition)
+      control.getTarget(tempTarget)
+      const viewWidth = getCameraViewWidth(
+        camera,
+        tempPosition.distanceTo(tempTarget),
+        viewportSize,
+      )
+      const step = Math.min(
+        Math.max(viewWidth * PIVOT_STEP_VIEW_WIDTH, PIVOT_STEP_MIN),
+        PIVOT_STEP_MAX,
+      )
+      control.moveTo(tempTarget.x, tempTarget.y + direction * step, tempTarget.z, true)
+    },
+    [beginLocalCameraInteraction, camera, isFirstPersonMode, viewportSize],
+  )
 
   useEffect(() => {
     if (!(isPreviewMode && controls.current) || isFirstPersonMode) return
@@ -1222,6 +1230,9 @@ export const CustomCameraControls = () => {
       focusNode(nodeId)
     }
 
+    const handlePivotUp = () => movePivotVertically(1)
+    const handlePivotDown = () => movePivotVertically(-1)
+
     const handleFitScene = ({ bounds }: CameraControlFitSceneEvent) => {
       if (isFirstPersonMode || !controls.current || isPreviewMode) return
       if (!bounds) {
@@ -1245,6 +1256,8 @@ export const CustomCameraControls = () => {
     emitter.on('camera-controls:top-view', handleTopView)
     emitter.on('camera-controls:orbit-cw', handleOrbitCW)
     emitter.on('camera-controls:orbit-ccw', handleOrbitCCW)
+    emitter.on('camera-controls:pivot-up', handlePivotUp)
+    emitter.on('camera-controls:pivot-down', handlePivotDown)
     emitter.on('camera-controls:fit-scene', handleFitScene)
 
     return () => {
@@ -1254,9 +1267,11 @@ export const CustomCameraControls = () => {
       emitter.off('camera-controls:top-view', handleTopView)
       emitter.off('camera-controls:orbit-cw', handleOrbitCW)
       emitter.off('camera-controls:orbit-ccw', handleOrbitCCW)
+      emitter.off('camera-controls:pivot-up', handlePivotUp)
+      emitter.off('camera-controls:pivot-down', handlePivotDown)
       emitter.off('camera-controls:fit-scene', handleFitScene)
     }
-  }, [focusNode, isPreviewMode, isFirstPersonMode])
+  }, [focusNode, isPreviewMode, isFirstPersonMode, movePivotVertically])
 
   const onTransitionStart = useCallback(() => {
     cameraDraggingLifecycle.begin()

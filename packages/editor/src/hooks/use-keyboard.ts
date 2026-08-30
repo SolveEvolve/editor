@@ -322,7 +322,7 @@ export const useKeyboard = ({
         // stale tool from a prior build session.
         useEditor.getState().setTool('item')
         useEditor.getState().setActiveSidebarPanel('items')
-      } else if (e.key === 'z' && !e.metaKey && !e.ctrlKey) {
+      } else if (e.key === '4' && !e.metaKey && !e.ctrlKey) {
         if (isVersionPreviewMode) return
         e.preventDefault()
         useEditor.getState().setPhase('structure')

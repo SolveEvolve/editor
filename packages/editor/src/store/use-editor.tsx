@@ -1217,7 +1217,7 @@ const useEditor = create<EditorState>()(
       referenceFloorOpacity: DEFAULT_PERSISTED_EDITOR_LAYOUT_STATE.referenceFloorOpacity,
       setReferenceFloorOpacity: (opacity) =>
         set({ referenceFloorOpacity: Math.min(0.8, Math.max(0.1, opacity)) }),
-      allowUndergroundCamera: false,
+      allowUndergroundCamera: true,
       setAllowUndergroundCamera: (enabled) => set({ allowUndergroundCamera: enabled }),
       show2dVoronoi: false,
       setShow2dVoronoi: (enabled) => set({ show2dVoronoi: enabled }),

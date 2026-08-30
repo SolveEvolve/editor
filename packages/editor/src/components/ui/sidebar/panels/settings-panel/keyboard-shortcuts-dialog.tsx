@@ -38,7 +38,7 @@ const SHORTCUT_CATEGORIES: ShortcutCategory[] = [
       { keys: ['2'], action: 'Switch to Structure phase' },
       { keys: ['3'], action: 'Switch to Furnish phase' },
       { keys: ['F'], action: 'Switch to Furnish layer' },
-      { keys: ['Z'], action: 'Switch to Zones layer' },
+      { keys: ['4'], action: 'Switch to Zones layer' },
       {
         keys: ['Cmd/Ctrl', 'Arrow Up'],
         action: 'Select next level in the active building',
@@ -176,8 +176,18 @@ const SHORTCUT_CATEGORIES: ShortcutCategory[] = [
       },
       {
         keys: ['Middle click'],
-        action: 'Pan camera',
-        note: 'Drag with the middle mouse button, or hold Space while dragging with the left mouse button.',
+        action: 'Pan camera in the current view plane',
+        note: 'Vertical drag moves up/down when looking forward and across the scene in top or bottom views.',
+      },
+      {
+        keys: ['Q', 'Z'],
+        action: 'Raise or lower the orbit center',
+        note: 'Moves the camera and its orbit target together along the world vertical axis.',
+      },
+      {
+        keys: ['Space', 'Left click'],
+        action: 'Pan camera along the viewing direction',
+        note: 'This retains the existing forward/ground-style drag behavior.',
       },
       {
         keys: ['Right click'],
