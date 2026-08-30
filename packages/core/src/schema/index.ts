@@ -204,6 +204,7 @@ export {
   ScanNode,
 } from './nodes/scan'
 export { ShelfNode } from './nodes/shelf'
+export { ShureMicrophoneNode, ShureMicrophoneTargetNode } from './nodes/shure-microphone'
 export { SiteNode } from './nodes/site'
 export {
   SKYLIGHT_TYPE_ORDER,

@@ -32,6 +32,7 @@ import { roofDefinition } from './roof'
 import { roofSegmentDefinition } from './roof-segment'
 import { scanDefinition } from './scan'
 import { shelfDefinition } from './shelf'
+import { shureMicrophoneDefinition, shureMicrophoneTargetDefinition } from './shure-microphone'
 import { siteDefinition } from './site'
 import { skylightDefinition } from './skylight'
 import { slabDefinition } from './slab'
@@ -67,6 +68,8 @@ export const builtinPlugin: Plugin = {
   nodes: [
     // Stage E-complete (full registry path)
     shelfDefinition as unknown as AnyNodeDefinition,
+    shureMicrophoneDefinition as unknown as AnyNodeDefinition,
+    shureMicrophoneTargetDefinition as unknown as AnyNodeDefinition,
     spawnDefinition as unknown as AnyNodeDefinition,
     wallDefinition as unknown as AnyNodeDefinition,
     fenceDefinition as unknown as AnyNodeDefinition,
@@ -161,6 +164,7 @@ export { roofDefinition } from './roof'
 export { roofSegmentDefinition } from './roof-segment'
 export { scanDefinition } from './scan'
 export { shelfDefinition } from './shelf'
+export { shureMicrophoneDefinition, shureMicrophoneTargetDefinition } from './shure-microphone'
 export { siteDefinition } from './site'
 export { skylightDefinition } from './skylight'
 export { slabDefinition } from './slab'

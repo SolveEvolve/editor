@@ -36,6 +36,8 @@ import type {
   RoofSegmentNode,
   ScanNode,
   ShelfNode,
+  ShureMicrophoneNode,
+  ShureMicrophoneTargetNode,
   SiteNode,
   SkylightNode,
   SlabNode,
@@ -99,6 +101,8 @@ export type CabinetModuleEvent = NodeEvent<CabinetModuleNode>
 export type LevelEvent = NodeEvent<LevelNode>
 export type ZoneEvent = NodeEvent<ZoneNode>
 export type ShelfEvent = NodeEvent<ShelfNode>
+export type ShureMicrophoneEvent = NodeEvent<ShureMicrophoneNode>
+export type ShureMicrophoneTargetEvent = NodeEvent<ShureMicrophoneTargetNode>
 export type SlabEvent = NodeEvent<SlabNode>
 export type SpawnEvent = NodeEvent<SpawnNode>
 export type CeilingEvent = NodeEvent<CeilingNode>
@@ -303,6 +307,8 @@ type EditorEvents = GridEvents &
   NodeEvents<'zone', ZoneEvent> &
   NodeEvents<'slab', SlabEvent> &
   NodeEvents<'shelf', ShelfEvent> &
+  NodeEvents<'shure-microphone', ShureMicrophoneEvent> &
+  NodeEvents<'shure-microphone-target', ShureMicrophoneTargetEvent> &
   NodeEvents<'spawn', SpawnEvent> &
   NodeEvents<'ceiling', CeilingEvent> &
   NodeEvents<'column', ColumnEvent> &

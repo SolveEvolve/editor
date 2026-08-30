@@ -44,6 +44,7 @@ import { TurbineVentNode } from './nodes/turbine-vent'
 import { WallNode } from './nodes/wall'
 import { WindowNode } from './nodes/window'
 import { ZoneNode } from './nodes/zone'
+import { ShureMicrophoneNode, ShureMicrophoneTargetNode } from './nodes/shure-microphone'
 
 export const AnyNode = z.discriminatedUnion('type', [
   SiteNode,
@@ -92,6 +93,8 @@ export const AnyNode = z.discriminatedUnion('type', [
   PipeSegmentNode,
   PipeFittingNode,
   PipeTrapNode,
+  ShureMicrophoneNode,
+  ShureMicrophoneTargetNode,
 ])
 
 export type AnyNode = z.infer<typeof AnyNode>

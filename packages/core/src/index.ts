@@ -28,6 +28,8 @@ export type {
   RoomPresetCreateEvent,
   ScanEvent,
   ShelfEvent,
+  ShureMicrophoneEvent,
+  ShureMicrophoneTargetEvent,
   SiteEvent,
   SkylightEvent,
   SlabEvent,

@@ -106,6 +106,19 @@ export function cloneSceneGraph(sceneGraph: SceneGraph): SceneGraph {
         | string
         | undefined
     }
+    if ('targetId' in clonedNode && typeof clonedNode.targetId === 'string') {
+      ;(clonedNode as Record<string, unknown>).targetId =
+        idMap.get(clonedNode.targetId) ?? clonedNode.targetId
+    }
+    if ('targetIds' in clonedNode && Array.isArray(clonedNode.targetIds)) {
+      ;(clonedNode as Record<string, unknown>).targetIds = clonedNode.targetIds.map(
+        (targetId) => idMap.get(targetId) ?? targetId,
+      )
+    }
+    if ('microphoneId' in clonedNode && typeof clonedNode.microphoneId === 'string') {
+      ;(clonedNode as Record<string, unknown>).microphoneId =
+        idMap.get(clonedNode.microphoneId) ?? clonedNode.microphoneId
+    }
 
     if (clonedNode.type === 'measurement') {
       clonedNode.measurement = remapMeasurementReferences(clonedNode.measurement, idMap)
@@ -274,6 +287,18 @@ export function cloneLevelSubtree(
     if ('deckSlabId' in cloned && typeof cloned.deckSlabId === 'string') {
       ;(cloned as Record<string, unknown>).deckSlabId =
         idMap.get(cloned.deckSlabId) ?? cloned.deckSlabId
+    }
+    if ('targetId' in cloned && typeof cloned.targetId === 'string') {
+      ;(cloned as Record<string, unknown>).targetId = idMap.get(cloned.targetId) ?? cloned.targetId
+    }
+    if ('targetIds' in cloned && Array.isArray(cloned.targetIds)) {
+      ;(cloned as Record<string, unknown>).targetIds = cloned.targetIds.map(
+        (targetId) => idMap.get(targetId) ?? targetId,
+      )
+    }
+    if ('microphoneId' in cloned && typeof cloned.microphoneId === 'string') {
+      ;(cloned as Record<string, unknown>).microphoneId =
+        idMap.get(cloned.microphoneId) ?? cloned.microphoneId
     }
 
     if (cloned.type === 'measurement') {
