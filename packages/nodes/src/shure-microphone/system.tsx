@@ -46,6 +46,7 @@ const ShureMicrophoneSystem = () => {
           microphonePosition,
           microphoneRotation,
           targetPosition,
+          target.beamAngle ?? node.beamAngle ?? 30,
         )
       }
     }

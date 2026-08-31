@@ -52,6 +52,7 @@ const ShureMicrophoneTool = () => {
         parentId: activeLevelId,
         microphoneId: microphone.id,
         position: [position[0], position[1] + 2, position[2] + 2],
+        beamAngle: 30,
       })
       const linkedMicrophone = ShureMicrophoneNode.parse({
         ...microphone,

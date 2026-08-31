@@ -51,6 +51,7 @@ export function ShureMicrophoneConeCountEditor({
         parentId: node.parentId,
         microphoneId: node.id,
         position: targetPosition(node, count + offset, nextCount),
+        beamAngle: node.beamAngle ?? 30,
       }),
     )
     if (!node.parentId) return

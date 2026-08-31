@@ -662,6 +662,19 @@ function migrateNodes(nodes: Record<string, any>): {
     if (node.type === 'item' && !('scale' in node)) {
       patchedNodes[id] = { ...node, scale: [1, 1, 1] }
     }
+    if (node.type === 'shure-microphone') {
+      patchedNodes[id] = {
+        ...node,
+        targetIds: getStringArray(node.targetIds).slice(0, 7),
+        beamAngle: getFiniteNumberInRange(node.beamAngle, 30, 5, 120),
+      }
+    }
+    if (node.type === 'shure-microphone-target') {
+      patchedNodes[id] = {
+        ...node,
+        beamAngle: getFiniteNumberInRange(node.beamAngle, 30, 5, 120),
+      }
+    }
     // 2. Old roof to new roof + segment migration
     if (node.type === 'roof' && !('children' in node)) {
       const oldRoof = node

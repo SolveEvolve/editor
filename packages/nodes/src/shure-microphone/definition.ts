@@ -19,6 +19,7 @@ export const shureMicrophoneDefinition: NodeDefinition<typeof ShureMicrophoneNod
     position: [0, 0, 0],
     rotation: [0, 0, 0],
     targetIds: [],
+    beamAngle: 30,
   }),
   capabilities: {
     selectable: { hitVolume: 'bbox' },
@@ -29,7 +30,8 @@ export const shureMicrophoneDefinition: NodeDefinition<typeof ShureMicrophoneNod
   },
   geometry: buildShureMicrophoneGeometry,
   floorplan: buildShureMicrophoneFloorplan,
-  geometryKey: (n) => JSON.stringify([n.position, n.rotation, n.targetId, n.targetIds]),
+  geometryKey: (n) =>
+    JSON.stringify([n.position, n.rotation, n.targetId, n.targetIds, n.beamAngle ?? 30]),
   system: { module: () => import('./system') },
   affordanceTools: { selection: () => import('./selection') },
   parametrics: {
@@ -63,6 +65,7 @@ export const shureMicrophoneTargetDefinition: NodeDefinition<typeof ShureMicroph
     visible: true,
     metadata: {},
     position: [0, 0, 2],
+    beamAngle: 30,
   }),
   capabilities: {
     selectable: { hitVolume: 'bbox' },
@@ -71,9 +74,16 @@ export const shureMicrophoneTargetDefinition: NodeDefinition<typeof ShureMicroph
   },
   geometry: buildShureMicrophoneTargetGeometry,
   floorplan: buildShureMicrophoneTargetFloorplan,
-  geometryKey: (n) => JSON.stringify([n.position, n.microphoneId]),
+  geometryKey: (n) => JSON.stringify([n.position, n.microphoneId, n.beamAngle]),
   affordanceTools: { selection: () => import('./selection') },
-  parametrics: { groups: [] },
+  parametrics: {
+    groups: [
+      {
+        label: 'Direction guide',
+        fields: [{ key: 'beamAngle', kind: 'number', unit: '°', min: 5, max: 120, step: 1 }],
+      },
+    ],
+  },
   presentation: {
     label: 'Microphone target',
     description: 'Aim point for a Shure Microphone.',

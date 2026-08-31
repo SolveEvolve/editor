@@ -12,11 +12,13 @@ import {
   MeshBasicMaterial,
   Quaternion,
   SphereGeometry,
+  SpotLight,
   Vector3,
 } from 'three'
 import { getShureMicrophoneTargetIds } from './target-ids'
 
 const CYAN = '#22d3ee'
+const LIGHT_COLOR = '#d9fbff'
 const DOWN = new Vector3(0, -1, 0)
 
 type Point = readonly [number, number, number]
@@ -26,6 +28,9 @@ type ConeMesh = Mesh & {
     shureConeRadius?: number
   }
 }
+
+const beamRadius = (length: number, beamAngle: number) =>
+  Math.tan((beamAngle * Math.PI) / 360) * length
 
 const source = new Vector3()
 const target = new Vector3()
@@ -39,9 +44,12 @@ export function applyShureMicrophoneConePose(
   sourcePosition: Point,
   sourceRotation: Point,
   targetPosition: Point,
+  beamAngle: number,
 ) {
   const cone = group.getObjectByName(`direction-cone:${targetId}`) as ConeMesh | undefined
-  if (!cone) return
+  const light = group.getObjectByName(`direction-light:${targetId}`) as SpotLight | undefined
+  const lightTarget = group.getObjectByName(`direction-light-target:${targetId}`)
+  if (!(cone && light && lightTarget)) return
 
   source.fromArray(sourcePosition)
   target.fromArray(targetPosition)
@@ -49,10 +57,12 @@ export function applyShureMicrophoneConePose(
   const length = direction.length()
   if (length < 0.001) {
     cone.visible = false
+    light.visible = false
     return
   }
 
   cone.visible = true
+  light.visible = true
   direction
     .normalize()
     .applyQuaternion(
@@ -64,16 +74,20 @@ export function applyShureMicrophoneConePose(
     )
   const baseLength = cone.userData.shureConeLength ?? length
   const baseRadius = cone.userData.shureConeRadius ?? Math.max(0.12, baseLength * 0.16)
-  const radius = Math.max(0.12, length * 0.16)
+  const radius = beamRadius(length, beamAngle)
   cone.position.copy(direction).multiplyScalar(length / 2)
   cone.quaternion.setFromUnitVectors(DOWN, direction)
   cone.scale.set(radius / baseRadius, length / baseLength, radius / baseRadius)
+  light.angle = (beamAngle * Math.PI) / 360
+  light.distance = length
+  lightTarget.position.copy(direction).multiplyScalar(length)
 }
 
 export function buildShureMicrophoneGeometry(
   node: ShureMicrophoneNode,
   ctx: GeometryContext,
 ): Group {
+  const beamAngle = node.beamAngle ?? 30
   const group = new Group()
   const disk = new Mesh(
     new ConeGeometry(0.16, 0.035, 32),
@@ -92,7 +106,8 @@ export function buildShureMicrophoneGeometry(
     )
     const length = targetDirection.length()
     if (length < 0.001) continue
-    const radius = Math.max(0.12, length * 0.16)
+    const targetBeamAngle = target.beamAngle ?? beamAngle
+    const radius = beamRadius(length, targetBeamAngle)
     const cone = new Mesh(
       new ConeGeometry(radius, length, 32, 1, true),
       new MeshBasicMaterial({
@@ -110,7 +125,20 @@ export function buildShureMicrophoneGeometry(
     cone.userData.shureConeLength = length
     cone.userData.shureConeRadius = radius
     group.add(cone)
-    applyShureMicrophoneConePose(group, targetId, node.position, node.rotation, target.position)
+    const lightTarget = new Group()
+    lightTarget.name = `direction-light-target:${targetId}`
+    const light = new SpotLight(LIGHT_COLOR, 20, length, (targetBeamAngle * Math.PI) / 360, 0.35, 2)
+    light.name = `direction-light:${targetId}`
+    light.target = lightTarget
+    group.add(light, lightTarget)
+    applyShureMicrophoneConePose(
+      group,
+      targetId,
+      node.position,
+      node.rotation,
+      target.position,
+      targetBeamAngle,
+    )
   }
   return group
 }
