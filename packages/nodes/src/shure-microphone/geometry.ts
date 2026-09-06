@@ -108,13 +108,14 @@ export function buildShureMicrophoneGeometry(
         color: CYAN,
         transparent: true,
         opacity: 0.8,
-        depthTest: true,
+        depthTest: false,
         depthWrite: false,
       }),
     )
     coneGeometry.dispose()
     cone.name = `direction-cone:${targetId}`
     cone.raycast = () => {}
+    cone.renderOrder = 1000
     cone.userData.shureConeLength = length
     cone.userData.shureConeRadius = radius
     group.add(cone)

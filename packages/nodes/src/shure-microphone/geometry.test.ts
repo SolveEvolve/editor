@@ -5,7 +5,7 @@ import { buildShureMicrophoneGeometry } from './geometry'
 import { ShureMicrophoneNode, ShureMicrophoneTargetNode } from './schema'
 
 describe('buildShureMicrophoneGeometry', () => {
-  test('builds a depth-tested hollow cone without a spotlight', () => {
+  test('builds an always-visible hollow cone without a spotlight', () => {
     const target = ShureMicrophoneTargetNode.parse({
       id: 'shure-microphone-target_demo',
       position: [0, 0, 2],
@@ -31,8 +31,9 @@ describe('buildShureMicrophoneGeometry', () => {
 
     expect(cone).toBeInstanceOf(LineSegments)
     expect(material.opacity).toBe(0.8)
-    expect(material.depthTest).toBe(true)
+    expect(material.depthTest).toBe(false)
     expect(material.depthWrite).toBe(false)
+    expect(cone.renderOrder).toBe(1000)
     expect(spotLightCount).toBe(0)
   })
 })
