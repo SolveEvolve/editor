@@ -1,6 +1,6 @@
 'use client'
 
-import { Editor, ItemsPanel } from '@pascal-app/editor'
+import { Editor, ItemsPanel, type SceneGraph } from '@pascal-app/editor'
 import { Hammer, Layers, Package, Settings } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -86,6 +86,75 @@ const SIDEBAR_TABS = [
 
 const PROJECT_ID = 'local-editor'
 
+const PROTO_DEMO_SCENE: SceneGraph = {
+  nodes: {
+    site_splat_demo: {
+      object: 'node',
+      id: 'site_splat_demo',
+      type: 'site',
+      name: 'Proto August Site',
+      parentId: null,
+      visible: true,
+      metadata: {},
+      polygon: {
+        type: 'polygon',
+        points: [
+          [-15, -15],
+          [15, -15],
+          [15, 15],
+          [-15, 15],
+        ],
+      },
+      children: ['building_splat_demo'],
+    },
+    building_splat_demo: {
+      object: 'node',
+      id: 'building_splat_demo',
+      type: 'building',
+      name: 'Proto August Building',
+      parentId: 'site_splat_demo',
+      visible: true,
+      metadata: {},
+      children: ['level_splat_demo'],
+      position: [0, 0, 0],
+      rotation: [0, 0, 0],
+    },
+    level_splat_demo: {
+      object: 'node',
+      id: 'level_splat_demo',
+      type: 'level',
+      name: 'Scan Level',
+      parentId: 'building_splat_demo',
+      visible: true,
+      metadata: {},
+      children: ['scan_proto_august'],
+      level: 0,
+      height: 3,
+    },
+    scan_proto_august: {
+      object: 'node',
+      id: 'scan_proto_august',
+      type: 'scan',
+      name: 'Proto August Scan',
+      parentId: 'level_splat_demo',
+      visible: true,
+      metadata: {},
+      url: '/test-assets/gaussian-splats/proto-august-scan-converted/proto-august-scan-464k.spz',
+      assetFormat: 'spz',
+      position: [0, 0.9, -0.3],
+      rotation: [-Math.PI / 2, 0, 0],
+      scale: 1,
+      opacity: 100,
+    },
+  },
+  rootNodeIds: ['site_splat_demo'],
+  collections: {},
+}
+
+async function loadProtoDemoScene(): Promise<SceneGraph> {
+  return structuredClone(PROTO_DEMO_SCENE)
+}
+
 export default function Home() {
   return (
     <div className="relative h-screen w-screen">
@@ -107,6 +176,7 @@ export default function Home() {
       )}
       <Editor
         layoutVersion="v2"
+        onLoad={loadProtoDemoScene}
         projectId={PROJECT_ID}
         sidebarTabs={SIDEBAR_TABS}
         viewerToolbarLeft={<CommunityViewerToolbarLeft />}
