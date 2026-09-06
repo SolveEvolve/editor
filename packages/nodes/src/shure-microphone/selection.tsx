@@ -4,7 +4,6 @@ import {
   type AnyNodeId,
   type Cursor,
   sceneRegistry,
-  useLiveTransforms,
   useScene,
 } from '@pascal-app/core'
 import { swallowNextClick, useEditor } from '@pascal-app/editor'
@@ -92,32 +91,18 @@ function VerticalMoveHandles({ node }: { node: SelectableGuide }) {
     setDragging(true)
     document.body.style.cursor = cursor
     let nextPosition: Point | null = null
-    let queuedPosition: Point | null = null
-    let pendingFrame: number | null = null
-
-    const publishPosition = () => {
-      pendingFrame = null
-      if (!queuedPosition) return
-      useLiveTransforms.getState().set(node.id, {
-        position: queuedPosition,
-        rotation: node.rotation?.[1] ?? 0,
-      })
-    }
-
     const onMove = (pointerEvent: PointerEvent) => {
       const currentY = sampleY(pointerEvent)
       if (currentY === null) return
       const y = snap(initialPosition[1] + currentY - startY)
       if (nextPosition?.[1] === y) return
       nextPosition = [initialPosition[0], y, initialPosition[2]]
-      queuedPosition = nextPosition
-      if (pendingFrame === null) pendingFrame = window.requestAnimationFrame(publishPosition)
+      // This is a drag-local presentation transform. Publishing it through
+      // Zustand makes R3F reconcile the full scene every frame, including a
+      // dense splat; the Shure system reads this group pose for the guide.
+      sceneRegistry.nodes.get(node.id)?.position.fromArray(nextPosition)
     }
     const cleanup = () => {
-      if (pendingFrame !== null) {
-        window.cancelAnimationFrame(pendingFrame)
-        pendingFrame = null
-      }
       window.removeEventListener('pointermove', onMove)
       window.removeEventListener('pointerup', onUp)
       window.removeEventListener('pointercancel', onUp)
@@ -128,7 +113,6 @@ function VerticalMoveHandles({ node }: { node: SelectableGuide }) {
     const onUp = () => {
       swallowNextClick()
       cleanup()
-      useLiveTransforms.getState().clear(node.id)
       useScene.temporal.getState().resume()
       if (nextPosition) useScene.getState().updateNode(node.id, { position: nextPosition })
       useScene.temporal.getState().pause()

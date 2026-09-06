@@ -14,6 +14,11 @@ function asPoint(value: unknown): [number, number, number] | null {
     : null
 }
 
+function registryPosition(nodeId: string): [number, number, number] | null {
+  const position = sceneRegistry.nodes.get(nodeId)?.position
+  return position ? [position.x, position.y, position.z] : null
+}
+
 const ShureMicrophoneSystem = () => {
   useFrame(() => {
     const { nodes } = useScene.getState()
@@ -39,7 +44,10 @@ const ShureMicrophoneSystem = () => {
         const targetTransform = transforms.get(target.id)
         const targetOverride = overrides.get(target.id)
         const targetPosition =
-          targetTransform?.position ?? asPoint(targetOverride?.position) ?? target.position
+          targetTransform?.position ??
+          asPoint(targetOverride?.position) ??
+          registryPosition(target.id) ??
+          target.position
         applyShureMicrophoneConePose(
           group,
           targetId,
