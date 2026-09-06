@@ -92,18 +92,32 @@ function VerticalMoveHandles({ node }: { node: SelectableGuide }) {
     setDragging(true)
     document.body.style.cursor = cursor
     let nextPosition: Point | null = null
+    let queuedPosition: Point | null = null
+    let pendingFrame: number | null = null
+
+    const publishPosition = () => {
+      pendingFrame = null
+      if (!queuedPosition) return
+      useLiveTransforms.getState().set(node.id, {
+        position: queuedPosition,
+        rotation: node.rotation?.[1] ?? 0,
+      })
+    }
 
     const onMove = (pointerEvent: PointerEvent) => {
       const currentY = sampleY(pointerEvent)
       if (currentY === null) return
       const y = snap(initialPosition[1] + currentY - startY)
+      if (nextPosition?.[1] === y) return
       nextPosition = [initialPosition[0], y, initialPosition[2]]
-      useLiveTransforms.getState().set(node.id, {
-        position: nextPosition,
-        rotation: node.rotation?.[1] ?? 0,
-      })
+      queuedPosition = nextPosition
+      if (pendingFrame === null) pendingFrame = window.requestAnimationFrame(publishPosition)
     }
     const cleanup = () => {
+      if (pendingFrame !== null) {
+        window.cancelAnimationFrame(pendingFrame)
+        pendingFrame = null
+      }
       window.removeEventListener('pointermove', onMove)
       window.removeEventListener('pointerup', onUp)
       window.removeEventListener('pointercancel', onUp)
