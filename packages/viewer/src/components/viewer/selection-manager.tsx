@@ -26,6 +26,7 @@ const tempWorldPos = new Vector3()
 
 // Tolerance for edge detection (in meters)
 const EDGE_TOLERANCE = 0.5
+const OUTLINE_EXCLUDED_TYPES = new Set(['slab', 'shure-microphone', 'shure-microphone-target'])
 
 // Hardcoded kinds the viewer's selection manager knows about. Registry kinds
 // (any NodeDefinition with `capabilities.selectable`) are merged in at
@@ -461,7 +462,7 @@ const OutlinerSync = () => {
     outliner.selectedObjects.length = 0
     for (const id of new Set([...selection.selectedIds, ...externalSelectedIds])) {
       const node = nodes[id as AnyNodeId]
-      if (node?.type === 'slab') continue
+      if (node && OUTLINE_EXCLUDED_TYPES.has(node.type)) continue
       const obj = sceneRegistry.nodes.get(id)
       if (obj) outliner.selectedObjects.push(obj)
     }
@@ -470,7 +471,7 @@ const OutlinerSync = () => {
     outliner.hoveredObjects.length = 0
     if (hoveredId) {
       const hoveredNode = nodes[hoveredId as AnyNodeId]
-      if (hoveredNode?.type === 'slab') return
+      if (hoveredNode && OUTLINE_EXCLUDED_TYPES.has(hoveredNode.type)) return
       const obj = sceneRegistry.nodes.get(hoveredId)
       if (obj) outliner.hoveredObjects.push(obj)
     }
