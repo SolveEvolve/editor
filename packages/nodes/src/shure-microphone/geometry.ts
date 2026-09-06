@@ -5,9 +5,11 @@ import type {
 } from '@pascal-app/core'
 import {
   ConeGeometry,
+  EdgesGeometry,
   Euler,
-  FrontSide,
   Group,
+  LineBasicMaterial,
+  LineSegments,
   Mesh,
   MeshBasicMaterial,
   Quaternion,
@@ -20,7 +22,7 @@ const CYAN = '#22d3ee'
 const DOWN = new Vector3(0, -1, 0)
 
 type Point = readonly [number, number, number]
-type ConeMesh = Mesh & {
+type ConeGuide = LineSegments & {
   userData: {
     shureConeLength?: number
     shureConeRadius?: number
@@ -44,7 +46,7 @@ export function applyShureMicrophoneConePose(
   targetPosition: Point,
   beamAngle: number,
 ) {
-  const cone = group.getObjectByName(`direction-cone:${targetId}`) as ConeMesh | undefined
+  const cone = group.getObjectByName(`direction-cone:${targetId}`) as ConeGuide | undefined
   if (!cone) return
 
   source.fromArray(sourcePosition)
@@ -99,17 +101,18 @@ export function buildShureMicrophoneGeometry(
     if (length < 0.001) continue
     const targetBeamAngle = target.beamAngle ?? beamAngle
     const radius = beamRadius(length, targetBeamAngle)
-    const cone = new Mesh(
-      new ConeGeometry(radius, length, 32, 1, true),
-      new MeshBasicMaterial({
+    const coneGeometry = new ConeGeometry(radius, length, 16, 1, true)
+    const cone = new LineSegments(
+      new EdgesGeometry(coneGeometry),
+      new LineBasicMaterial({
         color: CYAN,
         transparent: true,
-        opacity: 0.1,
+        opacity: 0.8,
         depthTest: true,
         depthWrite: false,
-        side: FrontSide,
       }),
     )
+    coneGeometry.dispose()
     cone.name = `direction-cone:${targetId}`
     cone.raycast = () => {}
     cone.userData.shureConeLength = length

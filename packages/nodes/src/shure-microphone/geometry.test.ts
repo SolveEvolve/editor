@@ -1,11 +1,11 @@
 import { describe, expect, test } from 'bun:test'
 import type { AnyNodeId, GeometryContext } from '@pascal-app/core'
-import { FrontSide, Mesh, MeshBasicMaterial, SpotLight } from 'three'
+import { LineBasicMaterial, LineSegments, SpotLight } from 'three'
 import { buildShureMicrophoneGeometry } from './geometry'
 import { ShureMicrophoneNode, ShureMicrophoneTargetNode } from './schema'
 
 describe('buildShureMicrophoneGeometry', () => {
-  test('builds a depth-tested front-sided cone without a spotlight', () => {
+  test('builds a depth-tested hollow cone without a spotlight', () => {
     const target = ShureMicrophoneTargetNode.parse({
       id: 'shure-microphone-target_demo',
       position: [0, 0, 2],
@@ -22,17 +22,17 @@ describe('buildShureMicrophoneGeometry', () => {
     }
 
     const group = buildShureMicrophoneGeometry(microphone, ctx)
-    const cone = group.getObjectByName(`direction-cone:${target.id}`) as Mesh
-    const material = cone.material as MeshBasicMaterial
+    const cone = group.getObjectByName(`direction-cone:${target.id}`) as LineSegments
+    const material = cone.material as LineBasicMaterial
     let spotLightCount = 0
     group.traverse((child) => {
       if (child instanceof SpotLight) spotLightCount += 1
     })
 
-    expect(material.opacity).toBe(0.1)
+    expect(cone).toBeInstanceOf(LineSegments)
+    expect(material.opacity).toBe(0.8)
     expect(material.depthTest).toBe(true)
     expect(material.depthWrite).toBe(false)
-    expect(material.side).toBe(FrontSide)
     expect(spotLightCount).toBe(0)
   })
 })
