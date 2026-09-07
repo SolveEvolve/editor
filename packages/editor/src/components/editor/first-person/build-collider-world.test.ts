@@ -209,4 +209,17 @@ describe('buildFirstPersonColliderWorldFromRegistry', () => {
     expect(world?.bounds?.max.z).toBeCloseTo(1000)
     world?.dispose()
   })
+
+  test('keeps the site ground collider when its visual ground is hidden', () => {
+    const site = SiteNode.parse({ id: 'site_test', renderGround: false })
+    setSceneNodes([site])
+    mountRegistryGroup(site)
+
+    const world = buildFirstPersonColliderWorldFromRegistry()
+
+    expect(world).not.toBeNull()
+    expect(world?.bounds?.min.y).toBeCloseTo(-0.08)
+    expect(world?.bounds?.max.y).toBeCloseTo(0)
+    world?.dispose()
+  })
 })

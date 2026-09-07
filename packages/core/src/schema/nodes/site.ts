@@ -30,6 +30,7 @@ export const SiteNode = BaseNode.extend({
       [-15, 15],
     ],
   }),
+  renderGround: z.boolean().default(true),
   // terrain: TerrainData,
   children: z.array(z.string()).default([]),
 }).describe(

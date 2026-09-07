@@ -271,7 +271,7 @@ export const SiteRenderer = ({ node }: { node: SiteNode }) => {
       ))}
 
       {/* Ground fill: site polygon with slab holes, occludes below-grade geometry */}
-      {groundGeometry && (
+      {node.renderGround && groundGeometry && (
         <mesh
           geometry={groundGeometry}
           material={groundMaterial}
@@ -282,7 +282,7 @@ export const SiteRenderer = ({ node }: { node: SiteNode }) => {
       )}
 
       {/* Infinite-ground presentation disc fading into the sky at the horizon */}
-      {horizonGeometry && horizonMaterial && fadeBounds && (
+      {node.renderGround && horizonGeometry && horizonMaterial && fadeBounds && (
         <mesh
           geometry={horizonGeometry}
           material={horizonMaterial}
