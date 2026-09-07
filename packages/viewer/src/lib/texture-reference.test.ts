@@ -2,6 +2,7 @@
 // depend on @types/bun so the import type is unresolved at compile time.
 import { describe, expect, test } from 'bun:test'
 import * as THREE from 'three'
+import { ASSETS_CDN_URL } from './asset-url'
 import { getPascalTextureRef, stampPascalTextureRef } from './texture-reference'
 
 // The module reads the storage origin lazily on first use, so setting the env
@@ -28,8 +29,7 @@ describe('Pascal texture references', () => {
   })
 
   test("resolves 'material' input to app-material for assets-CDN catalog URLs", () => {
-    const cdnOrigin = new URL(process.env.NEXT_PUBLIC_ASSETS_CDN_URL || 'https://editor.pascal.app')
-      .origin
+    const cdnOrigin = new URL(ASSETS_CDN_URL).origin
     const texture = new THREE.Texture()
     const src = `${cdnOrigin}/material/concrete/prepared_drywall/prepared_drywall_normal_512.ktx2`
 
@@ -66,6 +66,18 @@ describe('Pascal texture references', () => {
       colorSpace: 'srgb',
     })
     expect(getPascalTextureRef(texture)).toEqual(ref)
+  })
+
+  test('resolves same-origin material paths as app materials', () => {
+    const texture = new THREE.Texture()
+    texture.colorSpace = THREE.SRGBColorSpace
+    const src = '/material/concrete/prepared_drywall/prepared_drywall_normal_512.ktx2'
+
+    expect(stampPascalTextureRef(texture, { kind: 'material', src, slot: 'normalMap' })).toMatchObject({
+      kind: 'app-material',
+      src,
+      map: 'normal',
+    })
   })
 
   test('keeps local and non-Pascal URLs unstamped', () => {

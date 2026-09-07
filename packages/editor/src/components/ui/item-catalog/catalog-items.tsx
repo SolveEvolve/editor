@@ -1,4 +1,5 @@
 import type { AssetInput } from '@pascal-app/core'
+import { localizeBundledCatalogAssetUrl } from '@pascal-app/viewer'
 
 /**
  * A catalog tile: the asset plus optional editor placement metadata.
@@ -8,7 +9,7 @@ import type { AssetInput } from '@pascal-app/core'
  */
 export type CatalogItem = AssetInput & { tool?: string }
 
-export const CATALOG_ITEMS: CatalogItem[] = [
+const CATALOG_ITEM_DEFINITIONS: CatalogItem[] = [
   {
     id: 'shure-microphone',
     tool: 'shure-microphone',
@@ -2975,6 +2976,13 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     scale: [1, 1, 1],
   },
 ]
+
+export const CATALOG_ITEMS: CatalogItem[] = CATALOG_ITEM_DEFINITIONS.map((item) => ({
+  ...item,
+  thumbnail: localizeBundledCatalogAssetUrl(item.thumbnail) ?? item.thumbnail,
+  src: localizeBundledCatalogAssetUrl(item.src) ?? item.src,
+  floorPlanUrl: localizeBundledCatalogAssetUrl(item.floorPlanUrl) ?? item.floorPlanUrl,
+}))
 
 export function getDefaultCatalogItem(category: string | null | undefined): AssetInput | null {
   if (!category) return null

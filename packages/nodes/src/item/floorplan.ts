@@ -12,6 +12,7 @@ import {
   useLiveTransforms,
 } from '@pascal-app/core'
 import { formatLinearMeasurement, readFloorplanMetricNotationOverride } from '@pascal-app/editor'
+import { localizeBundledCatalogAssetUrl } from '@pascal-app/viewer'
 
 /**
  * Stage C floor-plan builder for item.
@@ -243,7 +244,7 @@ export function buildItemFloorplan(node: ItemNode, ctx: GeometryContext): Floorp
   const showSelection = isSelected || isHighlighted
   const isMoving = ctx.viewState?.moving ?? false
   const selectedStroke = ctx.viewState?.palette?.selectedStroke ?? '#3b82f6'
-  const floorPlanUrl = node.asset.floorPlanUrl
+  const floorPlanUrl = localizeBundledCatalogAssetUrl(node.asset.floorPlanUrl) ?? node.asset.floorPlanUrl
   const children: FloorplanGeometry[] = [
     {
       kind: 'polygon',

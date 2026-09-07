@@ -49,6 +49,7 @@ function pascalStorageOrigin(): string | null {
  *  the assets CDN (`/material/{category}/{slug}/{slug}_{map}_{size}.ktx2`) —
  *  a server-known KTX2 source like the storage buckets, just app-hosted. */
 function isAppMaterialUrl(src: string): boolean {
+  if (src.startsWith('/material/')) return true
   try {
     const url = new URL(src)
     return url.origin === new URL(ASSETS_CDN_URL).origin && url.pathname.startsWith('/material/')

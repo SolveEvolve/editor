@@ -120,7 +120,7 @@ class AlignmentSafeKTX2Loader extends KTX2Loader {
  * the scene, so catalog `.ktx2` finishes still load).
  */
 export const ktx2Loader = new AlignmentSafeKTX2Loader()
-ktx2Loader.setTranscoderPath('https://cdn.jsdelivr.net/gh/pmndrs/drei-assets@master/basis/')
+ktx2Loader.setTranscoderPath('/decoders/basis/')
 
 const configuredRenderers = new WeakSet<object>()
 const warnedRenderers = new WeakSet<object>()
