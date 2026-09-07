@@ -9,6 +9,7 @@ export type FurnishToolConfig = {
 
 export const furnishTools: FurnishToolConfig[] = [
   { id: 'item', iconSrc: '/icons/couch.webp', label: 'Furniture', catalogCategory: 'furniture' },
+  { id: 'item', iconSrc: '/icons/production.webp', label: 'Production', catalogCategory: 'production' },
   { id: 'item', iconSrc: '/icons/appliance.webp', label: 'Appliance', catalogCategory: 'appliance' },
   { id: 'item', iconSrc: '/icons/kitchen.webp', label: 'Kitchen', catalogCategory: 'kitchen' },
   { id: 'item', iconSrc: '/icons/bathroom.webp', label: 'Bathroom', catalogCategory: 'bathroom' },

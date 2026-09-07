@@ -12,10 +12,10 @@ export const CATALOG_ITEMS: CatalogItem[] = [
   {
     id: 'shure-microphone',
     tool: 'shure-microphone',
-    category: 'furniture',
+    category: 'production',
     name: 'Shure Microphone',
     tags: ['microphone', 'audio', 'direction'],
-    thumbnail: '/icons/couch.webp',
+    thumbnail: '/icons/production.webp',
     src: 'asset://system/shure-microphone',
     dimensions: [0.32, 0.04, 0.32],
   },

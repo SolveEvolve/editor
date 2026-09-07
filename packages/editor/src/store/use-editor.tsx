@@ -192,6 +192,7 @@ export type SiteTool = 'property-line'
 // Catalog categories for furnish mode items
 export type CatalogCategory =
   | 'furniture'
+  | 'production'
   | 'appliance'
   | 'bathroom'
   | 'kitchen'

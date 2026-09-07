@@ -18,6 +18,7 @@ const CATEGORY_ICONS: Record<string, string> = {
   door: '/icons/door.webp',
   window: '/icons/window.webp',
   furniture: '/icons/couch.webp',
+  production: '/icons/production.webp',
   appliance: '/icons/appliance.webp',
   kitchen: '/icons/kitchen.webp',
   bathroom: '/icons/bathroom.webp',
