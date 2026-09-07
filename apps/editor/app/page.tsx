@@ -137,6 +137,7 @@ const PROTO_DEMO_SCENE: SceneGraph = {
         ],
       },
       renderGround: false,
+      shadowCatcher: true,
       children: ['building_splat_demo'],
     },
     building_splat_demo: {

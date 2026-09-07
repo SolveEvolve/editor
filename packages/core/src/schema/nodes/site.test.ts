@@ -9,4 +9,10 @@ describe('SiteNode', () => {
   test('accepts scenes that hide only the site ground visuals', () => {
     expect(SiteNode.parse({ renderGround: false }).renderGround).toBe(false)
   })
+
+  test('allows hidden ground to remain a shadow catcher', () => {
+    const site = SiteNode.parse({ renderGround: false, shadowCatcher: true })
+
+    expect(site.shadowCatcher).toBe(true)
+  })
 })

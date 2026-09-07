@@ -31,6 +31,7 @@ export const SiteNode = BaseNode.extend({
     ],
   }),
   renderGround: z.boolean().default(true),
+  shadowCatcher: z.boolean().default(false),
   // terrain: TerrainData,
   children: z.array(z.string()).default([]),
 }).describe(

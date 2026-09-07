@@ -27,7 +27,7 @@ import {
   ShapeGeometry,
 } from 'three'
 import { cameraPosition, color, float, mix, positionWorld, smoothstep, vec2 } from 'three/tsl'
-import { MeshLambertNodeMaterial } from 'three/webgpu'
+import { MeshLambertNodeMaterial, ShadowNodeMaterial } from 'three/webgpu'
 import { getRecessedSlabGroundHoles } from './recessed-slab-ground-holes'
 
 const Y_OFFSET = 0.01
@@ -153,6 +153,12 @@ export const SiteRenderer = ({ node }: { node: SiteNode }) => {
     return material
   }, [bgColor])
 
+  const shadowCatcherMaterial = useMemo(() => {
+    const material = new ShadowNodeMaterial({ color: '#000000', opacity: 0.24 })
+    material.depthWrite = false
+    return material
+  }, [])
+
   // Presentation horizon: a large ground disc under the lot, in the same
   // theme ground colour, fading radially into the theme background so the
   // scene sits on an "infinite" plane that dissolves into the sky instead of
@@ -271,15 +277,24 @@ export const SiteRenderer = ({ node }: { node: SiteNode }) => {
       ))}
 
       {/* Ground fill: site polygon with slab holes, occludes below-grade geometry */}
-      {node.renderGround && groundGeometry && (
-        <mesh
-          geometry={groundGeometry}
-          material={groundMaterial}
-          position={[0, -0.05, 0]}
-          receiveShadow
-          rotation={[-Math.PI / 2, 0, 0]}
-        />
-      )}
+      {groundGeometry &&
+        (node.renderGround ? (
+          <mesh
+            geometry={groundGeometry}
+            material={groundMaterial}
+            position={[0, -0.05, 0]}
+            receiveShadow
+            rotation={[-Math.PI / 2, 0, 0]}
+          />
+        ) : node.shadowCatcher ? (
+          <mesh
+            geometry={groundGeometry}
+            material={shadowCatcherMaterial}
+            position={[0, -0.05, 0]}
+            receiveShadow
+            rotation={[-Math.PI / 2, 0, 0]}
+          />
+        ) : null)}
 
       {/* Infinite-ground presentation disc fading into the sky at the horizon */}
       {node.renderGround && horizonGeometry && horizonMaterial && fadeBounds && (
