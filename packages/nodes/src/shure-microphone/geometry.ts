@@ -19,6 +19,7 @@ import {
 import { getShureMicrophoneTargetIds } from './target-ids'
 
 const CYAN = '#22d3ee'
+const CONE_COLOR = '#9bff33'
 const DOWN = new Vector3(0, -1, 0)
 
 type Point = readonly [number, number, number]
@@ -105,7 +106,7 @@ export function buildShureMicrophoneGeometry(
     const cone = new LineSegments(
       new EdgesGeometry(coneGeometry),
       new LineBasicMaterial({
-        color: CYAN,
+        color: CONE_COLOR,
         transparent: true,
         opacity: 0.8,
         depthTest: false,

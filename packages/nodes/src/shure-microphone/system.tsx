@@ -1,8 +1,18 @@
 'use client'
 
-import { sceneRegistry, useLiveNodeOverrides, useLiveTransforms, useScene } from '@pascal-app/core'
-import { useFrame } from '@react-three/fiber'
+import {
+  type AnyNodeId,
+  sceneRegistry,
+  type ShureMicrophoneNode,
+  useLiveNodeOverrides,
+  useLiveTransforms,
+  useScene,
+} from '@pascal-app/core'
+import { Html } from '@react-three/drei'
+import { createPortal, useFrame } from '@react-three/fiber'
+import { useState } from 'react'
 import type { Group } from 'three'
+import { useShallow } from 'zustand/react/shallow'
 import { applyShureMicrophoneConePose } from './geometry'
 import { getShureMicrophoneTargetIds } from './target-ids'
 
@@ -20,6 +30,14 @@ function registryPosition(nodeId: string): [number, number, number] | null {
 }
 
 const ShureMicrophoneSystem = () => {
+  const microphoneIds = useScene(
+    useShallow((state) =>
+      Object.values(state.nodes)
+        .filter((node): node is ShureMicrophoneNode => node.type === 'shure-microphone')
+        .map((node) => node.id),
+    ),
+  )
+
   useFrame(() => {
     const { nodes } = useScene.getState()
     const transforms = useLiveTransforms.getState()
@@ -62,7 +80,57 @@ const ShureMicrophoneSystem = () => {
       }
     }
   })
-  return null
+  return (
+    <>
+      {microphoneIds.map((microphoneId) => (
+        <ShureMicrophoneLabel key={microphoneId} microphoneId={microphoneId} />
+      ))}
+    </>
+  )
+}
+
+function ShureMicrophoneLabel({ microphoneId }: { microphoneId: AnyNodeId }) {
+  const [group, setGroup] = useState<Group | null>(null)
+
+  useFrame(() => {
+    if (group) return
+    const next = sceneRegistry.nodes.get(microphoneId) as Group | undefined
+    if (next) setGroup(next)
+  })
+
+  if (!group) return null
+
+  return createPortal(
+    <Html
+      distanceFactor={8}
+      eps={-1}
+      position={[0.24, 0.18, 0]}
+      style={{ pointerEvents: 'none' }}
+      zIndexRange={[20, 0]}
+    >
+      <div
+        style={{
+          alignItems: 'center',
+          background: 'rgba(15, 23, 42, 0.82)',
+          border: '1px solid rgba(155, 255, 51, 0.8)',
+          borderRadius: 6,
+          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.35)',
+          color: '#9bff33',
+          display: 'flex',
+          fontFamily: 'sans-serif',
+          fontSize: 12,
+          fontWeight: 600,
+          letterSpacing: '0.02em',
+          padding: '4px 7px',
+          userSelect: 'none',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        Shure DCA901
+      </div>
+    </Html>,
+    group,
+  )
 }
 
 export default ShureMicrophoneSystem

@@ -30,6 +30,7 @@ describe('buildShureMicrophoneGeometry', () => {
     })
 
     expect(cone).toBeInstanceOf(LineSegments)
+    expect(material.color.getHexString()).toBe('9bff33')
     expect(material.opacity).toBe(0.8)
     expect(material.depthTest).toBe(false)
     expect(material.depthWrite).toBe(false)

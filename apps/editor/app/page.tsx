@@ -198,7 +198,7 @@ const PROTO_DEMO_SCENE: SceneGraph = {
       parentId: 'level_splat_demo',
       visible: true,
       metadata: {},
-      position: [3.587648111203707, 5.330595709669998, -0.21191005168788016],
+      position: [3.587648111203707, 5.237181523579031, -0.21191005168788016],
       rotation: [0, 0, 0],
       targetId: 'shure-microphone-target_26sygq8c4lslvus6',
       targetIds: [
