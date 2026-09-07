@@ -6,7 +6,7 @@ import {
   sceneRegistry,
   useScene,
 } from '@pascal-app/core'
-import { swallowNextClick, useEditor } from '@pascal-app/editor'
+import { swallowNextClick } from '@pascal-app/editor'
 import { useViewer } from '@pascal-app/viewer'
 import { createPortal, type ThreeEvent, useThree } from '@react-three/fiber'
 import { useEffect, useState } from 'react'
@@ -19,11 +19,6 @@ type SelectableGuide = {
   position: Point
   rotation?: Point
   type: 'shure-microphone' | 'shure-microphone-target'
-}
-
-function snap(value: number) {
-  const step = useEditor.getState().gridSnapStep
-  return Math.round(value / step) * step
 }
 
 const ShureMicrophoneSelection = () => {
@@ -58,7 +53,7 @@ const ShureMicrophoneSelection = () => {
 }
 
 function VerticalMoveHandles({ node }: { node: SelectableGuide }) {
-  const { camera, gl } = useThree()
+  const { camera, gl, events, setEvents } = useThree()
   const [dragging, setDragging] = useState(false)
   const zoom = camera instanceof OrthographicCamera ? 1 / camera.zoom : 1
   const gap = zoom * 0.4
@@ -88,13 +83,17 @@ function VerticalMoveHandles({ node }: { node: SelectableGuide }) {
 
     useScene.temporal.getState().pause()
     useViewer.getState().setInputDragging(true)
+    const eventsEnabledBeforeDrag = events.enabled
+    // The drag samples its own plane from native pointer events. Keeping R3F
+    // events enabled would still raycast the dense splat on every move.
+    setEvents({ enabled: false })
     setDragging(true)
     document.body.style.cursor = cursor
     let nextPosition: Point | null = null
     const onMove = (pointerEvent: PointerEvent) => {
       const currentY = sampleY(pointerEvent)
       if (currentY === null) return
-      const y = snap(initialPosition[1] + currentY - startY)
+      const y = initialPosition[1] + currentY - startY
       if (nextPosition?.[1] === y) return
       nextPosition = [initialPosition[0], y, initialPosition[2]]
       // This is a drag-local presentation transform. Publishing it through
@@ -106,6 +105,7 @@ function VerticalMoveHandles({ node }: { node: SelectableGuide }) {
       window.removeEventListener('pointermove', onMove)
       window.removeEventListener('pointerup', onUp)
       window.removeEventListener('pointercancel', onUp)
+      setEvents({ enabled: eventsEnabledBeforeDrag })
       useViewer.getState().setInputDragging(false)
       setDragging(false)
       if (document.body.style.cursor === cursor) document.body.style.cursor = ''

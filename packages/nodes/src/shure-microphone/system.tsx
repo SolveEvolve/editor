@@ -29,7 +29,10 @@ const ShureMicrophoneSystem = () => {
       const microphoneTransform = transforms.get(node.id)
       const microphoneOverride = overrides.get(node.id)
       const microphonePosition =
-        microphoneTransform?.position ?? asPoint(microphoneOverride?.position) ?? node.position
+        microphoneTransform?.position ??
+        asPoint(microphoneOverride?.position) ??
+        registryPosition(node.id) ??
+        node.position
       const overrideRotation = asPoint(microphoneOverride?.rotation)
       const microphoneRotation: [number, number, number] = [
         overrideRotation?.[0] ?? node.rotation[0],
