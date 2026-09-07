@@ -10,7 +10,6 @@ export const shureMicrophoneDefinition: NodeDefinition<typeof ShureMicrophoneNod
   schemaVersion: 2,
   schema: ShureMicrophoneNode,
   category: 'furnish',
-  snapProfile: 'item',
   defaults: () => ({
     object: 'node',
     parentId: null,
@@ -23,7 +22,7 @@ export const shureMicrophoneDefinition: NodeDefinition<typeof ShureMicrophoneNod
   }),
   capabilities: {
     selectable: { hitVolume: 'bbox' },
-    movable: { axes: ['x', 'y', 'z'], gridSnap: true },
+    movable: { axes: ['x', 'y', 'z'] },
     rotatable: { axes: ['x', 'y', 'z'] },
     duplicable: true,
     deletable: true,
