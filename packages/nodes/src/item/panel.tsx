@@ -11,7 +11,7 @@ import {
   triggerSFX,
   useEditor,
 } from '@pascal-app/editor'
-import { useViewer } from '@pascal-app/viewer'
+import { localizeBundledCatalogAssetUrl, useViewer } from '@pascal-app/viewer'
 import { Copy, Link, Link2Off, Move, Trash2 } from 'lucide-react'
 import { useCallback, useRef, useState } from 'react'
 
@@ -100,7 +100,7 @@ export default function ItemPanel() {
 
   return (
     <PanelWrapper
-      icon={node.asset.thumbnail || '/icons/item.webp'}
+      icon={(localizeBundledCatalogAssetUrl(node.asset.thumbnail) ?? node.asset.thumbnail) || '/icons/item.webp'}
       onClose={handleClose}
       title={node.name || node.asset.name}
       width={300}
