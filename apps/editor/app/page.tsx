@@ -1,9 +1,11 @@
 'use client'
 
-import { Editor, ItemsPanel, type SceneGraph } from '@pascal-app/editor'
+import { emitter, useScene } from '@pascal-app/core'
+import { Editor, ItemsPanel, type SceneGraph, useEditor } from '@pascal-app/editor'
 import { Hammer, Layers, Package, Settings } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useRef } from 'react'
 import { BuildTab } from '@/components/build-tab'
 import {
   CommunityViewerToolbarLeft,
@@ -85,6 +87,35 @@ const SIDEBAR_TABS = [
 ]
 
 const PROJECT_ID = 'local-editor'
+const DEMO_SPAWN_ID = 'spawn_9dxykm8b3plfgbam'
+const DEMO_SPAWN_EYE_HEIGHT = 1.65
+
+function DemoLaunchPose() {
+  const spawn = useScene((state) => state.nodes[DEMO_SPAWN_ID])
+  const hasApplied = useRef(false)
+
+  useEffect(() => {
+    if (hasApplied.current || spawn?.type !== 'spawn') return
+    hasApplied.current = true
+    useEditor.getState().setMode('select')
+
+    const [x, y, z] = spawn.position
+    const forwardX = -Math.sin(spawn.rotation)
+    const forwardZ = -Math.cos(spawn.rotation)
+    const eyeY = y + DEMO_SPAWN_EYE_HEIGHT
+    const frame = window.requestAnimationFrame(() => {
+      emitter.emit('camera-controls:apply-pose', {
+        position: [x, eyeY, z],
+        target: [x + forwardX * 8, eyeY - 0.9, z + forwardZ * 8],
+        projection: 'perspective',
+      })
+    })
+
+    return () => window.cancelAnimationFrame(frame)
+  }, [spawn])
+
+  return null
+}
 
 const PROTO_DEMO_SCENE: SceneGraph = {
   nodes: {
@@ -250,6 +281,7 @@ export default function Home() {
         onLoad={loadProtoDemoScene}
         projectId={PROJECT_ID}
         sidebarTabs={SIDEBAR_TABS}
+        viewerSceneSlot={<DemoLaunchPose />}
         viewerToolbarLeft={<CommunityViewerToolbarLeft />}
         viewerToolbarRight={<CommunityViewerToolbarRight />}
       />
