@@ -3,9 +3,9 @@
   "assets": [
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/cactus/thumbnail.png",
-      "localPath": "/items/cactus/thumbnail.webp",
-      "bytes": 4116,
-      "sha256": "40cc89cf4b9831b29e5e7365330a7f68818e9ea7770f2a9adf08807281bd5652",
+      "localPath": "/items/cactus/thumbnail.png",
+      "bytes": 95978,
+      "sha256": "b2ad236a0645f91a4671f4326265ea8526a61260afaf4395f40cf91e44bf2be1",
       "attribution": null,
       "license": null
     },
@@ -27,9 +27,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/tv-stand/thumbnail.png",
-      "localPath": "/items/tv-stand/thumbnail.webp",
-      "bytes": 3886,
-      "sha256": "73b82fd9afa323e1c79557275309dc1c255d8690121525c7a5f1adfbbacae723",
+      "localPath": "/items/tv-stand/thumbnail.png",
+      "bytes": 96627,
+      "sha256": "52d2dd071824e2db5731dfa08be82ed0dd8ded86df755eb7d6e228ca8fb561d5",
       "attribution": null,
       "license": null
     },
@@ -51,9 +51,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-table-mo9ms5yh/thumbnail.png",
-      "localPath": "/items/dining-table-mo9ms5yh/thumbnail.webp",
-      "bytes": 5048,
-      "sha256": "b553096adbbe2a241492010bdc1149ce56318ad38e4788995e0df063afdc086f",
+      "localPath": "/items/dining-table-mo9ms5yh/thumbnail.png",
+      "bytes": 105148,
+      "sha256": "a932502b94f002411000a575d41b3a3972b9d7a26c50283ac27806f19ca3b8cb",
       "attribution": null,
       "license": null
     },
@@ -75,9 +75,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/single-bed/thumbnail.png",
-      "localPath": "/items/single-bed/thumbnail.webp",
-      "bytes": 3220,
-      "sha256": "3ef30db65530baa3cf819e05a2a258d1fe93905a8c9ce7380bb17c78b83c45b6",
+      "localPath": "/items/single-bed/thumbnail.png",
+      "bytes": 95613,
+      "sha256": "ea9467799bd1a7bac668350670e5a37f36bf58c5411a238b79cdcdbfa52ad283",
       "attribution": null,
       "license": null
     },
@@ -99,9 +99,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/livingroom-chair/thumbnail.png",
-      "localPath": "/items/livingroom-chair/thumbnail.webp",
-      "bytes": 3236,
-      "sha256": "cd581e2a9fe0bf7bfc86babd838a031d89d5ad0fa2c340afedfc74d9659ced95",
+      "localPath": "/items/livingroom-chair/thumbnail.png",
+      "bytes": 130261,
+      "sha256": "d13b2f56af32d5bb145b824a828f94134f304e89838e0285d09c00d4e61c224f",
       "attribution": null,
       "license": null
     },
@@ -123,9 +123,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/small-indoor-plant/thumbnail.png",
-      "localPath": "/items/small-indoor-plant/thumbnail.webp",
-      "bytes": 5404,
-      "sha256": "64fd452f9c35e2c1a639ecf8668466aec9695dd4bb743994a3cbbff5b8ef0913",
+      "localPath": "/items/small-indoor-plant/thumbnail.png",
+      "bytes": 94719,
+      "sha256": "4f69ac6a8dfbc4a5276bcae74d3fb37b786fb0a3f7913fa3784c6a9873f0ef51",
       "attribution": null,
       "license": null
     },
@@ -147,9 +147,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/column/thumbnail.png",
-      "localPath": "/items/column/thumbnail.webp",
-      "bytes": 990,
-      "sha256": "d53305793ea09c9632dbbcf65ae95e134464c2aec3b44daeb9654e848de6e235",
+      "localPath": "/items/column/thumbnail.png",
+      "bytes": 107017,
+      "sha256": "de149143d4a965643ef3c0f9f28745e7510e3e266aaad2d021e4804a9769c1a7",
       "attribution": null,
       "license": null
     },
@@ -171,9 +171,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/barbell/thumbnail.png",
-      "localPath": "/items/barbell/thumbnail.webp",
-      "bytes": 3298,
-      "sha256": "cbeb874119c1b5605af736b0afb093c70f8d52d5bb240edba20fb18afa0e3f3d",
+      "localPath": "/items/barbell/thumbnail.png",
+      "bytes": 69937,
+      "sha256": "7792f8ac87e0790303a79a4a2b86d1fc2c8cc4cf38825c4817e1ed352e09f01b",
       "attribution": null,
       "license": null
     },
@@ -195,9 +195,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toy/thumbnail.png",
-      "localPath": "/items/toy/thumbnail.webp",
-      "bytes": 3528,
-      "sha256": "c4939fbbf27e03f09d9c90e9458f600331a1d8d85e0fafb57fd297c540937a94",
+      "localPath": "/items/toy/thumbnail.png",
+      "bytes": 118575,
+      "sha256": "e98c48f3424f04c12a11d6c89e8c923e00b05286d126c7a7a21d9ddcba87b5d7",
       "attribution": null,
       "license": null
     },
@@ -219,9 +219,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/barbell-stand/thumbnail.png",
-      "localPath": "/items/barbell-stand/thumbnail.webp",
-      "bytes": 6600,
-      "sha256": "a87dcf11e6a89026ed55ca18112c79ef2f9a304169123812a8e5a5a6abacc9d1",
+      "localPath": "/items/barbell-stand/thumbnail.png",
+      "bytes": 81545,
+      "sha256": "c8515fc94d1c3639bbbead9331204f637be655d9e3f8f9784c299db5f2fd5a9b",
       "attribution": null,
       "license": null
     },
@@ -243,9 +243,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/books/thumbnail.png",
-      "localPath": "/items/books/thumbnail.webp",
-      "bytes": 4844,
-      "sha256": "b6754d7ec52e05b07d3015e3baebb27235d4aa519a1effe9b949fbda4d327fa2",
+      "localPath": "/items/books/thumbnail.png",
+      "bytes": 150918,
+      "sha256": "99fc9e95c33e661ba2244af5cb45ce2a465a1b5af62570d20daa500bec89a3ab",
       "attribution": null,
       "license": null
     },
@@ -267,9 +267,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/stool/thumbnail.png",
-      "localPath": "/items/stool/thumbnail.webp",
-      "bytes": 3114,
-      "sha256": "a7784cb6eb0de85ead170ae7870d3b31925a0664c0b1ae91feb203aba584fef1",
+      "localPath": "/items/stool/thumbnail.png",
+      "bytes": 71626,
+      "sha256": "7b9e9ea317ac7bfc47a1bae84519f357325bd4967d51a1316095a8649173069f",
       "attribution": null,
       "license": null
     },
@@ -291,9 +291,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/pool-table/thumbnail.png",
-      "localPath": "/items/pool-table/thumbnail.webp",
-      "bytes": 3778,
-      "sha256": "aa78238022bb744a25372e4b21b21b7d4a8495038aa519911b1c99f29253ad2e",
+      "localPath": "/items/pool-table/thumbnail.png",
+      "bytes": 153744,
+      "sha256": "ab864fe6a185bd641a2c5ea2d52b7d0089e395623925b113b9f076c0456a160b",
       "attribution": null,
       "license": null
     },
@@ -315,9 +315,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bookshelf/thumbnail.png",
-      "localPath": "/items/bookshelf/thumbnail.webp",
-      "bytes": 2678,
-      "sha256": "eac94f4b2312620104c1dcf16621e77f7a2fd49e86faa72cade17e5586fb6f48",
+      "localPath": "/items/bookshelf/thumbnail.png",
+      "bytes": 163685,
+      "sha256": "181699b01b6c4a508c3c62ef0aee74a365f16207d24fc20d12f46add3b2cf715",
       "attribution": null,
       "license": null
     },
@@ -339,9 +339,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/coat-rack/thumbnail.png",
-      "localPath": "/items/coat-rack/thumbnail.webp",
-      "bytes": 2702,
-      "sha256": "bbd6178ac485d678128ce7023be93b234ab6af229793cea529793e3c9e0a5917",
+      "localPath": "/items/coat-rack/thumbnail.png",
+      "bytes": 35694,
+      "sha256": "0ebdcf0742be0fb440efd1aa4fb358de47fcf38da071fc8b07db698106fd512c",
       "attribution": null,
       "license": null
     },
@@ -363,9 +363,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/car-toy/thumbnail.png",
-      "localPath": "/items/car-toy/thumbnail.webp",
-      "bytes": 4218,
-      "sha256": "c7e2b52256990538ae11b2096c619de159daf56d82255c0019572666edc2a4a3",
+      "localPath": "/items/car-toy/thumbnail.png",
+      "bytes": 108877,
+      "sha256": "6057bf4fd35312cac8a970227a196b0be4543dc2e800097359b6ed54eac5e26e",
       "attribution": null,
       "license": null
     },
@@ -387,9 +387,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bedside-table/thumbnail.png",
-      "localPath": "/items/bedside-table/thumbnail.webp",
-      "bytes": 2970,
-      "sha256": "e81f1598561856079826c168da731c9f5d44a9d748d2fb39a1f1949018e54eb0",
+      "localPath": "/items/bedside-table/thumbnail.png",
+      "bytes": 164578,
+      "sha256": "750e6385a876b5ff6947023714a59c01dcd4a83687eb202c3826c8fba5b16bce",
       "attribution": null,
       "license": null
     },
@@ -411,9 +411,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-cabinet/thumbnail.png",
-      "localPath": "/items/kitchen-cabinet/thumbnail.webp",
-      "bytes": 4732,
-      "sha256": "f847165ce70ff856b6797af88d75d4a87418d4cca51bf043ef5095e79aed94d9",
+      "localPath": "/items/kitchen-cabinet/thumbnail.png",
+      "bytes": 152537,
+      "sha256": "1ed1c8692f279c06ef4c393dd544caece2a3525fce7560b39023c56895ec2bdd",
       "attribution": null,
       "license": null
     },
@@ -435,9 +435,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sofa/thumbnail.png",
-      "localPath": "/items/sofa/thumbnail.webp",
-      "bytes": 3440,
-      "sha256": "90186cd6710b7aa3b0180d80d316ccd0b373740e0794c3d641fb9c4ed0dc2b6d",
+      "localPath": "/items/sofa/thumbnail.png",
+      "bytes": 137566,
+      "sha256": "9d80f13a6b0d8dc89034ee99a9b1e7fee4224d39ae244236d885aafea44c4f20",
       "attribution": null,
       "license": null
     },
@@ -459,9 +459,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bunkbed/thumbnail.png",
-      "localPath": "/items/bunkbed/thumbnail.webp",
-      "bytes": 5890,
-      "sha256": "5f134ebd57800945be7a82035a9079e5828f48369e27e2858946b459dc583d5e",
+      "localPath": "/items/bunkbed/thumbnail.png",
+      "bytes": 371397,
+      "sha256": "f3043e7b3a65348dc55f96f9d28afa8f36dcb5892d8fd296af2781fe5c8f4848",
       "attribution": null,
       "license": null
     },
@@ -483,9 +483,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/my-leather-couch-modp80ha/thumbnail.png",
-      "localPath": "/items/my-leather-couch-modp80ha/thumbnail.webp",
-      "bytes": 7804,
-      "sha256": "d2ed56d17bb621ca217d15b25b903c530c043c6b87299c3d25a44b8913b76550",
+      "localPath": "/items/my-leather-couch-modp80ha/thumbnail.png",
+      "bytes": 199718,
+      "sha256": "a2568e248e3d583c1c3ddd4fc3423778b8352bc98b14b3adde34c62a1913954e",
       "attribution": null,
       "license": null
     },
@@ -507,9 +507,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/office-table/thumbnail.png",
-      "localPath": "/items/office-table/thumbnail.webp",
-      "bytes": 3700,
-      "sha256": "d0fb62c007738b2d2c895bca1112adfa39258f03b4417ac12487a5ce37ac67a9",
+      "localPath": "/items/office-table/thumbnail.png",
+      "bytes": 156798,
+      "sha256": "324db2d5a590fe235cc70ee99a522c36420012f8029f4106bcf3658e2f851497",
       "attribution": null,
       "license": null
     },
@@ -531,9 +531,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-table/thumbnail.png",
-      "localPath": "/items/dining-table/thumbnail.webp",
-      "bytes": 2414,
-      "sha256": "0851e4a7663dada444d78a265484ada5d5eaed06cc5dbd8accd2c4d0b915fbca",
+      "localPath": "/items/dining-table/thumbnail.png",
+      "bytes": 93251,
+      "sha256": "0d45321aef9dd53f74ff75d2145882b3422295b4194ebd7255c55ad1a78bb30f",
       "attribution": null,
       "license": null
     },
@@ -555,9 +555,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/guitar/thumbnail.png",
-      "localPath": "/items/guitar/thumbnail.webp",
-      "bytes": 2118,
-      "sha256": "427d9066f645eb848e00e3fb3b765846867c9730731717d45c41d1e3063f5bc9",
+      "localPath": "/items/guitar/thumbnail.png",
+      "bytes": 48223,
+      "sha256": "2279aab06d315fb27413042fa6fd1865b33b00ec0111702c1bffe40c709ee47a",
       "attribution": null,
       "license": null
     },
@@ -579,9 +579,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/trash-bin/thumbnail.png",
-      "localPath": "/items/trash-bin/thumbnail.webp",
-      "bytes": 2848,
-      "sha256": "16ff5c156486164e57a18456c12fbf0eb2dc0ce9f981f8bec14ae475aedba032",
+      "localPath": "/items/trash-bin/thumbnail.png",
+      "bytes": 88701,
+      "sha256": "85a78ca255275bcdd47d6d23ead05a14afd17d472b6689357e154f867afd58f0",
       "attribution": null,
       "license": null
     },
@@ -603,9 +603,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/recessed-light/thumbnail.png",
-      "localPath": "/items/recessed-light/thumbnail.webp",
-      "bytes": 2814,
-      "sha256": "612001a0a1624644a7aca251e3203318f3a82a98c5214f70464c0945ce1e5571",
+      "localPath": "/items/recessed-light/thumbnail.png",
+      "bytes": 103647,
+      "sha256": "53d8b07468fda31e8dbd237e798ac2354214063437a623217233ebdab7dfcab6",
       "attribution": null,
       "license": null
     },
@@ -627,9 +627,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shelf/thumbnail.png",
-      "localPath": "/items/shelf/thumbnail.webp",
-      "bytes": 2304,
-      "sha256": "b640ee3862b4eae4fda331b989231bea995cfb06565f181eefb1a8f97854d0bb",
+      "localPath": "/items/shelf/thumbnail.png",
+      "bytes": 103192,
+      "sha256": "99ce9933e7e96f798314ddaa63b6a94e4967e7f7778b90f414b7a16b1ca39be9",
       "attribution": null,
       "license": null
     },
@@ -651,9 +651,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/table-lamp/thumbnail.png",
-      "localPath": "/items/table-lamp/thumbnail.webp",
-      "bytes": 4126,
-      "sha256": "5a15604bdd7e79c6a0c141efdcb8221718567785f266a6c596ae96ccf390ba86",
+      "localPath": "/items/table-lamp/thumbnail.png",
+      "bytes": 74982,
+      "sha256": "cabcaa6662ea725dab8dc8ec5d851cc4e0c6346d4e3324701f9fc70b738996ef",
       "attribution": null,
       "license": null
     },
@@ -675,9 +675,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ceiling-lamp/thumbnail.png",
-      "localPath": "/items/ceiling-lamp/thumbnail.webp",
-      "bytes": 1644,
-      "sha256": "e15782ff7daa1f8456827510bad682ee011b3190be003153cfea2f380266fbfc",
+      "localPath": "/items/ceiling-lamp/thumbnail.png",
+      "bytes": 157096,
+      "sha256": "a6e94571236a21e16f959126bedf8ddf9a9e47551ffabe86945e3c5bf49f971a",
       "attribution": null,
       "license": null
     },
@@ -699,9 +699,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/closet/thumbnail.png",
-      "localPath": "/items/closet/thumbnail.webp",
-      "bytes": 2948,
-      "sha256": "dd005b577a9af171b0953d09ba0cc5d047927adc960b41ef8f27daa23dd78509",
+      "localPath": "/items/closet/thumbnail.png",
+      "bytes": 126642,
+      "sha256": "021c2d4a46046c9f3b8c4b7f534a3d07929b5b22e50260ed4d2583fe44ce0e53",
       "attribution": null,
       "license": null
     },
@@ -723,9 +723,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/coffee-table/thumbnail.png",
-      "localPath": "/items/coffee-table/thumbnail.webp",
-      "bytes": 3842,
-      "sha256": "2fe69041cb46aaf16f6837c25498449582a0262d8be43f5712d954a371e04437",
+      "localPath": "/items/coffee-table/thumbnail.png",
+      "bytes": 124480,
+      "sha256": "d9f3c598fadecfa6d58ef2ee9be0473f4882c95f39d00bef62da9744986c11cd",
       "attribution": null,
       "license": null
     },
@@ -747,9 +747,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dining-chair/thumbnail.png",
-      "localPath": "/items/dining-chair/thumbnail.webp",
-      "bytes": 3448,
-      "sha256": "ff9a54f77b02f7f416226a223599df6214281e6a5c36e96e96ccd33ae6ac5d55",
+      "localPath": "/items/dining-chair/thumbnail.png",
+      "bytes": 63095,
+      "sha256": "39a13c82359b3c7c5b56cb24fe5fdf440238f9b83c0dea0f452ea9979d2caf2d",
       "attribution": null,
       "license": null
     },
@@ -771,9 +771,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/dresser/thumbnail.png",
-      "localPath": "/items/dresser/thumbnail.webp",
-      "bytes": 3684,
-      "sha256": "f0921c7fd33a2aeea7bcab7f3d76de1021a92339331262c094fb403eebfc4b70",
+      "localPath": "/items/dresser/thumbnail.png",
+      "bytes": 168743,
+      "sha256": "92467e7a4aa4ecfcea42b3b145a39a5a8666e9189e7f0a3f4d695981682c803d",
       "attribution": null,
       "license": null
     },
@@ -795,9 +795,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ikea-kallax-1x4-moa2y49n/thumbnail.png",
-      "localPath": "/items/ikea-kallax-1x4-moa2y49n/thumbnail.webp",
-      "bytes": 10644,
-      "sha256": "8e45d227162e0af506d0db99e90fc0eb580a64f90af916430cc48f406891c87a",
+      "localPath": "/items/ikea-kallax-1x4-moa2y49n/thumbnail.png",
+      "bytes": 296334,
+      "sha256": "bd62413868d85b86de8be5cd8597c69fb4c57016df7cae0b8c87dc9e28d9370d",
       "attribution": null,
       "license": null
     },
@@ -819,9 +819,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/indoor-plant/thumbnail.png",
-      "localPath": "/items/indoor-plant/thumbnail.webp",
-      "bytes": 7878,
-      "sha256": "5f2a44255b82c13ef16e0aba4b0dffb35ac5624cafad70c750d2731a5788205b",
+      "localPath": "/items/indoor-plant/thumbnail.png",
+      "bytes": 98525,
+      "sha256": "d6f77a4ac3a0b04b3769e95fb6e426457f9a44781d8e68cbf642d03f3ac1b3b8",
       "attribution": null,
       "license": null
     },
@@ -843,9 +843,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ironing-board/thumbnail.png",
-      "localPath": "/items/ironing-board/thumbnail.webp",
-      "bytes": 7162,
-      "sha256": "dbbbd7c200dd87d74b34cd5540fffd37112aadbfd3fc392028946a8a315beaca",
+      "localPath": "/items/ironing-board/thumbnail.png",
+      "bytes": 75485,
+      "sha256": "329f4bbbd2e68aa99a5b9e0faafe98b694cb27d160e6aa15172c43597ba22005",
       "attribution": null,
       "license": null
     },
@@ -867,9 +867,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/double-bed/thumbnail.png",
-      "localPath": "/items/double-bed/thumbnail.webp",
-      "bytes": 3368,
-      "sha256": "c0ab3ad60061bc4706c1af3c2bf29354977506317cfcf0528589fbc10dec7fdc",
+      "localPath": "/items/double-bed/thumbnail.png",
+      "bytes": 92317,
+      "sha256": "df9220fdc051c656ff023e24ece17e9090005e1d721cbcad3b5558ba5532d405",
       "attribution": null,
       "license": null
     },
@@ -891,9 +891,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/floor-lamp/thumbnail.png",
-      "localPath": "/items/floor-lamp/thumbnail.webp",
-      "bytes": 3672,
-      "sha256": "0968158da5830fb0c9e8ef4198b239539c4f52a8314101873e217869202cabee",
+      "localPath": "/items/floor-lamp/thumbnail.png",
+      "bytes": 43324,
+      "sha256": "3080ea487669a26c9f3528d1c278e78f93c751c5b16c56690458072bb8034ac3",
       "attribution": null,
       "license": null
     },
@@ -915,9 +915,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/herman-miller-aeron-mo8x36k9/thumbnail.png",
-      "localPath": "/items/herman-miller-aeron-mo8x36k9/thumbnail.webp",
-      "bytes": 17950,
-      "sha256": "bbba9ae3da76463b38dca3d9d592c11b66d536b71c5e0d4805a5e7cbe780a987",
+      "localPath": "/items/herman-miller-aeron-mo8x36k9/thumbnail.png",
+      "bytes": 260133,
+      "sha256": "b561c72e9b33ab79465fa61ef2e7c73bdf704a431a345f8bfd877306ce646589",
       "attribution": null,
       "license": null
     },
@@ -939,9 +939,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/easel/thumbnail.png",
-      "localPath": "/items/easel/thumbnail.webp",
-      "bytes": 3384,
-      "sha256": "763e3b32bcf0939975d0b6ce233a14caade143cc9e7f000948b0ebd6eb6b35ae",
+      "localPath": "/items/easel/thumbnail.png",
+      "bytes": 53816,
+      "sha256": "a29beab65ba41337854c9f64f85c42bf3606ebed756e6c18b352dff73273c2f0",
       "attribution": null,
       "license": null
     },
@@ -963,9 +963,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/lounge-chair/thumbnail.png",
-      "localPath": "/items/lounge-chair/thumbnail.webp",
-      "bytes": 3672,
-      "sha256": "576ed9bcba0c882b583955ab22d77b1b6ef11ed506104be7dd7422f55d6aff89",
+      "localPath": "/items/lounge-chair/thumbnail.png",
+      "bytes": 100903,
+      "sha256": "3107388234fecf637353e5d6dd23a247fde23bf7d6416d42dc2b91fae781b9a6",
       "attribution": null,
       "license": null
     },
@@ -987,9 +987,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/office-chair/thumbnail.png",
-      "localPath": "/items/office-chair/thumbnail.webp",
-      "bytes": 4132,
-      "sha256": "74ff96a0121217b3e5a79821aa11b4b01e05a4f92575caeecf94a9d81a1e9a17",
+      "localPath": "/items/office-chair/thumbnail.png",
+      "bytes": 105989,
+      "sha256": "01da4dfdda248f63f9311fdad6ecf1db5518b6c157cf42624473c25527eb8d23",
       "attribution": null,
       "license": null
     },
@@ -1011,9 +1011,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/piano/thumbnail.png",
-      "localPath": "/items/piano/thumbnail.webp",
-      "bytes": 6684,
-      "sha256": "0936e3e5d5f683bc15b5b5a01cef5d6863d48885e54596f24755a88a4ec39a2f",
+      "localPath": "/items/piano/thumbnail.png",
+      "bytes": 189237,
+      "sha256": "a5f5dcb1e7375b1d4211b3cd17fa4f1539b9a608b35a5c2c2f0cb26b1cea0fd4",
       "attribution": null,
       "license": null
     },
@@ -1035,9 +1035,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/picture/thumbnail.png",
-      "localPath": "/items/picture/thumbnail.webp",
-      "bytes": 2964,
-      "sha256": "6af4433fbc9fa484f966ee04139a3c474bbaa6e6d4406393756b6803c6f09bee",
+      "localPath": "/items/picture/thumbnail.png",
+      "bytes": 173494,
+      "sha256": "cbec719755a0d773c97b9f4ec78b656ee23294b8c6ee33e9e935428415b934d8",
       "attribution": null,
       "license": null
     },
@@ -1059,9 +1059,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/rectangular-carpet/thumbnail.png",
-      "localPath": "/items/rectangular-carpet/thumbnail.webp",
-      "bytes": 4086,
-      "sha256": "8f415b9224299da11711f6c919c4e8c8ef2bd6853845d51b582983840c301e62",
+      "localPath": "/items/rectangular-carpet/thumbnail.png",
+      "bytes": 91687,
+      "sha256": "d6bdde9f2527562de4cbb28140187dfcba9bb957947cc400fc8dc87ad4a83cb6",
       "attribution": null,
       "license": null
     },
@@ -1083,9 +1083,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/round-mirror/thumbnail.png",
-      "localPath": "/items/round-mirror/thumbnail.webp",
-      "bytes": 3114,
-      "sha256": "570cd9b2d49f3de1d46fdc4afa019325380c0f111708bb80be7e687964f8fa0c",
+      "localPath": "/items/round-mirror/thumbnail.png",
+      "bytes": 67270,
+      "sha256": "3dd24a4880be0386d0d72ec142cf7520c2ab81f0492ff4714a274df4956457ec",
       "attribution": null,
       "license": null
     },
@@ -1107,9 +1107,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/round-carpet/thumbnail.png",
-      "localPath": "/items/round-carpet/thumbnail.webp",
-      "bytes": 2612,
-      "sha256": "dc29056197f905f360e8188b013f152951686e10bc7bdf3afc26b2e47657cc5d",
+      "localPath": "/items/round-carpet/thumbnail.png",
+      "bytes": 123682,
+      "sha256": "a040ea94d157442379fb64c5eb7a50c8e6895e5beff06faa2638609ee46f558e",
       "attribution": null,
       "license": null
     },
@@ -1131,9 +1131,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/threadmill/thumbnail.png",
-      "localPath": "/items/threadmill/thumbnail.webp",
-      "bytes": 6492,
-      "sha256": "b21ae6ffb80d88873cddcad78da2e66d971bdce6a1c1b2b82a510cbafac93092",
+      "localPath": "/items/threadmill/thumbnail.png",
+      "bytes": 126565,
+      "sha256": "d058cd11e835c6522d47826a1ab5c865150d40a7bf2e1b80e160578c75d72bd4",
       "attribution": null,
       "license": null
     },
@@ -1155,9 +1155,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/standing-desk-mo8wgz95/thumbnail.png",
-      "localPath": "/items/standing-desk-mo8wgz95/thumbnail.webp",
-      "bytes": 8330,
-      "sha256": "c902054dbab443747a4c4ef4e1ef1927746732b01ea1f8b6e42dd871f8f460e4",
+      "localPath": "/items/standing-desk-mo8wgz95/thumbnail.png",
+      "bytes": 132388,
+      "sha256": "ae7f6dd02f6270dab1354641e9a165b4c1867b334fe29be7d47bac048160bc7e",
       "attribution": null,
       "license": null
     },
@@ -1179,9 +1179,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sprinkler/thumbnail.png",
-      "localPath": "/items/sprinkler/thumbnail.webp",
-      "bytes": 3368,
-      "sha256": "4ea10877615431cc6ca354adadecc823b2dca0f09689c55773b4ca0ad1640989",
+      "localPath": "/items/sprinkler/thumbnail.png",
+      "bytes": 113478,
+      "sha256": "9069be6b4589158b44c7acafcb146c844df605f2f31da71462639886b94663d0",
       "attribution": null,
       "license": null
     },
@@ -1203,9 +1203,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/exit-sign/thumbnail.png",
-      "localPath": "/items/exit-sign/thumbnail.webp",
-      "bytes": 2578,
-      "sha256": "b3d7ea88b07c846b33dbb5e4612f7e5cf4b603fe7f318fa0c2621c02fd36f475",
+      "localPath": "/items/exit-sign/thumbnail.png",
+      "bytes": 62300,
+      "sha256": "1f14d2537b545a44752794cab9213d025553f2fc99150bf8303d1b31708d26b9",
       "attribution": null,
       "license": null
     },
@@ -1227,9 +1227,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sewing-machine/thumbnail.png",
-      "localPath": "/items/sewing-machine/thumbnail.webp",
-      "bytes": 6414,
-      "sha256": "3eaae0bf7970081d59f498a68a2202b59f1dc4a0e685c6b446019e66fce0e6f2",
+      "localPath": "/items/sewing-machine/thumbnail.png",
+      "bytes": 152352,
+      "sha256": "e4a2de5f59ba3318723739d12974dcb05440e7eee4ed7e8cb67dad6beac3b518",
       "attribution": null,
       "license": null
     },
@@ -1251,9 +1251,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/television/thumbnail.png",
-      "localPath": "/items/television/thumbnail.webp",
-      "bytes": 4072,
-      "sha256": "a36b271bdd0a83e9746ea3dcd7b9ddc145166ab0c32fd2417d384b264c7fc6b2",
+      "localPath": "/items/television/thumbnail.png",
+      "bytes": 131025,
+      "sha256": "17ca5f1161b7784191d59d2733ecd4c03a6055d692abb4e36296fbcaed0f0a35",
       "attribution": null,
       "license": null
     },
@@ -1275,9 +1275,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/power-outlet-moa09g0o/thumbnail.png",
-      "localPath": "/items/power-outlet-moa09g0o/thumbnail.webp",
-      "bytes": 10572,
-      "sha256": "2499690592f99e7be8e67edfc0a677003400f732ef3d6a8d8dd49e5fc715a148",
+      "localPath": "/items/power-outlet-moa09g0o/thumbnail.png",
+      "bytes": 271674,
+      "sha256": "0341f182c81e01ea880b266c6fe3de8172331e8bea43b93f1a49c343e4dd5a8a",
       "attribution": null,
       "license": null
     },
@@ -1299,9 +1299,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ac-block/thumbnail.png",
-      "localPath": "/items/ac-block/thumbnail.webp",
-      "bytes": 3088,
-      "sha256": "ff4bcbb5e82db5310080ce2bc81699cd0f9b30f39f7c4671cbbd7ea3314f0112",
+      "localPath": "/items/ac-block/thumbnail.png",
+      "bytes": 122413,
+      "sha256": "c99477d7868dcfaaefa2fc0df1096df1ae9a1bd325f740d5cb6f23fd115d2d51",
       "attribution": null,
       "license": null
     },
@@ -1323,9 +1323,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/stereo-speaker/thumbnail.png",
-      "localPath": "/items/stereo-speaker/thumbnail.webp",
-      "bytes": 2296,
-      "sha256": "d2d5390462bdb7e83d35284f1755fdade98897de8fe74eb220f268b07d001d3a",
+      "localPath": "/items/stereo-speaker/thumbnail.png",
+      "bytes": 103676,
+      "sha256": "d4e84e387a5e9a8b2785ab843b22784429e42b652726d70951b3b2177d14e00d",
       "attribution": null,
       "license": null
     },
@@ -1347,9 +1347,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/thermostat/thumbnail.png",
-      "localPath": "/items/thermostat/thumbnail.webp",
-      "bytes": 2748,
-      "sha256": "271224901a5b7facc1d20e1029e7fa3a50c1154093c114e8b1a717a4f798313e",
+      "localPath": "/items/thermostat/thumbnail.png",
+      "bytes": 121581,
+      "sha256": "306154f65d83e53cf7001d77b77feeef2fc7b2c8b75237bfd8acbfa52d1881a6",
       "attribution": null,
       "license": null
     },
@@ -1371,9 +1371,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toaster/thumbnail.png",
-      "localPath": "/items/toaster/thumbnail.webp",
-      "bytes": 4678,
-      "sha256": "743a9685323bce0547e3685a6f1ee2c299edbb0fc2c4d14e01c6828d62cb6cd5",
+      "localPath": "/items/toaster/thumbnail.png",
+      "bytes": 87688,
+      "sha256": "1dbfba1a342b8c7295282afee370919ee374012254c7417a6708584686e954ea",
       "attribution": null,
       "license": null
     },
@@ -1395,9 +1395,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kettle/thumbnail.png",
-      "localPath": "/items/kettle/thumbnail.webp",
-      "bytes": 3444,
-      "sha256": "95980330197b505462f33f8ad5b31fa46944837e34b5349027fe0f10f873bd29",
+      "localPath": "/items/kettle/thumbnail.png",
+      "bytes": 88524,
+      "sha256": "12f9fc08d49932c912870393e2210f4ffe9fbc6bf3bbbb5627f3c8fba21663f1",
       "attribution": null,
       "license": null
     },
@@ -1419,9 +1419,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/hydrant/thumbnail.png",
-      "localPath": "/items/hydrant/thumbnail.webp",
-      "bytes": 3442,
-      "sha256": "cb97d7d896762a97a654e51d5934fd51881bbdb6f32fbcfbe8fbeeab0edaf8bf",
+      "localPath": "/items/hydrant/thumbnail.png",
+      "bytes": 94021,
+      "sha256": "8cd4448aae5c197ff58f9cf9de278988cdd415362d256ea6f6f347bc830491a4",
       "attribution": null,
       "license": null
     },
@@ -1443,9 +1443,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fire-detector/thumbnail.png",
-      "localPath": "/items/fire-detector/thumbnail.webp",
-      "bytes": 2560,
-      "sha256": "5fe1bea6cbf19f266f533d55720d72111f29fc00ec8e3023987d155598cbf396",
+      "localPath": "/items/fire-detector/thumbnail.png",
+      "bytes": 77068,
+      "sha256": "dfb80038684d61414bb690079e5ad5055dcdb09a8ffa713a7cd213b2907d2a2f",
       "attribution": null,
       "license": null
     },
@@ -1467,9 +1467,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/smoke-detector/thumbnail.png",
-      "localPath": "/items/smoke-detector/thumbnail.webp",
-      "bytes": 2924,
-      "sha256": "e2c6273f4ba8c391eeb141cdcbad7223584955c0131b1a8e317fd91c5e001651",
+      "localPath": "/items/smoke-detector/thumbnail.png",
+      "bytes": 72859,
+      "sha256": "8b161d55ca860a14312e8a5e0a4181a56e68d9f1ae461644eb7d129c289eaaae",
       "attribution": null,
       "license": null
     },
@@ -1491,9 +1491,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/coffee-machine/thumbnail.png",
-      "localPath": "/items/coffee-machine/thumbnail.webp",
-      "bytes": 4150,
-      "sha256": "ebda93156313c90c23a5fb940f9c63228ec115fe2771c52341092ad921098e3c",
+      "localPath": "/items/coffee-machine/thumbnail.png",
+      "bytes": 140020,
+      "sha256": "d8c74bfb07b3ffbcc68c5e4257c0e4025d80c5782e971a381f88d2645a6dc763",
       "attribution": null,
       "license": null
     },
@@ -1515,9 +1515,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ceiling-fan/thumbnail.png",
-      "localPath": "/items/ceiling-fan/thumbnail.webp",
-      "bytes": 2842,
-      "sha256": "be215459a7cdee69c754e5cd73541bdefc34d460f25c435132a5df063289e7bb",
+      "localPath": "/items/ceiling-fan/thumbnail.png",
+      "bytes": 48789,
+      "sha256": "ccfb33d7a389f610d252d79171d02da06bcd140abb3b63a421b29aefca406dee",
       "attribution": null,
       "license": null
     },
@@ -1539,9 +1539,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/iron/thumbnail.png",
-      "localPath": "/items/iron/thumbnail.webp",
-      "bytes": 4474,
-      "sha256": "2a1bbc4fdac6da0ed64b4b6c40990e3839b44add932107f3164710afd17ca67e",
+      "localPath": "/items/iron/thumbnail.png",
+      "bytes": 96980,
+      "sha256": "c10901733355d9245600dbddb8cd803e3d15c5acfcb51442b77a55d68958feb2",
       "attribution": null,
       "license": null
     },
@@ -1563,9 +1563,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/air-conditioning/thumbnail.png",
-      "localPath": "/items/air-conditioning/thumbnail.webp",
-      "bytes": 3548,
-      "sha256": "acdee1cb9d378d6f6c3701604253d205c8a508675b02608f530906046e728318",
+      "localPath": "/items/air-conditioning/thumbnail.png",
+      "bytes": 72265,
+      "sha256": "c18303ad13876fc157e11bf32244e0dc7ca409747453fb6f23ceb0117a36597e",
       "attribution": null,
       "license": null
     },
@@ -1587,9 +1587,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/computer/thumbnail.png",
-      "localPath": "/items/computer/thumbnail.webp",
-      "bytes": 1882,
-      "sha256": "85cffee9ab8eb052f8f62bd92dddd5cb78af0d20b8c7ef306c2bb8a81100f844",
+      "localPath": "/items/computer/thumbnail.png",
+      "bytes": 79583,
+      "sha256": "2fdb06755f1a31685039f020970f0d5d4b6f69d30a80e512f02283fb88f89c82",
       "attribution": null,
       "license": null
     },
@@ -1611,9 +1611,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/alarm-keypad/thumbnail.png",
-      "localPath": "/items/alarm-keypad/thumbnail.webp",
-      "bytes": 3468,
-      "sha256": "c3fdd748cb22566b41d00a7a4301aaf0d87b589fd832d78a1470b05acc8d300b",
+      "localPath": "/items/alarm-keypad/thumbnail.png",
+      "bytes": 91657,
+      "sha256": "18d0ca5e2e742b6d4e5f020190d54f894eae390d6aa413b0be67f759707518b0",
       "attribution": null,
       "license": null
     },
@@ -1635,9 +1635,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ev-wall-charger/thumbnail.png",
-      "localPath": "/items/ev-wall-charger/thumbnail.webp",
-      "bytes": 2570,
-      "sha256": "68b1dd7406b65fc37996e9d64d3d4f527bb202e8425ee811de25e40302d1ee01",
+      "localPath": "/items/ev-wall-charger/thumbnail.png",
+      "bytes": 40175,
+      "sha256": "499f4ad3f77f89fca66901c2eabbaf190bbb9b222be718a9d3fc134924307652",
       "attribution": null,
       "license": null
     },
@@ -1659,9 +1659,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/electric-panel/thumbnail.png",
-      "localPath": "/items/electric-panel/thumbnail.webp",
-      "bytes": 1912,
-      "sha256": "00deea993479d9e29a4085512165ba9a2f2bfbf91517dd1dcc7df4702c8dd31f",
+      "localPath": "/items/electric-panel/thumbnail.png",
+      "bytes": 83914,
+      "sha256": "444fb17b53adfac7d72ba18020118761447604a20583b30e9d406cc8af72d42b",
       "attribution": null,
       "license": null
     },
@@ -1683,9 +1683,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bathroom-sink/thumbnail.png",
-      "localPath": "/items/bathroom-sink/thumbnail.webp",
-      "bytes": 2780,
-      "sha256": "f2c4df034d7247b61b43bd70b7417abe0c3d471b801524ecb2730df19aa5cd92",
+      "localPath": "/items/bathroom-sink/thumbnail.png",
+      "bytes": 108672,
+      "sha256": "06a3846729dbd1e1bbc6532bd4d48f03bd03701455631fabfefd4b82550a3e8a",
       "attribution": null,
       "license": null
     },
@@ -1707,9 +1707,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shower-angle/thumbnail.png",
-      "localPath": "/items/shower-angle/thumbnail.webp",
-      "bytes": 4494,
-      "sha256": "75ad2a4e84fc5fcccbf10c305c14e9d84c47ddaac79375bec65be03fdfc33be7",
+      "localPath": "/items/shower-angle/thumbnail.png",
+      "bytes": 78987,
+      "sha256": "f98cbbfb1ea4aa470ec02a7f88dd01ba1950c02f40de51c23c8effa21f2fb45c",
       "attribution": null,
       "license": null
     },
@@ -1731,9 +1731,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toilet-paper/thumbnail.png",
-      "localPath": "/items/toilet-paper/thumbnail.webp",
-      "bytes": 4908,
-      "sha256": "b6aa858ca88b745293a760f9150efe44ff9f4c5fe9965eebf4b9bfa7bc518e4c",
+      "localPath": "/items/toilet-paper/thumbnail.png",
+      "bytes": 106142,
+      "sha256": "27ec42bf55e560f654e20661fea0c2235209ff3ac1644f6dea55083ce68e0225",
       "attribution": null,
       "license": null
     },
@@ -1755,9 +1755,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/washing-machine/thumbnail.png",
-      "localPath": "/items/washing-machine/thumbnail.webp",
-      "bytes": 2794,
-      "sha256": "f067fad3851f3e7cb3dc6392afdbcd4141bd3f80dcc6f3a5b28b07b0568c41a5",
+      "localPath": "/items/washing-machine/thumbnail.png",
+      "bytes": 177392,
+      "sha256": "3ccbbc759566d2530eb3f9e7bc9a9c1db486407cccf6e6c737975c7c725a4a65",
       "attribution": null,
       "license": null
     },
@@ -1779,9 +1779,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shower-rug/thumbnail.png",
-      "localPath": "/items/shower-rug/thumbnail.webp",
-      "bytes": 3862,
-      "sha256": "d163bc9dbb87897d98411695533b73f8789ba74e7d473ab60655acae5697c401",
+      "localPath": "/items/shower-rug/thumbnail.png",
+      "bytes": 71948,
+      "sha256": "951debb656612eef6b0095ce39a43a42189f448f2b9306af8e894c246ac967da",
       "attribution": null,
       "license": null
     },
@@ -1803,9 +1803,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bathtub/thumbnail.png",
-      "localPath": "/items/bathtub/thumbnail.webp",
-      "bytes": 3120,
-      "sha256": "9682d4107ef0a8c926a4e11def73abd1b32ca05cb80009201e91ce124956f943",
+      "localPath": "/items/bathtub/thumbnail.png",
+      "bytes": 84525,
+      "sha256": "f5d9251107467617870fe7be975a2ea469e136273ca670a0b111cbf1aafa73b2",
       "attribution": null,
       "license": null
     },
@@ -1827,9 +1827,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/laundry-bag/thumbnail.png",
-      "localPath": "/items/laundry-bag/thumbnail.webp",
-      "bytes": 3970,
-      "sha256": "7ec2bc8fd843470ba896531029069346924393e04e450adcf55b8c3ce4b8d78f",
+      "localPath": "/items/laundry-bag/thumbnail.png",
+      "bytes": 70438,
+      "sha256": "c58b741fea9c96810675c57dba4a6b897a0ad52ed8a82e63e33a4fc5b149dc0e",
       "attribution": null,
       "license": null
     },
@@ -1851,9 +1851,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/shower-square/thumbnail.png",
-      "localPath": "/items/shower-square/thumbnail.webp",
-      "bytes": 3500,
-      "sha256": "4178c100d2914bc404d8de61bc4568e341514f5656082fe1e45e544f62c4198e",
+      "localPath": "/items/shower-square/thumbnail.png",
+      "bytes": 53905,
+      "sha256": "d56456f7a2212a995861dcd9619e02f80ee333b969fa518d3c4c62850b5fc675",
       "attribution": null,
       "license": null
     },
@@ -1875,9 +1875,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/drying-rack/thumbnail.png",
-      "localPath": "/items/drying-rack/thumbnail.webp",
-      "bytes": 13452,
-      "sha256": "68f14b01a2f24582cf053afe41587aa67b198073abc5fad47216dea6fbddef07",
+      "localPath": "/items/drying-rack/thumbnail.png",
+      "bytes": 85829,
+      "sha256": "dbf90ba33391cf6f9caba8a1f8df47f639d757d8f1f106e7702bc0cb5f56c39a",
       "attribution": null,
       "license": null
     },
@@ -1899,9 +1899,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/toilet/thumbnail.png",
-      "localPath": "/items/toilet/thumbnail.webp",
-      "bytes": 2610,
-      "sha256": "c964b5e996db7ca629f9dc15aa3aebc615f9e9849c8e60d6e69453074f6fac56",
+      "localPath": "/items/toilet/thumbnail.png",
+      "bytes": 67830,
+      "sha256": "bced7d57da5e08afbc554fe7898acc0a9c32ea5793351e2f5082818f2fe87cb3",
       "attribution": null,
       "license": null
     },
@@ -1923,9 +1923,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/microwave/thumbnail.png",
-      "localPath": "/items/microwave/thumbnail.webp",
-      "bytes": 3148,
-      "sha256": "2727ea9b84d63e64e430a762af62e8211b02070d67bb1b2732be0a4f1a91ec05",
+      "localPath": "/items/microwave/thumbnail.png",
+      "bytes": 106565,
+      "sha256": "94ee83666d1aaecffeddbbedbbd419af8149e1af2aca42b88467589a23c8cae8",
       "attribution": null,
       "license": null
     },
@@ -1947,9 +1947,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/cutting-board/thumbnail.png",
-      "localPath": "/items/cutting-board/thumbnail.webp",
-      "bytes": 3284,
-      "sha256": "d482164c74b9cd4e08090f654ff6984aa58088df7591648dc0a82c1986068667",
+      "localPath": "/items/cutting-board/thumbnail.png",
+      "bytes": 134754,
+      "sha256": "192e565b9f6e1e79eff2e83be9d5501ae604028c6dc4693fa3a182193dc141d7",
       "attribution": null,
       "license": null
     },
@@ -1971,9 +1971,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-utensils/thumbnail.png",
-      "localPath": "/items/kitchen-utensils/thumbnail.webp",
-      "bytes": 3644,
-      "sha256": "dc16725930509b92fe376b71df4ac41cb32743e653b7726378863ba14abd2a25",
+      "localPath": "/items/kitchen-utensils/thumbnail.png",
+      "bytes": 78875,
+      "sha256": "b41b6cd72f0245130c2a9bd24c2265f8f38d5681970f4c02faca6a903013d980",
       "attribution": null,
       "license": null
     },
@@ -1995,9 +1995,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-counter/thumbnail.png",
-      "localPath": "/items/kitchen-counter/thumbnail.webp",
-      "bytes": 2884,
-      "sha256": "f807923ec6c974774489ba211d70ac1380b6b97d9b2b468267be0da71d871045",
+      "localPath": "/items/kitchen-counter/thumbnail.png",
+      "bytes": 121332,
+      "sha256": "d79fa1781924de468e2d99a118b77d2bf4070bb926c1bdae7a3ceecab29e81fa",
       "attribution": null,
       "license": null
     },
@@ -2019,9 +2019,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/hood/thumbnail.png",
-      "localPath": "/items/hood/thumbnail.webp",
-      "bytes": 2658,
-      "sha256": "0153557dba2b71fc7527a7c43493b1c80ea18a18f6b896ae9b1e59f38accfd85",
+      "localPath": "/items/hood/thumbnail.png",
+      "bytes": 109088,
+      "sha256": "a230998ae860d88d1462e2f8b3a27afaad3df8ceb8c25a7bba44a8fbe4fd2476",
       "attribution": null,
       "license": null
     },
@@ -2043,9 +2043,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/wooden-kitchen-bar-moa2hhh4/thumbnail.png",
-      "localPath": "/items/wooden-kitchen-bar-moa2hhh4/thumbnail.webp",
-      "bytes": 5860,
-      "sha256": "e3c1485f35c715c26b7af232dae6623f78c4abb538a1d2ad8453f6915a3480bf",
+      "localPath": "/items/wooden-kitchen-bar-moa2hhh4/thumbnail.png",
+      "bytes": 201266,
+      "sha256": "5fe0416ba3bd2377cf76c5db33f37e6f068615fceed3c6f77d5a29ff8a988ba5",
       "attribution": null,
       "license": null
     },
@@ -2067,9 +2067,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-cabinet/thumbnail.png",
-      "localPath": "/items/kitchen-cabinet/thumbnail.webp",
-      "bytes": 4732,
-      "sha256": "f847165ce70ff856b6797af88d75d4a87418d4cca51bf043ef5095e79aed94d9",
+      "localPath": "/items/kitchen-cabinet/thumbnail.png",
+      "bytes": 152537,
+      "sha256": "1ed1c8692f279c06ef4c393dd544caece2a3525fce7560b39023c56895ec2bdd",
       "attribution": null,
       "license": null
     },
@@ -2091,9 +2091,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen/thumbnail.png",
-      "localPath": "/items/kitchen/thumbnail.webp",
-      "bytes": 3676,
-      "sha256": "7018969f91189f3c2c9a9352589732ef3312c15e3735b9a511bb135051e2bf4c",
+      "localPath": "/items/kitchen/thumbnail.png",
+      "bytes": 86619,
+      "sha256": "3268d324ee13764540c24982aea8ae52c490d6f0be1397fbc085d709531dfffb",
       "attribution": null,
       "license": null
     },
@@ -2115,9 +2115,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/frying-pan/thumbnail.png",
-      "localPath": "/items/frying-pan/thumbnail.webp",
-      "bytes": 2882,
-      "sha256": "c1a2b248ebe5ec6206c0970589c5ac06b24098aa6d02985f8afcb5c7812d7713",
+      "localPath": "/items/frying-pan/thumbnail.png",
+      "bytes": 52771,
+      "sha256": "62f4fea954bb31f1665c41e3d47f001cc4ba691a3c2ffb724f990db5a44fae75",
       "attribution": null,
       "license": null
     },
@@ -2139,9 +2139,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fruits/thumbnail.png",
-      "localPath": "/items/fruits/thumbnail.webp",
-      "bytes": 4648,
-      "sha256": "171940d9151d20910b1bd719422d43078442aae821df4f05292a95c0f7237033",
+      "localPath": "/items/fruits/thumbnail.png",
+      "bytes": 69087,
+      "sha256": "136fc1552ab1cca48207e90cbe443f48fdfb0448a20e643ad9ff98993d28eb20",
       "attribution": null,
       "license": null
     },
@@ -2163,9 +2163,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fridge/thumbnail.png",
-      "localPath": "/items/fridge/thumbnail.webp",
-      "bytes": 2152,
-      "sha256": "04f60493e6fb8a996c6156f32ae3aa717b1485aa4b50da729644869dd5b865b2",
+      "localPath": "/items/fridge/thumbnail.png",
+      "bytes": 96188,
+      "sha256": "9a26cfc07e1307f5cf2e0a5641cc81a7ed85c69625d8a0edb4c574eb31d1a61e",
       "attribution": null,
       "license": null
     },
@@ -2187,9 +2187,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/kitchen-shelf/thumbnail.png",
-      "localPath": "/items/kitchen-shelf/thumbnail.webp",
-      "bytes": 2240,
-      "sha256": "f9f248ea429d703c782f7d110b6a0d73c4797bcea39c10d241a9f6d62bfb6b57",
+      "localPath": "/items/kitchen-shelf/thumbnail.png",
+      "bytes": 103571,
+      "sha256": "d2413e4eb5675c1bf27406c17392e6852468a95a679c24f2bfc4ad7d16e135a3",
       "attribution": null,
       "license": null
     },
@@ -2211,9 +2211,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/wine-bottle/thumbnail.png",
-      "localPath": "/items/wine-bottle/thumbnail.webp",
-      "bytes": 5140,
-      "sha256": "29a13f85a17b04e6d32e07c6aa11431b2a77012632a973006d34a53dc1c7b5b4",
+      "localPath": "/items/wine-bottle/thumbnail.png",
+      "bytes": 124345,
+      "sha256": "24b41721deea38f62dae8e5f3ba47a1c8d402e5ee898e38b15349524cb53b7c6",
       "attribution": null,
       "license": null
     },
@@ -2235,9 +2235,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/stove/thumbnail.png",
-      "localPath": "/items/stove/thumbnail.webp",
-      "bytes": 4096,
-      "sha256": "fdeeca47ca2edea3c47ae803def41e841e40637289f0759c7fd894d3af28bed4",
+      "localPath": "/items/stove/thumbnail.png",
+      "bytes": 163438,
+      "sha256": "2327c7b5873d6ef6fdbbabf6d04df8689dfb9ea0c3d6ecaed3cc097211147646",
       "attribution": null,
       "license": null
     },
@@ -2259,9 +2259,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/ball/thumbnail.png",
-      "localPath": "/items/ball/thumbnail.webp",
-      "bytes": 3398,
-      "sha256": "aeadcd224ccc7c4e8c6f0157c6dc3775cde3a9c780dd14bb3a36ed37bd1b6286",
+      "localPath": "/items/ball/thumbnail.png",
+      "bytes": 103445,
+      "sha256": "8d367099f25497ba53adeeccd91ff8190403d0fa648be7868ccfa1f387e606ca",
       "attribution": null,
       "license": null
     },
@@ -2283,9 +2283,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/bush/thumbnail.png",
-      "localPath": "/items/bush/thumbnail.webp",
-      "bytes": 3188,
-      "sha256": "e57e628165cf83275de9a7df1ce6650ae35d8347a39f9fd2ead499468568f9d5",
+      "localPath": "/items/bush/thumbnail.png",
+      "bytes": 95302,
+      "sha256": "a5eb6438fc9629796110356a0b497205f16868e00194e30d52277f9af537c53f",
       "attribution": null,
       "license": null
     },
@@ -2307,9 +2307,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/basket-hoop/thumbnail.png",
-      "localPath": "/items/basket-hoop/thumbnail.webp",
-      "bytes": 2464,
-      "sha256": "fb197c90c78c5ea6bcf4865bb073911a8cf90949d620b6c9b8fde6c4c1e895ef",
+      "localPath": "/items/basket-hoop/thumbnail.png",
+      "bytes": 52730,
+      "sha256": "e5f1cb74beebc91ea2c11b7eae46a49f25a0f6cd453bcbe1678e220af117e6ad",
       "attribution": null,
       "license": null
     },
@@ -2331,9 +2331,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/parking-spot/thumbnail.png",
-      "localPath": "/items/parking-spot/thumbnail.webp",
-      "bytes": 2168,
-      "sha256": "1a375323578111435dfeb7818887b5ae0e8f9b2526e6e051c474753d955fddfc",
+      "localPath": "/items/parking-spot/thumbnail.png",
+      "bytes": 89596,
+      "sha256": "537b5a4a75372bd517c55b309e5595f6240409e44793e91ca5683cfd3dd8b7f4",
       "attribution": null,
       "license": null
     },
@@ -2355,9 +2355,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/palm/thumbnail.png",
-      "localPath": "/items/palm/thumbnail.webp",
-      "bytes": 5036,
-      "sha256": "4026f515e642208c68070fe192f5a517eecce74234a43c280a409c7dd9545dbb",
+      "localPath": "/items/palm/thumbnail.png",
+      "bytes": 92897,
+      "sha256": "7ee5745eacd40c2614b07e29529e3804b5d10176bbdd1ced6e1acbe5c972b1b6",
       "attribution": null,
       "license": null
     },
@@ -2379,9 +2379,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/sunbed/thumbnail.png",
-      "localPath": "/items/sunbed/thumbnail.webp",
-      "bytes": 5194,
-      "sha256": "18728163d2922240593e1d738bce05a74b8406de4dd148055e0ed62a31724161",
+      "localPath": "/items/sunbed/thumbnail.png",
+      "bytes": 103006,
+      "sha256": "2bcae636fa14d1995c4fd134fa1dcf803f76d015e672ff4d26d767c2b21c9d95",
       "attribution": null,
       "license": null
     },
@@ -2403,9 +2403,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/fir-tree/thumbnail.png",
-      "localPath": "/items/fir-tree/thumbnail.webp",
-      "bytes": 2612,
-      "sha256": "bb89c0dcd79258ebecded3514c36644f67e7c5375241749022db49d819943f87",
+      "localPath": "/items/fir-tree/thumbnail.png",
+      "bytes": 69421,
+      "sha256": "b17b7388d677ba50db7fd7baef9145561c92194bf6796c03fb7cc4ae18746871",
       "attribution": null,
       "license": null
     },
@@ -2427,9 +2427,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/tree/thumbnail.png",
-      "localPath": "/items/tree/thumbnail.webp",
-      "bytes": 3764,
-      "sha256": "eb72b1fa02f19e8570dac6e17416c37ef5973be74b63adc6529367474a9ddc10",
+      "localPath": "/items/tree/thumbnail.png",
+      "bytes": 168956,
+      "sha256": "f9903b69e5ab5e9fe2ef4d488f4ff66ed929d07bedf1427d762ab5f9005812ac",
       "attribution": null,
       "license": null
     },
@@ -2451,9 +2451,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/skate/thumbnail.png",
-      "localPath": "/items/skate/thumbnail.webp",
-      "bytes": 2754,
-      "sha256": "06eeed01c2872b4846062bb8918a4b694d469db844007d2217a444a7ba0b953e",
+      "localPath": "/items/skate/thumbnail.png",
+      "bytes": 45778,
+      "sha256": "356bb824d52d10b39018b365e6ccdd4f71ae3f0a6d28f8b6057862b4005cab31",
       "attribution": null,
       "license": null
     },
@@ -2475,9 +2475,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/1967-chevrolet-camaro-moa24wsf/thumbnail.png",
-      "localPath": "/items/1967-chevrolet-camaro-moa24wsf/thumbnail.webp",
-      "bytes": 12420,
-      "sha256": "c2e307263a15a5a0c13a4bc412c13e3901dc9330b7c8ed254dfacc997346753a",
+      "localPath": "/items/1967-chevrolet-camaro-moa24wsf/thumbnail.png",
+      "bytes": 298612,
+      "sha256": "d1980dcf905a5c4716ffcae347f62a483478999d6a73501e6d131d7ff3026652",
       "attribution": null,
       "license": null
     },
@@ -2499,9 +2499,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/outdoor-playhouse/thumbnail.png",
-      "localPath": "/items/outdoor-playhouse/thumbnail.webp",
-      "bytes": 6526,
-      "sha256": "744b4400baedb359028a526c47799ed99d510ee442c1b5797f67e9974a836be2",
+      "localPath": "/items/outdoor-playhouse/thumbnail.png",
+      "bytes": 141562,
+      "sha256": "8b6c391bffb950768880e83cd71f65b01c797bf11c3eb0338a4406a1f111d71c",
       "attribution": null,
       "license": null
     },
@@ -2523,9 +2523,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/patio-umbrella/thumbnail.png",
-      "localPath": "/items/patio-umbrella/thumbnail.webp",
-      "bytes": 2626,
-      "sha256": "6d4a46a3366aa761207d4fefffdc3ee87f4707ed010c7288cdb8e023ec58ab0e",
+      "localPath": "/items/patio-umbrella/thumbnail.png",
+      "bytes": 56838,
+      "sha256": "bdd3b510b0b5dd270a35629bd4c2d94fac0b28d266a65114ef5bd7b0b8201427",
       "attribution": null,
       "license": null
     },
@@ -2547,9 +2547,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/pillar/thumbnail.png",
-      "localPath": "/items/pillar/thumbnail.webp",
-      "bytes": 2990,
-      "sha256": "bb3e911ce7bb0219043fe1b9772b3f3de90020a60d6c774058692a88b65de2cc",
+      "localPath": "/items/pillar/thumbnail.png",
+      "bytes": 59455,
+      "sha256": "a6f55df23e91801882659c0568dc5bfb3631fd72ae7325b11a1bc6740fd9eeb1",
       "attribution": null,
       "license": null
     },
@@ -2571,9 +2571,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/scooter/thumbnail.png",
-      "localPath": "/items/scooter/thumbnail.webp",
-      "bytes": 4374,
-      "sha256": "cd91f4c56ecacf80369dc039ace9b0acad4fc6b4e70d79de7a21d73e1fa3ddee",
+      "localPath": "/items/scooter/thumbnail.png",
+      "bytes": 43093,
+      "sha256": "dfcac2074e365a29f8c010781fd630569289c12fbe8c77178bf5f466fb6c746f",
       "attribution": null,
       "license": null
     },
@@ -2595,9 +2595,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/tesla/thumbnail.png",
-      "localPath": "/items/tesla/thumbnail.webp",
-      "bytes": 3240,
-      "sha256": "edc064d37fc985c016997a59c4a48b42a9c8cc74004ba928b1139a375dd51895",
+      "localPath": "/items/tesla/thumbnail.png",
+      "bytes": 145617,
+      "sha256": "a939f79623c536120a5923286f88b739fb0a6ef37431363eb61b0ea8a29e8dbc",
       "attribution": null,
       "license": null
     },
@@ -2619,9 +2619,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/users/user_7hUFMrlrAX1vtIwT/dishwasher-movn72ls/thumbnail.png",
-      "localPath": "/items/dishwasher-movn72ls/thumbnail.webp",
-      "bytes": 3398,
-      "sha256": "51589d2daab9401be39bde42ff6b970cd1e524f946cd09414456312875259d08",
+      "localPath": "/items/dishwasher-movn72ls/thumbnail.png",
+      "bytes": 95380,
+      "sha256": "ac9a765e0fb449f771cc4521f915b0e9032547c84e110b2d327b5648bfc9d733",
       "attribution": null,
       "license": null
     },
@@ -2643,9 +2643,9 @@
     },
     {
       "source": "https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/users/user_7hUFMrlrAX1vtIwT/fireplace-movn1fnn/thumbnail.png",
-      "localPath": "/items/fireplace-movn1fnn/thumbnail.webp",
-      "bytes": 4678,
-      "sha256": "6b8c251e5d701b0d66908af647a8b54a92090969ce235836740b773478dca4da",
+      "localPath": "/items/fireplace-movn1fnn/thumbnail.png",
+      "bytes": 116835,
+      "sha256": "6c1aa7e5b221764cccb429f4fc5c41289cc4f93442a409605923fb96b95c92d2",
       "attribution": null,
       "license": null
     },

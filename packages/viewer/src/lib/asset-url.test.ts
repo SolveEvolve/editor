@@ -9,6 +9,11 @@ describe('bundled asset URLs', () => {
   test('maps legacy catalog URLs to their same-origin copies', () => {
     expect(localizeBundledCatalogAssetUrl(catalogUrl)).toBe('/items/cactus/model.glb')
     expect(resolveCdnUrl(catalogUrl)).toBe('/items/cactus/model.glb')
+    expect(
+      localizeBundledCatalogAssetUrl(
+        'https://byrpxoiotywskoojsrzd.supabase.co/storage/v1/object/public/items/system/cactus/thumbnail.png',
+      ),
+    ).toBe('/items/cactus/thumbnail.png')
   })
 
   test('keeps root-relative public assets on the active deployment', () => {

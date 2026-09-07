@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto'
-import { mkdir, readFile, stat, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, rm, stat, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import { basename, dirname, resolve } from 'node:path'
 
@@ -25,10 +25,7 @@ function targetFor(url) {
 const entries = []
 for (const url of urls) {
   const target = targetFor(url)
-  const preferred = target.path.endsWith('thumbnail.png')
-    ? target.path.replace(/\.png$/, '.webp')
-    : target.path
-  if (!existsSync(preferred)) {
+  if (!existsSync(target.path)) {
     await mkdir(dirname(target.path), { recursive: true })
     const response = await fetch(url)
     if (!response.ok) throw new Error(`${response.status} while downloading ${url}`)
@@ -41,11 +38,13 @@ for (const url of urls) {
     }
     await writeFile(target.path, buffer)
   }
-  const localPath = existsSync(preferred) ? preferred : target.path
-  const buffer = await readFile(localPath)
+  if (target.path.endsWith('thumbnail.png')) {
+    await rm(target.path.replace(/\.png$/, '.webp'), { force: true })
+  }
+  const buffer = await readFile(target.path)
   entries.push({
     source: url,
-    localPath: `/${localPath.slice(resolve(root, 'apps/editor/public').length + 1).replaceAll('\\', '/')}`,
+    localPath: `/${target.path.slice(resolve(root, 'apps/editor/public').length + 1).replaceAll('\\', '/')}`,
     bytes: buffer.byteLength,
     sha256: createHash('sha256').update(buffer).digest('hex'),
     attribution: null,

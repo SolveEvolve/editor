@@ -14,7 +14,7 @@ export function localizeBundledCatalogAssetUrl(url: string | undefined | null): 
   if (!match) return null
   const id = match[1]
   if (url.endsWith('.glb')) return `/items/${id}/model.glb`
-  if (url.endsWith('thumbnail.png')) return `/items/${id}/thumbnail.webp`
+  if (url.endsWith('thumbnail.png')) return `/items/${id}/thumbnail.png`
   if (url.endsWith('floor-plan.png')) return `/items/${id}/floor-plan.png`
   return null
 }
