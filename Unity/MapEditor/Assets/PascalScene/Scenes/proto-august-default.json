@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "catalog-2026-07-29",
+  "materialLibraryVersion": "materials-2026-07-29",
+  "collections": {},
+  "materials": {},
+  "installedPlugins": [],
+  "nodes": {
+    "site_splat_demo": {
+      "object": "node", "id": "site_splat_demo", "type": "site", "name": "Proto August Site", "parentId": null, "visible": true,
+      "polygon": { "type": "polygon", "points": [[-15, -15], [15, -15], [15, 15], [-15, 15]] },
+      "renderGround": false, "shadowCatcher": true, "children": ["building_splat_demo"]
+    },
+    "building_splat_demo": {
+      "object": "node", "id": "building_splat_demo", "type": "building", "name": "Proto August Building", "parentId": "site_splat_demo", "visible": true,
+      "children": ["level_splat_demo"], "position": [0, 0, 0], "rotation": [0, 0, 0]
+    },
+    "level_splat_demo": {
+      "object": "node", "id": "level_splat_demo", "type": "level", "name": "Scan Level", "parentId": "building_splat_demo", "visible": true,
+      "children": ["scan_proto_august", "shure-microphone_em4p38utk859cif1", "shure-microphone-target_26sygq8c4lslvus6", "shure-microphone-target_ba20kgmkh3muro3c", "shure-microphone-target_jf84lh9jikci175g", "spawn_9dxykm8b3plfgbam", "item_swbh30xhl0yqyxhp", "item_0pncv22y76f0fyd1", "item_dz7wyxl3vyn71w2j", "item_th1so8limf3a3m1d"],
+      "level": 0, "height": 3
+    },
+    "scan_proto_august": {
+      "object": "node", "id": "scan_proto_august", "type": "scan", "name": "Proto August Scan", "parentId": "level_splat_demo", "visible": true,
+      "url": "/test-assets/gaussian-splats/proto-august-scan-converted/proto-august-scan-464k.spz", "assetFormat": "spz", "position": [-4.9, 0.8, 3.3], "rotation": [-1.5707963267948966, 0, -0.12217304763960307], "scale": 1, "opacity": 100
+    },
+    "shure-microphone_em4p38utk859cif1": {
+      "object": "node", "id": "shure-microphone_em4p38utk859cif1", "type": "shure-microphone", "name": "Shure Microphone", "parentId": "level_splat_demo", "visible": true,
+      "position": [3.587648111203707, 5.237181523579031, -0.21191005168788016], "rotation": [0, 0, 0], "targetId": "shure-microphone-target_26sygq8c4lslvus6", "targetIds": ["shure-microphone-target_ba20kgmkh3muro3c", "shure-microphone-target_jf84lh9jikci175g"], "beamAngle": 30
+    },
+    "shure-microphone-target_26sygq8c4lslvus6": {
+      "object": "node", "id": "shure-microphone-target_26sygq8c4lslvus6", "type": "shure-microphone-target", "name": "Microphone target", "parentId": "level_splat_demo", "visible": true,
+      "position": [5.5, 0.1281505072178809, 0], "beamAngle": 30
+    },
+    "shure-microphone-target_ba20kgmkh3muro3c": {
+      "object": "node", "id": "shure-microphone-target_ba20kgmkh3muro3c", "type": "shure-microphone-target", "name": "Microphone target 2", "parentId": "level_splat_demo", "visible": true,
+      "position": [12.749349466770456, 0.12298399194282583, -5.515604665541342], "beamAngle": 10
+    },
+    "shure-microphone-target_jf84lh9jikci175g": {
+      "object": "node", "id": "shure-microphone-target_jf84lh9jikci175g", "type": "shure-microphone-target", "name": "Microphone target 3", "parentId": "level_splat_demo", "visible": true,
+      "position": [1.4948079185090464, 0.09767871949152462, -1.0621751565787108], "beamAngle": 12
+    },
+    "spawn_9dxykm8b3plfgbam": {
+      "object": "node", "id": "spawn_9dxykm8b3plfgbam", "type": "spawn", "name": "Spawn Point", "parentId": "level_splat_demo", "visible": true,
+      "position": [-4.5, 0, 0], "rotation": -1.5707963267948966
+    },
+    "item_swbh30xhl0yqyxhp": {
+      "object": "node", "id": "item_swbh30xhl0yqyxhp", "type": "item", "name": "Tesla Model Y", "parentId": "level_splat_demo", "visible": true,
+      "position": [5.5, 0, 0], "rotation": [0, -0.7853981633974483, 0], "scale": [1, 1, 1], "children": [],
+      "asset": { "id": "tesla", "name": "Tesla Model Y", "src": "/items/tesla/model.glb", "dimensions": [1.98, 1.62, 4.76], "offset": [0.0039, -0.0102, -0.0148], "rotation": [0, 0, 0], "scale": [1, 1, 1] }
+    },
+    "item_0pncv22y76f0fyd1": {
+      "object": "node", "id": "item_0pncv22y76f0fyd1", "type": "item", "name": "Hard Light", "parentId": "level_splat_demo", "visible": true,
+      "position": [1.5, 0, 2], "rotation": [0, 2.356194490192345, 0], "scale": [1.2, 1.2, 1.2], "children": [],
+      "asset": { "id": "hard-light", "name": "Hard Light", "src": "/assets/production/hard-light.glb", "dimensions": [0.7234, 1.9029, 0.8077], "offset": [0, 0.9522, 0], "rotation": [0, 0, 0], "scale": [1, 1, 1] }
+    },
+    "item_dz7wyxl3vyn71w2j": {
+      "object": "node", "id": "item_dz7wyxl3vyn71w2j", "type": "item", "name": "Hard Light", "parentId": "level_splat_demo", "visible": true,
+      "position": [4, 0, -3], "rotation": [0, 0, 0], "scale": [1.2, 1.2, 1.2], "children": [],
+      "asset": { "id": "hard-light", "name": "Hard Light", "src": "/assets/production/hard-light.glb", "dimensions": [0.7234, 1.9029, 0.8077], "offset": [0, 0.9522, 0], "rotation": [0, 0, 0], "scale": [1, 1, 1] }
+    },
+    "item_th1so8limf3a3m1d": {
+      "object": "node", "id": "item_th1so8limf3a3m1d", "type": "item", "name": "Cinema Camera", "parentId": "level_splat_demo", "visible": true,
+      "position": [-0.25, 0, 0.25], "rotation": [0, 3.403392041388942, 0], "scale": [0.9, 0.9, 0.9], "children": [],
+      "asset": { "id": "cinema-camera", "name": "Cinema Camera", "src": "/assets/production/cinema-camera.glb", "dimensions": [1.4112, 1.9027, 1.2331], "offset": [0, 0.9524, 0], "rotation": [0, 0, 0], "scale": [1, 1, 1] }
+    }
+  },
+  "rootNodeIds": ["site_splat_demo"]
+}

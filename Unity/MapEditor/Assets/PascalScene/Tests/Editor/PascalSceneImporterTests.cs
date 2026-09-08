@@ -245,6 +245,43 @@ namespace PascalScene.Tests
             Object.DestroyImmediate(GameObject.Find("Dummy Model"));
         }
 
+        [Test]
+        public void ProtoAugustBuildsStaticContentAndIntentionallySkipsGaussianScan()
+        {
+            var asset = AssetDatabase.LoadAssetAtPath<TextAsset>(
+                "Assets/PascalScene/Scenes/proto-august-default.json");
+            Assert.That(asset, Is.Not.Null);
+            var document = PascalSceneDocument.Parse(asset.text);
+            var report = PascalSceneBuilder.Build(
+                document,
+                parent.transform,
+                new PascalSceneBuildSettings(),
+                new DummyModelResolver());
+            var identities = parent.GetComponentsInChildren<PascalSceneIdentity>(true);
+
+            Assert.That(identities.Count(identity => identity.NodeType == "item"), Is.EqualTo(4));
+            Assert.That(identities.Count(identity => identity.NodeType == "shure-microphone"), Is.EqualTo(1));
+            Assert.That(identities.Count(identity => identity.NodeType == "shure-microphone-target"), Is.EqualTo(3));
+            Assert.That(identities.Count(identity => identity.NodeType == "spawn"), Is.EqualTo(1));
+            Assert.That(report.MissingModelIds, Is.Empty);
+            Assert.That(report.UnsupportedNodes, Does.Contain(
+                "scan:scan_proto_august (Gaussian splat intentionally omitted)"));
+            Assert.That(parent.GetComponentsInChildren<LineRenderer>(true).Length, Is.GreaterThanOrEqualTo(3));
+            Object.DestroyImmediate(GameObject.Find("Dummy Model"));
+        }
+
+        [Test]
+        public void ScalarSpawnYawConvertsToPascalYRotation()
+        {
+            var document = PascalSceneDocument.Parse(
+                "{\"nodes\":{\"spawn\":{\"id\":\"spawn\",\"type\":\"spawn\",\"position\":[0,0,0],\"rotation\":1.5707963267948966}},\"rootNodeIds\":[\"spawn\"]}");
+
+            PascalSceneBuilder.Build(document, parent.transform, new PascalSceneBuildSettings());
+
+            var spawn = parent.GetComponentInChildren<PascalSceneIdentity>();
+            Assert.That(spawn.transform.localRotation.eulerAngles.y, Is.EqualTo(90f).Within(0.001f));
+        }
+
         private sealed class DummyModelResolver : IPascalAssetResolver
         {
             private readonly GameObject model = new("Dummy Model");

@@ -41,12 +41,14 @@ namespace PascalScene.Editor
             }
 
             EnsureFolder(GeneratedFolder);
-            ClearGeneratedMeshes();
             var settings = new PascalSceneBuildSettings
             {
                 WallMaterial = LoadOrCreateMaterial("Pascal Wall", new Color(0.91f, 0.90f, 0.88f)),
                 SlabMaterial = LoadOrCreateMaterial("Pascal Floor", new Color(0.52f, 0.46f, 0.39f)),
                 CeilingMaterial = LoadOrCreateMaterial("Pascal Ceiling", new Color(0.96f, 0.96f, 0.94f)),
+                GuideMaterial = LoadOrCreateMaterial("Pascal Guide", new Color(0.61f, 1f, 0.2f)),
+                TargetMaterial = LoadOrCreateMaterial("Pascal Target", new Color(0.13f, 0.83f, 0.93f)),
+                SpawnMaterial = LoadOrCreateMaterial("Pascal Spawn", new Color(0.51f, 0.55f, 0.95f)),
                 PersistMesh = PersistMesh
             };
 
@@ -96,15 +98,12 @@ namespace PascalScene.Editor
         {
             var safeId = string.Join("_", nodeId.Split(Path.GetInvalidFileNameChars()));
             var path = $"{GeneratedFolder}/{safeId}.asset";
-            AssetDatabase.CreateAsset(mesh, path);
-        }
-
-        private static void ClearGeneratedMeshes()
-        {
-            foreach (var guid in AssetDatabase.FindAssets("t:Mesh", new[] { GeneratedFolder }))
+            if (AssetDatabase.LoadAssetAtPath<Mesh>(path) != null)
             {
-                AssetDatabase.DeleteAsset(AssetDatabase.GUIDToAssetPath(guid));
+                AssetDatabase.DeleteAsset(path);
             }
+
+            AssetDatabase.CreateAsset(mesh, path);
         }
 
         private static void EnsureFolder(string assetPath)

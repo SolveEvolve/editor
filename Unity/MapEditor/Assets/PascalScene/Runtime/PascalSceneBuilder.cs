@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace PascalScene
 {
@@ -22,6 +23,9 @@ namespace PascalScene
         public Material WallMaterial { get; set; }
         public Material SlabMaterial { get; set; }
         public Material CeilingMaterial { get; set; }
+        public Material GuideMaterial { get; set; }
+        public Material TargetMaterial { get; set; }
+        public Material SpawnMaterial { get; set; }
         public Action<Mesh, string> PersistMesh { get; set; }
     }
 
@@ -42,7 +46,11 @@ namespace PascalScene
                 ["wall"] = BuildWallNode,
                 ["slab"] = BuildSlabNode,
                 ["ceiling"] = BuildCeilingNode,
-                ["item"] = BuildItemNode
+                ["item"] = BuildItemNode,
+                ["shure-microphone"] = BuildShureMicrophoneNode,
+                ["shure-microphone-target"] = BuildShureMicrophoneTargetNode,
+                ["spawn"] = BuildSpawnNode,
+                ["scan"] = SkipGaussianScanNode
             };
 
         public static PascalSceneBuildReport Build(
@@ -305,6 +313,67 @@ namespace PascalScene
             return containingLevelHeight;
         }
 
+        private static float BuildShureMicrophoneNode(
+            GameObject gameObject,
+            PascalSceneNode node,
+            float containingLevelHeight,
+            PascalSceneBuildContext context)
+        {
+            ApplyTransform(gameObject.transform, node);
+            CreatePrimitive("microphone-disk", PrimitiveType.Cylinder, gameObject.transform,
+                Vector3.zero, new Vector3(0.16f, 0.0175f, 0.16f), context.Settings.GuideMaterial);
+            var targetIds = new List<string>();
+            if (!string.IsNullOrWhiteSpace(node.TargetId)) targetIds.Add(node.TargetId);
+            targetIds.AddRange(node.TargetIds ?? Enumerable.Empty<string>());
+            foreach (var targetId in targetIds.Distinct(StringComparer.Ordinal))
+            {
+                if (!context.Document.Nodes.TryGetValue(targetId, out var target))
+                {
+                    context.Report.Warnings.Add($"shure-microphone:{node.Id} target '{targetId}' is missing.");
+                    continue;
+                }
+
+                CreateMicrophoneCone(gameObject.transform, node, target, context.Settings.GuideMaterial);
+            }
+
+            return containingLevelHeight;
+        }
+
+        private static float BuildShureMicrophoneTargetNode(
+            GameObject gameObject,
+            PascalSceneNode node,
+            float containingLevelHeight,
+            PascalSceneBuildContext context)
+        {
+            ApplyTransform(gameObject.transform, node);
+            CreatePrimitive("microphone-target", PrimitiveType.Sphere, gameObject.transform,
+                Vector3.zero, Vector3.one * 0.16f, context.Settings.TargetMaterial);
+            return containingLevelHeight;
+        }
+
+        private static float BuildSpawnNode(
+            GameObject gameObject,
+            PascalSceneNode node,
+            float containingLevelHeight,
+            PascalSceneBuildContext context)
+        {
+            ApplyTransform(gameObject.transform, node);
+            CreateSpawnVisual(gameObject.transform, context.Settings.SpawnMaterial);
+            return containingLevelHeight;
+        }
+
+        private static float SkipGaussianScanNode(
+            GameObject gameObject,
+            PascalSceneNode node,
+            float containingLevelHeight,
+            PascalSceneBuildContext context)
+        {
+            gameObject.SetActive(false);
+            context.Report.SkippedNodeCount++;
+            context.Report.UnsupportedNodes.Add($"scan:{node.Id} (Gaussian splat intentionally omitted)");
+            return containingLevelHeight;
+        }
+
         private static void BuildWall(
             GameObject gameObject,
             PascalSceneNode node,
@@ -391,6 +460,100 @@ namespace PascalScene
             instance.transform.localScale = ToUnityScale(node.Asset.Scale);
         }
 
+        private static void CreateSpawnVisual(Transform parent, Material material)
+        {
+            var ring = new GameObject("spawn-ring");
+            ring.transform.SetParent(parent, false);
+            var line = ring.AddComponent<LineRenderer>();
+            line.useWorldSpace = false;
+            line.loop = true;
+            line.widthMultiplier = 0.025f;
+            line.positionCount = 48;
+            line.sharedMaterial = material;
+            for (var index = 0; index < line.positionCount; index++)
+            {
+                var angle = index * Mathf.PI * 2f / line.positionCount;
+                line.SetPosition(index, new Vector3(Mathf.Cos(angle) * 0.41f, 0.09f, Mathf.Sin(angle) * 0.41f));
+            }
+
+            CreatePrimitive("spawn-torso", PrimitiveType.Cube, parent,
+                new Vector3(0f, 0.41f, 0f), new Vector3(0.3f, 0.54f, 0.16f), material);
+            CreatePrimitive("spawn-head", PrimitiveType.Cube, parent,
+                new Vector3(0f, 0.83f, 0f), Vector3.one * 0.18f, material);
+            var arrow = new GameObject("spawn-arrow");
+            arrow.transform.SetParent(parent, false);
+            var arrowLine = arrow.AddComponent<LineRenderer>();
+            arrowLine.useWorldSpace = false;
+            arrowLine.widthMultiplier = 0.035f;
+            arrowLine.positionCount = 4;
+            arrowLine.sharedMaterial = material;
+            arrowLine.SetPositions(new[]
+            {
+                new Vector3(-0.18f, 0.1f, -0.66f), new Vector3(0f, 0.1f, -0.28f),
+                new Vector3(0.18f, 0.1f, -0.66f), new Vector3(-0.18f, 0.1f, -0.66f)
+            });
+        }
+
+        private static void CreateMicrophoneCone(
+            Transform parent,
+            PascalSceneNode microphone,
+            PascalSceneNode target,
+            Material material)
+        {
+            var source = ToUnityPosition(microphone.Position);
+            var destination = ToUnityPosition(target.Position);
+            var direction = destination - source;
+            var length = direction.magnitude;
+            if (length < 0.001f) return;
+
+            var localDirection = Quaternion.Inverse(ToUnityRotation(microphone.GetRotation())) * direction.normalized;
+            var radius = Mathf.Tan((target.BeamAngle ?? microphone.BeamAngle ?? 30f) * Mathf.Deg2Rad * 0.5f) * length;
+            var basisA = Vector3.Cross(localDirection, Mathf.Abs(localDirection.y) > 0.9f ? Vector3.right : Vector3.up).normalized;
+            var basisB = Vector3.Cross(localDirection, basisA).normalized;
+            var cone = new GameObject($"direction-cone:{target.Id}");
+            cone.transform.SetParent(parent, false);
+            var line = cone.AddComponent<LineRenderer>();
+            line.useWorldSpace = false;
+            line.loop = false;
+            line.widthMultiplier = 0.012f;
+            line.sharedMaterial = material;
+            const int segments = 16;
+            line.positionCount = segments * 3;
+            for (var index = 0; index < segments; index++)
+            {
+                var angle = index * Mathf.PI * 2f / segments;
+                var rim = localDirection * length + (basisA * Mathf.Cos(angle) + basisB * Mathf.Sin(angle)) * radius;
+                var nextAngle = (index + 1) * Mathf.PI * 2f / segments;
+                var nextRim = localDirection * length + (basisA * Mathf.Cos(nextAngle) + basisB * Mathf.Sin(nextAngle)) * radius;
+                line.SetPosition(index * 3, Vector3.zero);
+                line.SetPosition(index * 3 + 1, rim);
+                line.SetPosition(index * 3 + 2, nextRim);
+            }
+        }
+
+        private static void CreatePrimitive(
+            string name,
+            PrimitiveType type,
+            Transform parent,
+            Vector3 position,
+            Vector3 scale,
+            Material material)
+        {
+            var primitive = GameObject.CreatePrimitive(type);
+            primitive.name = name;
+            primitive.transform.SetParent(parent, false);
+            primitive.transform.localPosition = position;
+            primitive.transform.localScale = scale;
+            var collider = primitive.GetComponent<Collider>();
+            if (collider != null)
+            {
+                if (Application.isPlaying) UnityEngine.Object.Destroy(collider);
+                else UnityEngine.Object.DestroyImmediate(collider);
+            }
+
+            primitive.GetComponent<MeshRenderer>().sharedMaterial = material;
+        }
+
         private static void AddMesh(
             GameObject gameObject,
             Mesh mesh,
@@ -407,8 +570,8 @@ namespace PascalScene
         private static void ApplyTransform(Transform transform, PascalSceneNode node)
         {
             transform.localPosition = ToUnityPosition(node.Position);
-            transform.localRotation = ToUnityRotation(node.Rotation);
-            transform.localScale = ToUnityScale(node.Scale);
+            transform.localRotation = ToUnityRotation(node.GetRotation());
+            transform.localScale = ToUnityScale(node.GetScale());
         }
 
         private static Quaternion ToUnityRotation(float[] radians)
@@ -554,8 +717,10 @@ namespace PascalScene
             }
             else
             {
-                var existingObject = GameObject.Find(PascalSceneBuildSettings.RootName);
-                existing = existingObject != null ? existingObject.transform : null;
+                existing = SceneManager.GetActiveScene()
+                    .GetRootGameObjects()
+                    .Select(gameObject => gameObject.transform)
+                    .FirstOrDefault(transform => transform.name == PascalSceneBuildSettings.RootName);
             }
 
             if (existing == null)

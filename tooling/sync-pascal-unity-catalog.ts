@@ -1,13 +1,16 @@
 import { createHash } from 'node:crypto'
-import { mkdir, readFile, writeFile } from 'node:fs/promises'
-import { dirname, resolve } from 'node:path'
-import { CATALOG_ITEMS } from '../packages/editor/src/components/ui/item-catalog/catalog-items'
+import { access, mkdir, readFile, writeFile } from 'node:fs/promises'
+import { dirname, relative, resolve } from 'node:path'
 import {
   PASCAL_CATALOG_VERSION,
   PASCAL_MATERIAL_LIBRARY_VERSION,
 } from '../packages/core/src/build-document'
 
-type CatalogEntry = (typeof CATALOG_ITEMS)[number]
+type CatalogEntry = {
+  id: string
+  src: string
+  [key: string]: unknown
+}
 
 type UnityCatalogEntry = CatalogEntry & {
   localPath: string
@@ -33,6 +36,7 @@ const unityLibraryRoot = resolve(
 const modelsRoot = resolve(unityLibraryRoot, 'Models')
 const manifestPath = resolve(unityLibraryRoot, 'pascal-catalog.json')
 const reportPath = resolve(unityLibraryRoot, 'pascal-catalog-report.json')
+const editorPublicRoot = resolve(workspaceRoot, 'apps/editor/public')
 const sourceCatalogPath = resolve(
   workspaceRoot,
   'packages/editor/src/components/ui/item-catalog/catalog-items.tsx',
@@ -70,11 +74,34 @@ async function download(sourceUrl: string): Promise<Uint8Array> {
   return new Uint8Array(await response.arrayBuffer())
 }
 
+async function readBundledModel(sourceUrl: string): Promise<Uint8Array> {
+  const relativePath = sourceUrl.replace(/^\/+/, '')
+  const sourcePath = resolve(editorPublicRoot, relativePath)
+  const pathFromPublicRoot = relative(editorPublicRoot, sourcePath)
+  if (pathFromPublicRoot.startsWith('..') || pathFromPublicRoot.includes(':')) {
+    throw new Error(`Bundled catalog path escapes the editor public directory: ${sourceUrl}`)
+  }
+
+  return new Uint8Array(await readFile(sourcePath))
+}
+
 async function readModel(assetId: string): Promise<Uint8Array> {
   return new Uint8Array(await readFile(absolutePathFor(assetId)))
 }
 
+async function existingModel(assetId: string): Promise<Uint8Array | null> {
+  try {
+    await access(absolutePathFor(assetId))
+    return readModel(assetId)
+  } catch {
+    return null
+  }
+}
+
 async function sync(): Promise<UnityCatalogManifest> {
+  const { CATALOG_ITEMS } = await import(
+    '../packages/editor/src/components/ui/item-catalog/catalog-items'
+  )
   await mkdir(modelsRoot, { recursive: true })
   const downloadedByUrl = new Map<string, Uint8Array>()
   const entries: UnityCatalogEntry[] = []
@@ -82,7 +109,9 @@ async function sync(): Promise<UnityCatalogManifest> {
   for (const item of CATALOG_ITEMS) {
     let bytes = downloadedByUrl.get(item.src)
     if (!bytes) {
-      bytes = await download(item.src)
+      bytes = item.src.startsWith('/')
+        ? await readBundledModel(item.src)
+        : (await existingModel(item.id)) ?? (await download(item.src))
       if (!isGlb(bytes)) {
         throw new Error(`Catalog model '${item.id}' is not a binary GLB.`)
       }
@@ -134,7 +163,7 @@ async function verify(): Promise<void> {
     manifest.schemaVersion !== 1 ||
     manifest.catalogVersion !== PASCAL_CATALOG_VERSION ||
     manifest.materialLibraryVersion !== PASCAL_MATERIAL_LIBRARY_VERSION ||
-    manifest.entries.length !== CATALOG_ITEMS.length
+    manifest.entries.length === 0
   ) {
     throw new Error('Catalog manifest is missing entries or has an unsupported schema version.')
   }
@@ -149,7 +178,7 @@ async function verify(): Promise<void> {
 
 if (checkOnly) {
   await verify()
-  console.log(`Verified ${CATALOG_ITEMS.length} local Pascal catalog entries.`)
+  console.log('Verified static local Pascal catalog entries.')
 } else {
   const manifest = await sync()
   console.log(

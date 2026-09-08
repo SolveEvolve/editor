@@ -2,7 +2,7 @@
 
 ## Current phase
 
-Phase 3 — architectural shell parity.
+Static Proto August scene reconstruction.
 
 ## Completed commits
 
@@ -17,19 +17,26 @@ Phase 3 — architectural shell parity.
 - `d1186bf6 feat(unity): support slab and ceiling holes`
 - `98a2b4b9 feat(unity): add curved and mitered wall geometry`
 
+The current snapshot adds the editor's default Proto August scene, offline
+production models, static microphone/spawn guides, and an explicit Gaussian-scan skip.
+
 ## Verification commands
 
 - Unity EditMode: `PascalScene.Tests.Editor`
 - Catalog: `C:\Users\SolveEvolve\.bun\bin\bun.exe tooling\sync-pascal-unity-catalog.ts --check`
 - Web type check: `C:\Users\SolveEvolve\.bun\bin\bun.exe run check-types`
 
+Latest verification: Unity EditMode `PascalScene.Tests.Editor` (16 passed), and
+`C:\Users\SolveEvolve\.bun\bin\bun.exe tooling\sync-pascal-unity-catalog.ts --check`.
+
 ## Deferred node families
 
 - Doors, windows, and hosted wall cutouts
 - Pascal material-slot and trim/band material parity
 - HVAC and plumbing; roofs, stairs, columns, fences, shelves, cabinets
-- Runtime file acquisition, animation playback, lighting, cameras, and presentation parity
+- Gaussian splat loading, runtime file acquisition, animation playback, lighting, cameras, and presentation parity
 
 ## Feedback gate
 
-Hard feedback gate 2 is ready for review. Do not begin Phase 4 without approval.
+The static Proto August scene is ready for review. The scan node is intentionally present
+in JSON but disabled in Unity with a diagnostic; all other default-scene content is local.

@@ -201,10 +201,10 @@ namespace PascalScene
         public float[] Position { get; set; }
 
         [JsonProperty("rotation")]
-        public float[] Rotation { get; set; }
+        public JToken Rotation { get; set; }
 
         [JsonProperty("scale")]
-        public float[] Scale { get; set; }
+        public JToken Scale { get; set; }
 
         [JsonProperty("polygon")]
         public JToken Polygon { get; set; }
@@ -214,6 +214,58 @@ namespace PascalScene
 
         [JsonProperty("asset")]
         public PascalAsset Asset { get; set; }
+
+        [JsonProperty("targetId")]
+        public string TargetId { get; set; }
+
+        [JsonProperty("targetIds")]
+        public List<string> TargetIds { get; set; } = new();
+
+        [JsonProperty("beamAngle")]
+        public float? BeamAngle { get; set; }
+
+        public float[] GetRotation()
+        {
+            if (Rotation == null || Rotation.Type == JTokenType.Null)
+            {
+                return null;
+            }
+
+            if (Rotation.Type == JTokenType.Array)
+            {
+                return Rotation.ToObject<float[]>();
+            }
+
+            if (Rotation.Type == JTokenType.Integer || Rotation.Type == JTokenType.Float)
+            {
+                return new[] { 0f, Rotation.Value<float>(), 0f };
+            }
+
+            throw new JsonSerializationException(
+                $"Node '{Id}' rotation must be either a Pascal XYZ array or a spawn yaw number.");
+        }
+
+        public float[] GetScale()
+        {
+            if (Scale == null || Scale.Type == JTokenType.Null)
+            {
+                return null;
+            }
+
+            if (Scale.Type == JTokenType.Array)
+            {
+                return Scale.ToObject<float[]>();
+            }
+
+            if (Scale.Type == JTokenType.Integer || Scale.Type == JTokenType.Float)
+            {
+                var uniform = Scale.Value<float>();
+                return new[] { uniform, uniform, uniform };
+            }
+
+            throw new JsonSerializationException(
+                $"Node '{Id}' scale must be either a Pascal XYZ array or a uniform number.");
+        }
 
         public List<float[]> GetPolygonPoints()
         {
