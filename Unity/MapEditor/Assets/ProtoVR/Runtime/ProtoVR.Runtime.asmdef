@@ -1,0 +1,9 @@
+{
+  "name": "ProtoVR.Runtime",
+  "rootNamespace": "ProtoVR",
+  "references": [
+    "GaussianSplatting",
+    "Unity.Mathematics"
+  ],
+  "autoReferenced": true
+}

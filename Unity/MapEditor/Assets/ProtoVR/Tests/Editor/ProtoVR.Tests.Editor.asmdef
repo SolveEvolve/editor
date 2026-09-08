@@ -1,0 +1,18 @@
+{
+  "name": "ProtoVR.Tests.Editor",
+  "rootNamespace": "ProtoVR.Tests",
+  "references": [
+    "ProtoVR.Runtime",
+    "GaussianSplatting"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

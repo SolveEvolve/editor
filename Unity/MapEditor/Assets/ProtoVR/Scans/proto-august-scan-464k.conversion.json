@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "converter": "Pascal Proto static PLY to QSF2",
+  "sourceFile": "point_cloud_3.ply",
+  "sourceSha256": "2041098ceab2ce9a019c6ae6a4f1f1532ec972aef22360541d6faa84dd4eabd0",
+  "outputFile": "proto-august-scan-464k.qsf",
+  "outputSha256": "68e53190715884b0ab4b373ce6795ceba8f8c09524110e806053609e1ce06748",
+  "sourceBytes": 115102298,
+  "qsf2Bytes": 8579776,
+  "reductionPercent": 92.54595594607503,
+  "splatCount": 464114,
+  "encoding": {
+    "qsfVersion": 2,
+    "chunkSize": 256,
+    "position": "Norm16",
+    "scale": "Norm11",
+    "color": "Norm8x4",
+    "sphericalHarmonics": "SH0"
+  },
+  "maxPositionAbsoluteError": 0.0003032684326171875,
+  "maxScaleRelativeError": 0.017308851704001427,
+  "maxColorAbsoluteError": 0.007550239562988281,
+  "maxOpacityAbsoluteError": 0.05350455641746521
+}

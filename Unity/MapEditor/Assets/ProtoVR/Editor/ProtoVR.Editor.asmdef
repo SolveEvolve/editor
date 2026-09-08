@@ -1,0 +1,11 @@
+{
+  "name": "ProtoVR.Editor",
+  "rootNamespace": "ProtoVR.Editor",
+  "references": [
+    "ProtoVR.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": true
+}
