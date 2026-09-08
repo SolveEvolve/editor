@@ -16,6 +16,8 @@ Static Proto August scene reconstruction.
 - `e42abc4a feat(unity): add curved wall geometry`
 - `d1186bf6 feat(unity): support slab and ceiling holes`
 - `98a2b4b9 feat(unity): add curved and mitered wall geometry`
+- `e495e538 assets(unity): add Proto production model snapshot`
+- `bdb5ebd6 feat(unity): reconstruct static Proto August scene`
 
 The current snapshot adds the editor's default Proto August scene, offline
 production models, static microphone/spawn guides, and an explicit Gaussian-scan skip.
