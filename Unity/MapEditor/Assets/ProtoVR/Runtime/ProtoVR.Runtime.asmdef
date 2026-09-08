@@ -3,7 +3,8 @@
   "rootNamespace": "ProtoVR",
   "references": [
     "GaussianSplatting",
-    "Unity.Mathematics"
+    "Unity.Mathematics",
+    "GUID:df380645f10b7bc4b97d4f5eb6303d95"
   ],
   "autoReferenced": true
 }

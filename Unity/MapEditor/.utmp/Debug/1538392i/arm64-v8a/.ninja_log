@@ -1,0 +1,10 @@
+# ninja log v5
+66	10596	8106094381922534	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	878cbda6758f8a53
+52	10626	8106094382282045	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	e224f787c183b9e
+15	10654	8106094382609751	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c40479d85618794d
+84	10684	8106094382880167	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	2fde59b7640c21c0
+27	10710	8106094383183939	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	61397204b90ab9bb
+38	10908	8106094385086082	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c2a4e5dfa2441ded
+1	10951	8106094385579861	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	f93b514dd21e2f0e
+107	11054	8106094386650747	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	e66b02ea581ac627
+11055	11311	8106094389129618	C:/Users/SolveEvolve/Documents/GitHub/editor/Unity/MapEditor/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/1538392i/obj/arm64-v8a/libgame.so	712b53edfe094f39

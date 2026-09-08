@@ -799,4 +799,3 @@ void CSCopySplats (uint3 id : SV_DispatchThreadID)
         _CopyDstEditDeleted.InterlockedOr(dstWordIdx * 4, 1u << dstBitIdx);
     }
 }
-
