@@ -1,0 +1,54 @@
+[
+  {
+    "input": "point_cloud_3.ply",
+    "output": "itv-scan.spz",
+    "splats": 621496,
+    "maxPositionError": 0.0001220703125,
+    "bounds": {
+      "min": [
+        -6.389404296875,
+        -16.081787109375,
+        -0.800537109375
+      ],
+      "max": [
+        17.385009765625,
+        8.47265625,
+        9.390869140625
+      ]
+    },
+    "attributes": [
+      "position",
+      "covariance",
+      "color",
+      "sphericalHarmonics1",
+      "sphericalHarmonics2",
+      "sphericalHarmonics3"
+    ]
+  },
+  {
+    "input": "environment.ply",
+    "output": "itv-environment.spz",
+    "splats": 2714,
+    "maxPositionError": 0.0001220703125,
+    "bounds": {
+      "min": [
+        -125.059326171875,
+        -164.146240234375,
+        -157.5888671875
+      ],
+      "max": [
+        164.003662109375,
+        287.169189453125,
+        131.618896484375
+      ]
+    },
+    "attributes": [
+      "position",
+      "covariance",
+      "color",
+      "sphericalHarmonics1",
+      "sphericalHarmonics2",
+      "sphericalHarmonics3"
+    ]
+  }
+]

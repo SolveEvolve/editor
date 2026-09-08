@@ -1,0 +1,27 @@
+{
+  "name": "ITV Scan",
+  "format": "spz",
+  "version": 4,
+  "converter": "gsply 0.4.6",
+  "assets": [
+    {
+      "name": "Main downsampled scan",
+      "file": "itv-scan.spz",
+      "url": "/test-assets/gaussian-splats/itv-scan-converted/itv-scan.spz",
+      "source": "point_cloud_3.ply",
+      "splats": 621496,
+      "bytes": 21614596,
+      "sha256": "BDC1F08247567C674AE1578BC6EB3FA852EF633C1AF3632A5C54F6293DF3B854"
+    },
+    {
+      "name": "Environment cloud",
+      "file": "itv-environment.spz",
+      "url": "/test-assets/gaussian-splats/itv-scan-converted/itv-environment.spz",
+      "source": "environment.ply",
+      "splats": 2714,
+      "bytes": 116575,
+      "sha256": "CDAAC939D6A4162E2FFE9B249A7EB77B056AABA59A5BCB5F1D93A9F279F7322B"
+    }
+  ],
+  "preview": "preview.jpg"
+}
