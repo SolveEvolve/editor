@@ -28,14 +28,12 @@ namespace GaussianSplatting.Runtime
             const string ProfilerTag = "GaussianSplatRenderGraph";
             static readonly ProfilingSampler s_profilingSampler = new(ProfilerTag);
             static readonly int s_gaussianSplatRT = Shader.PropertyToID(GaussianSplatRTName);
-            static readonly int s_cameraDepthTexture = Shader.PropertyToID("_CameraDepthTexture");
 
             class PassData
             {
                 internal UniversalCameraData CameraData;
                 internal TextureHandle SourceTexture;
                 internal TextureHandle SourceDepth;
-                internal TextureHandle CameraDepthTexture;
                 internal TextureHandle GaussianSplatRT;
                 internal bool IsStereo;
             }
@@ -53,20 +51,17 @@ namespace GaussianSplatting.Runtime
                                 !Application.isEditor;
                 RenderTextureDescriptor rtDesc = isStereo ? XRSettings.eyeTextureDesc : cameraData.cameraTargetDescriptor;
                 rtDesc.depthBufferBits = 0;
-                rtDesc.msaaSamples = 1;
                 rtDesc.graphicsFormat = GraphicsFormat.R16G16B16A16_SFloat;
                 var textureHandle = UniversalRenderer.CreateRenderGraphTexture(renderGraph, rtDesc, GaussianSplatRTName, true);
 
                 passData.CameraData = cameraData;
                 passData.SourceTexture = resourceData.activeColorTexture;
                 passData.SourceDepth = resourceData.activeDepthTexture;
-                passData.CameraDepthTexture = resourceData.cameraDepthTexture;
                 passData.GaussianSplatRT = textureHandle;
                 passData.IsStereo = isStereo;
 
                 builder.UseTexture(resourceData.activeColorTexture, AccessFlags.ReadWrite);
                 builder.UseTexture(resourceData.activeDepthTexture);
-                builder.UseTexture(resourceData.cameraDepthTexture);
                 builder.UseTexture(textureHandle, AccessFlags.ReadWrite);
                 builder.AllowPassCulling(false);
                 builder.SetRenderFunc(static (PassData data, UnsafeGraphContext context) =>
@@ -74,7 +69,6 @@ namespace GaussianSplatting.Runtime
                     var commandBuffer = CommandBufferHelpers.GetNativeCommandBuffer(context.cmd);
                     using var _ = new ProfilingScope(commandBuffer, s_profilingSampler);
                     commandBuffer.SetGlobalTexture(s_gaussianSplatRT, data.GaussianSplatRT);
-                    commandBuffer.SetGlobalTexture(s_cameraDepthTexture, data.CameraDepthTexture);
 
                     if (data.IsStereo)
                     {
@@ -126,7 +120,6 @@ namespace GaussianSplatting.Runtime
             {
                 renderPassEvent = RenderPassEvent.BeforeRenderingTransparents
             };
-            m_Pass.ConfigureInput(ScriptableRenderPassInput.Depth);
         }
 
         public override void OnCameraPreCull(ScriptableRenderer renderer, in CameraData cameraData)

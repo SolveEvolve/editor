@@ -31,7 +31,6 @@ uint _EyeIndex;
 #undef unity_StereoEyeIndex
 #define unity_StereoEyeIndex _EyeIndex
 #endif
-#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
 #include "Packages/com.meta.xr.sdk.core/Shaders/EnvironmentDepth/URP/EnvironmentOcclusionURP.hlsl"
 
 StructuredBuffer<uint> _OrderBuffer;
@@ -114,13 +113,6 @@ v2f vert (Attributes input)
 
 half4 frag (v2f i) : SV_Target
 {
-	float sceneDepth = SampleSceneDepth(i.vertex.xy / _ScaledScreenParams.xy);
-#if UNITY_REVERSED_Z
-	clip(i.vertex.z - sceneDepth);
-#else
-	clip(sceneDepth - i.vertex.z);
-#endif
-
 	float power = -dot(i.pos, i.pos);
 	power *= max(_SplatEdgeSharpness, 0.0001);
 	half alpha = exp(power);
