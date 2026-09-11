@@ -4,7 +4,8 @@
   "references": [
     "GaussianSplatting",
     "Unity.Mathematics",
-    "GUID:df380645f10b7bc4b97d4f5eb6303d95"
+    "GUID:df380645f10b7bc4b97d4f5eb6303d95",
+    "Oculus.VR"
   ],
   "autoReferenced": true
 }
