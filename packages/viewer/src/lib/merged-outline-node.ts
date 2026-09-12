@@ -353,8 +353,11 @@ export class MergedOutlineNode extends TempNode {
     // ── 1. Shared depth pass: all objects NOT in either group ─────────────────
     renderer.setRenderTarget(this._depthRT)
     renderer.setRenderObjectFunction(
-      (obj: any, sc: any, cam: any, geo: any, _mat: any, grp: any, lights: any, clip: any) => {
+      (obj: any, sc: any, cam: any, geo: any, mat: any, grp: any, lights: any, clip: any) => {
         if (!hasDrawableGeometry(geo)) return
+        // Preserve the source material's depth policy: transparent splats are not
+        // occluders, and drawing their billboards with a solid material is costly.
+        if (!mat.depthWrite) return
         const inCache = this._cacheA.has(obj) || this._cacheB.has(obj)
         if (!inCache) {
           const m = obj.isSprite ? this._depthSpriteMaterial : this._depthMaterial
